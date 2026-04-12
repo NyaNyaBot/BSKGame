@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [
+      {
+        "command": ".cursor/hooks/ccgs-session-start.sh",
+        "timeout": 10
+      },
+      {
+        "command": ".cursor/hooks/ccgs-detect-gaps.sh",
+        "timeout": 10
+      }
+    ],
+    "beforeShellExecution": [
+      {
+        "command": ".cursor/hooks/ccgs-validate-commit.sh",
+        "matcher": "git\\s+commit",
+        "timeout": 15
+      },
+      {
+        "command": ".cursor/hooks/ccgs-validate-push.sh",
+        "matcher": "git\\s+push",
+        "timeout": 10
+      }
+    ],
+    "afterFileEdit": [
+      {
+        "command": ".cursor/hooks/ccgs-validate-assets.sh",
+        "timeout": 10
+      },
+      {
+        "command": ".cursor/hooks/ccgs-validate-skill-change.sh",
+        "timeout": 5
+      }
+    ],
+    "preCompact": [
+      {
+        "command": ".cursor/hooks/ccgs-pre-compact.sh",
+        "timeout": 10
+      }
+    ],
+    "stop": [
+      {
+        "command": ".cursor/hooks/ccgs-session-stop.sh",
+        "timeout": 10
+      }
+    ],
+    "subagentStart": [
+      {
+        "command": ".cursor/hooks/ccgs-log-agent.sh",
+        "timeout": 5
+      }
+    ],
+    "subagentStop": [
+      {
+        "command": ".cursor/hooks/ccgs-log-agent-stop.sh",
+        "timeout": 5
+      }
+    ]
+  }
+}
