@@ -80,15 +80,21 @@ namespace Game.Client
         private void GotoUpdateApp(object userData)
         {
             string url = null;
+            var builtinDataComp = UnityGameFramework.Runtime.GameEntry.GetComponent<BuiltinDataComponent>();
+            if (builtinDataComp == null)
+            {
+                return;
+            }
+
 #if UNITY_EDITOR_WIN || UNITY_STANDALONE_WIN
             //@TODO:
-            //url = UnityGameFramework.Runtime.GameEntry.GetComponent<BuiltinDataComponent>().BuildInfo.WindowsAppUrl;
+            //url = builtinDataComp.BuildInfo.WindowsAppUrl;
 #elif UNITY_EDITOR_OSX || UNITY_STANDALONE_OSX
-            url = GameEntry.BuiltinData.BuildInfo.MacOSAppUrl;
+            url = builtinDataComp.BuildInfo.MacOSAppUrl;
 #elif UNITY_IOS
-            url = GameEntry.BuiltinData.BuildInfo.IOSAppUrl;
+            url = builtinDataComp.BuildInfo.IOSAppUrl;
 #elif UNITY_ANDROID
-            url = GameEntry.BuiltinData.BuildInfo.AndroidAppUrl;
+            url = builtinDataComp.BuildInfo.AndroidAppUrl;
 #endif
             if (!string.IsNullOrEmpty(url))
             {

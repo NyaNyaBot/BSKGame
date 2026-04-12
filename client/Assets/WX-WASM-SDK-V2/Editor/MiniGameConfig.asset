@@ -19,7 +19,7 @@ MonoBehaviour:
     assetLoadType: 1
     compressDataPackage: 1
     VideoUrl: 
-    DST: G:/Repos/BSKGame/wxProject
+    DST: /Users/sulequan/repository/BSKGame/client/../wxProject
     StreamCDN: 
     bundleHashLength: 8
     bundlePathIdentifier: StreamingAssets;.dat;
@@ -64,7 +64,7 @@ MonoBehaviour:
     enablePerfAnalysis: 0
     iOSAutoGCInterval: 10000
     enableIOSPerformancePlus: 0
-    brotliMT: 1
+    brotliMT: 0
     enableWasm2023: 0
   CompressTexture:
     halfSize: 0

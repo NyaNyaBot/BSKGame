@@ -22,19 +22,14 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// }} 
 
 	// {{ AOT generic types
-	// Game.Core.AbstractCommand<object>
-	// Game.Core.AbstractQuery<int>
 	// Game.Core.Architecture.<>c<object>
 	// Game.Core.Architecture<object>
 	// Game.Core.ArrayGraph<object>
 	// Game.Core.BindableProperty.<>c<float>
-	// Game.Core.BindableProperty.<>c<int>
 	// Game.Core.BindableProperty.<>c<object>
 	// Game.Core.BindableProperty.<>c__DisplayClass21_0<float>
-	// Game.Core.BindableProperty.<>c__DisplayClass21_0<int>
 	// Game.Core.BindableProperty.<>c__DisplayClass21_0<object>
 	// Game.Core.BindableProperty<float>
-	// Game.Core.BindableProperty<int>
 	// Game.Core.BindableProperty<object>
 	// Game.Core.CollectionPool.<>c<object,Game.Math.float3>
 	// Game.Core.CollectionPool.<>c<object,System.Collections.Generic.KeyValuePair<object,float>>
@@ -47,52 +42,20 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// Game.Core.CollectionPool<object,int>
 	// Game.Core.CollectionPool<object,object>
 	// Game.Core.DictionaryPathStorage<object>
-	// Game.Core.EasyEvent.<>c<QFramework.Example.InterfaceEventA>
-	// Game.Core.EasyEvent.<>c<QFramework.Example.InterfaceEventB>
-	// Game.Core.EasyEvent.<>c<QFramework.Example.TypeEventSystemBasicExample.TestEventA>
-	// Game.Core.EasyEvent.<>c<QFramework.Example.TypeEventSystemInheritEventExample.EventB>
-	// Game.Core.EasyEvent.<>c<QFramework.Example.TypeEventSystemUnRegisterExample.EventA>
-	// Game.Core.EasyEvent.<>c<QFramework.Example.TypeEventSystemUnRegisterExample.EventB>
 	// Game.Core.EasyEvent.<>c<float,float>
 	// Game.Core.EasyEvent.<>c<float>
-	// Game.Core.EasyEvent.<>c<int,int>
-	// Game.Core.EasyEvent.<>c<int>
 	// Game.Core.EasyEvent.<>c<object,object>
 	// Game.Core.EasyEvent.<>c<object>
-	// Game.Core.EasyEvent.<>c__DisplayClass1_0<QFramework.Example.InterfaceEventA>
-	// Game.Core.EasyEvent.<>c__DisplayClass1_0<QFramework.Example.InterfaceEventB>
-	// Game.Core.EasyEvent.<>c__DisplayClass1_0<QFramework.Example.TypeEventSystemBasicExample.TestEventA>
-	// Game.Core.EasyEvent.<>c__DisplayClass1_0<QFramework.Example.TypeEventSystemInheritEventExample.EventB>
-	// Game.Core.EasyEvent.<>c__DisplayClass1_0<QFramework.Example.TypeEventSystemUnRegisterExample.EventA>
-	// Game.Core.EasyEvent.<>c__DisplayClass1_0<QFramework.Example.TypeEventSystemUnRegisterExample.EventB>
 	// Game.Core.EasyEvent.<>c__DisplayClass1_0<float,float>
 	// Game.Core.EasyEvent.<>c__DisplayClass1_0<float>
-	// Game.Core.EasyEvent.<>c__DisplayClass1_0<int,int>
-	// Game.Core.EasyEvent.<>c__DisplayClass1_0<int>
 	// Game.Core.EasyEvent.<>c__DisplayClass1_0<object,object>
 	// Game.Core.EasyEvent.<>c__DisplayClass1_0<object>
-	// Game.Core.EasyEvent.<>c__DisplayClass4_0<QFramework.Example.InterfaceEventA>
-	// Game.Core.EasyEvent.<>c__DisplayClass4_0<QFramework.Example.InterfaceEventB>
-	// Game.Core.EasyEvent.<>c__DisplayClass4_0<QFramework.Example.TypeEventSystemBasicExample.TestEventA>
-	// Game.Core.EasyEvent.<>c__DisplayClass4_0<QFramework.Example.TypeEventSystemInheritEventExample.EventB>
-	// Game.Core.EasyEvent.<>c__DisplayClass4_0<QFramework.Example.TypeEventSystemUnRegisterExample.EventA>
-	// Game.Core.EasyEvent.<>c__DisplayClass4_0<QFramework.Example.TypeEventSystemUnRegisterExample.EventB>
 	// Game.Core.EasyEvent.<>c__DisplayClass4_0<float,float>
 	// Game.Core.EasyEvent.<>c__DisplayClass4_0<float>
-	// Game.Core.EasyEvent.<>c__DisplayClass4_0<int,int>
-	// Game.Core.EasyEvent.<>c__DisplayClass4_0<int>
 	// Game.Core.EasyEvent.<>c__DisplayClass4_0<object,object>
 	// Game.Core.EasyEvent.<>c__DisplayClass4_0<object>
-	// Game.Core.EasyEvent<QFramework.Example.InterfaceEventA>
-	// Game.Core.EasyEvent<QFramework.Example.InterfaceEventB>
-	// Game.Core.EasyEvent<QFramework.Example.TypeEventSystemBasicExample.TestEventA>
-	// Game.Core.EasyEvent<QFramework.Example.TypeEventSystemInheritEventExample.EventB>
-	// Game.Core.EasyEvent<QFramework.Example.TypeEventSystemUnRegisterExample.EventA>
-	// Game.Core.EasyEvent<QFramework.Example.TypeEventSystemUnRegisterExample.EventB>
 	// Game.Core.EasyEvent<float,float>
 	// Game.Core.EasyEvent<float>
-	// Game.Core.EasyEvent<int,int>
-	// Game.Core.EasyEvent<int>
 	// Game.Core.EasyEvent<object,object>
 	// Game.Core.EasyEvent<object>
 	// Game.Core.FPoolWrapper<object,Game.Math.float3>
@@ -102,11 +65,8 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// Game.Core.GraphBase<object>
 	// Game.Core.GraphNodeBase<object,object>
 	// Game.Core.IBindableProperty<float>
-	// Game.Core.ICommand<object>
 	// Game.Core.IGraph<object>
 	// Game.Core.IGraphNode<object>
-	// Game.Core.IOnEvent<QFramework.Example.InterfaceEventA>
-	// Game.Core.IOnEvent<QFramework.Example.InterfaceEventB>
 	// Game.Core.IReadonlyBindableProperty<float>
 	// Game.Core.MonoSingleton<object>
 	// Game.Core.PriorityQueue.<>c__DisplayClass6_0<object>
@@ -120,45 +80,15 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// SerializableDictionaryBase.Dictionary<object,object>
 	// SerializableDictionaryBase<object,object,object>
 	// System.Action<Game.Math.float3>
-	// System.Action<QFramework.Example.InterfaceEventA>
-	// System.Action<QFramework.Example.InterfaceEventB>
-	// System.Action<QFramework.Example.TypeEventSystemBasicExample.TestEventA>
-	// System.Action<QFramework.Example.TypeEventSystemInheritEventExample.EventB>
-	// System.Action<QFramework.Example.TypeEventSystemUnRegisterExample.EventA>
-	// System.Action<QFramework.Example.TypeEventSystemUnRegisterExample.EventB>
-	// System.Action<SnakeGame.CreateFoodEvent>
-	// System.Action<SnakeGame.CreateGridEvent>
-	// System.Action<SnakeGame.DirInputEvent>
-	// System.Action<SnakeGame.EatFoodEvent>
-	// System.Action<SnakeGame.GameInitEndEvent>
-	// System.Action<SnakeGame.GameOverEvent>
-	// System.Action<SnakeGame.SnakeBiggerEvent>
-	// System.Action<SnakeGame.SnakeMoveEvent>
-	// System.Action<SnakeGame.SnakePosUpdateEvent>
 	// System.Action<System.ValueTuple<object,float>>
 	// System.Action<UnityEngine.Vector3Int>
 	// System.Action<byte>
 	// System.Action<float,float>
 	// System.Action<float>
-	// System.Action<int,int>
 	// System.Action<int>
 	// System.Action<object,object>
 	// System.Action<object>
 	// System.Action<uint>
-	// System.ArraySegment.Enumerator<Game.Client.Stream0>
-	// System.ArraySegment.Enumerator<Game.Client.TriangleUInt16>
-	// System.ArraySegment.Enumerator<Unity.Mathematics.float2>
-	// System.ArraySegment.Enumerator<Unity.Mathematics.float3>
-	// System.ArraySegment.Enumerator<Unity.Mathematics.float4>
-	// System.ArraySegment.Enumerator<UnityEngine.Rendering.VertexAttributeDescriptor>
-	// System.ArraySegment.Enumerator<ushort>
-	// System.ArraySegment<Game.Client.Stream0>
-	// System.ArraySegment<Game.Client.TriangleUInt16>
-	// System.ArraySegment<Unity.Mathematics.float2>
-	// System.ArraySegment<Unity.Mathematics.float3>
-	// System.ArraySegment<Unity.Mathematics.float4>
-	// System.ArraySegment<UnityEngine.Rendering.VertexAttributeDescriptor>
-	// System.ArraySegment<ushort>
 	// System.ByReference<Game.Client.Stream0>
 	// System.ByReference<Game.Client.TriangleUInt16>
 	// System.ByReference<Unity.Mathematics.float2>
@@ -342,21 +272,13 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Comparison<uint>
 	// System.EventHandler<object>
 	// System.Func<Game.Gameplay.GenericTeamId,Game.Gameplay.GenericTeamId,byte>
-	// System.Func<byte>
 	// System.Func<float,float,byte>
-	// System.Func<int,int,byte>
 	// System.Func<int,int>
 	// System.Func<object,byte>
 	// System.Func<object,object,byte>
-	// System.Func<object,object,object>
 	// System.Func<object>
 	// System.IEquatable<Game.Gameplay.GenericTeamId>
-	// System.Lazy<object>
 	// System.Linq.Buffer<int>
-	// System.Linq.Enumerable.Iterator<object>
-	// System.Linq.Enumerable.WhereArrayIterator<object>
-	// System.Linq.Enumerable.WhereEnumerableIterator<object>
-	// System.Linq.Enumerable.WhereListIterator<object>
 	// System.Linq.EnumerableSorter<int,int>
 	// System.Linq.EnumerableSorter<int>
 	// System.Linq.OrderedEnumerable.<GetEnumerator>d__1<int>
@@ -370,13 +292,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Predicate<int>
 	// System.Predicate<object>
 	// System.Predicate<uint>
-	// System.ReadOnlySpan.Enumerator<Game.Client.Stream0>
-	// System.ReadOnlySpan.Enumerator<Game.Client.TriangleUInt16>
-	// System.ReadOnlySpan.Enumerator<Unity.Mathematics.float2>
-	// System.ReadOnlySpan.Enumerator<Unity.Mathematics.float3>
-	// System.ReadOnlySpan.Enumerator<Unity.Mathematics.float4>
-	// System.ReadOnlySpan.Enumerator<UnityEngine.Rendering.VertexAttributeDescriptor>
-	// System.ReadOnlySpan.Enumerator<ushort>
 	// System.ReadOnlySpan<Game.Client.Stream0>
 	// System.ReadOnlySpan<Game.Client.TriangleUInt16>
 	// System.ReadOnlySpan<Unity.Mathematics.float2>
@@ -384,17 +299,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.ReadOnlySpan<Unity.Mathematics.float4>
 	// System.ReadOnlySpan<UnityEngine.Rendering.VertexAttributeDescriptor>
 	// System.ReadOnlySpan<ushort>
-	// System.Runtime.CompilerServices.AsyncTaskMethodBuilder<byte>
-	// System.Runtime.CompilerServices.ConfiguredTaskAwaitable.ConfiguredTaskAwaiter<byte>
-	// System.Runtime.CompilerServices.ConfiguredTaskAwaitable<byte>
-	// System.Runtime.CompilerServices.TaskAwaiter<byte>
-	// System.Span.Enumerator<Game.Client.Stream0>
-	// System.Span.Enumerator<Game.Client.TriangleUInt16>
-	// System.Span.Enumerator<Unity.Mathematics.float2>
-	// System.Span.Enumerator<Unity.Mathematics.float3>
-	// System.Span.Enumerator<Unity.Mathematics.float4>
-	// System.Span.Enumerator<UnityEngine.Rendering.VertexAttributeDescriptor>
-	// System.Span.Enumerator<ushort>
 	// System.Span<Game.Client.Stream0>
 	// System.Span<Game.Client.TriangleUInt16>
 	// System.Span<Unity.Mathematics.float2>
@@ -402,10 +306,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Span<Unity.Mathematics.float4>
 	// System.Span<UnityEngine.Rendering.VertexAttributeDescriptor>
 	// System.Span<ushort>
-	// System.Threading.Tasks.ContinuationTaskFromResultTask<byte>
-	// System.Threading.Tasks.Task<byte>
-	// System.Threading.Tasks.TaskFactory.<>c__DisplayClass35_0<byte>
-	// System.Threading.Tasks.TaskFactory<byte>
 	// System.ValueTuple<object,float>
 	// Unity.Collections.LowLevel.Unsafe.BurstLike.SharedStatic<System.IntPtr>
 	// Unity.Collections.NativeArray.Enumerator<Game.Client.Stream0>
@@ -446,81 +346,9 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	public void RefMethods()
 	{
 		// Game.Core.IUnRegister Game.Client.UnRegisterExtension.UnRegisterWhenDisabled<object>(Game.Core.IUnRegister,object)
-		// Game.Core.IUnRegister Game.Client.UnRegisterExtension.UnRegisterWhenGameObjectDestroyed<object>(Game.Core.IUnRegister,object)
-		// object Game.Core.Architecture<object>.ExecuteCommand<object>(Game.Core.ICommand<object>)
 		// System.Void Game.Core.Architecture<object>.RegisterModel<object>(object)
 		// System.Void Game.Core.Architecture<object>.RegisterSystem<object>(object)
-		// System.Void Game.Core.Architecture<object>.RegisterUtility<object>(object)
-		// Game.Core.IUnRegister Game.Core.CanRegisterEventExtension.RegisterEvent<SnakeGame.CreateFoodEvent>(Game.Core.ICanRegisterEvent,System.Action<SnakeGame.CreateFoodEvent>)
-		// Game.Core.IUnRegister Game.Core.CanRegisterEventExtension.RegisterEvent<SnakeGame.CreateGridEvent>(Game.Core.ICanRegisterEvent,System.Action<SnakeGame.CreateGridEvent>)
-		// Game.Core.IUnRegister Game.Core.CanRegisterEventExtension.RegisterEvent<SnakeGame.DirInputEvent>(Game.Core.ICanRegisterEvent,System.Action<SnakeGame.DirInputEvent>)
-		// Game.Core.IUnRegister Game.Core.CanRegisterEventExtension.RegisterEvent<SnakeGame.EatFoodEvent>(Game.Core.ICanRegisterEvent,System.Action<SnakeGame.EatFoodEvent>)
-		// Game.Core.IUnRegister Game.Core.CanRegisterEventExtension.RegisterEvent<SnakeGame.GameInitEndEvent>(Game.Core.ICanRegisterEvent,System.Action<SnakeGame.GameInitEndEvent>)
-		// Game.Core.IUnRegister Game.Core.CanRegisterEventExtension.RegisterEvent<SnakeGame.GameOverEvent>(Game.Core.ICanRegisterEvent,System.Action<SnakeGame.GameOverEvent>)
-		// Game.Core.IUnRegister Game.Core.CanRegisterEventExtension.RegisterEvent<SnakeGame.SnakeBiggerEvent>(Game.Core.ICanRegisterEvent,System.Action<SnakeGame.SnakeBiggerEvent>)
-		// Game.Core.IUnRegister Game.Core.CanRegisterEventExtension.RegisterEvent<SnakeGame.SnakeMoveEvent>(Game.Core.ICanRegisterEvent,System.Action<SnakeGame.SnakeMoveEvent>)
-		// Game.Core.IUnRegister Game.Core.CanRegisterEventExtension.RegisterEvent<SnakeGame.SnakePosUpdateEvent>(Game.Core.ICanRegisterEvent,System.Action<SnakeGame.SnakePosUpdateEvent>)
-		// Game.Core.IUnRegister Game.Core.CanRegisterEventExtension.RegisterEvent<object>(Game.Core.ICanRegisterEvent,System.Action<object>)
-		// System.Void Game.Core.CanRegisterEventExtension.UnRegisterEvent<object>(Game.Core.ICanRegisterEvent,System.Action<object>)
-		// System.Void Game.Core.CanSendCommandExtension.SendCommand<object>(Game.Core.ICanSendCommand)
-		// System.Void Game.Core.CanSendCommandExtension.SendCommand<object>(Game.Core.ICanSendCommand,object)
-		// System.Void Game.Core.CanSendEventExtension.SendEvent<SnakeGame.CreateFoodEvent>(Game.Core.ICanSendEvent,SnakeGame.CreateFoodEvent)
-		// System.Void Game.Core.CanSendEventExtension.SendEvent<SnakeGame.CreateGridEvent>(Game.Core.ICanSendEvent,SnakeGame.CreateGridEvent)
-		// System.Void Game.Core.CanSendEventExtension.SendEvent<SnakeGame.DirInputEvent>(Game.Core.ICanSendEvent,SnakeGame.DirInputEvent)
-		// System.Void Game.Core.CanSendEventExtension.SendEvent<SnakeGame.EatFoodEvent>(Game.Core.ICanSendEvent,SnakeGame.EatFoodEvent)
-		// System.Void Game.Core.CanSendEventExtension.SendEvent<SnakeGame.GameInitEndEvent>(Game.Core.ICanSendEvent)
-		// System.Void Game.Core.CanSendEventExtension.SendEvent<SnakeGame.GameOverEvent>(Game.Core.ICanSendEvent)
-		// System.Void Game.Core.CanSendEventExtension.SendEvent<SnakeGame.SnakeBiggerEvent>(Game.Core.ICanSendEvent,SnakeGame.SnakeBiggerEvent)
-		// System.Void Game.Core.CanSendEventExtension.SendEvent<SnakeGame.SnakeMoveEvent>(Game.Core.ICanSendEvent,SnakeGame.SnakeMoveEvent)
-		// System.Void Game.Core.CanSendEventExtension.SendEvent<SnakeGame.SnakePosUpdateEvent>(Game.Core.ICanSendEvent,SnakeGame.SnakePosUpdateEvent)
-		// System.Void Game.Core.CanSendEventExtension.SendEvent<object>(Game.Core.ICanSendEvent)
-		// System.Void Game.Core.CanSendEventExtension.SendEvent<object>(Game.Core.ICanSendEvent,object)
-		// int Game.Core.CanSendQueryExtension.SendQuery<int>(Game.Core.ICanSendQuery,Game.Core.IQuery<int>)
-		// object Game.Core.EasyEvents.GetEvent<object>()
-		// object Game.Core.EasyEvents.GetOrAddEvent<object>()
-		// Game.Core.IUnRegister Game.Core.IArchitecture.RegisterEvent<SnakeGame.CreateFoodEvent>(System.Action<SnakeGame.CreateFoodEvent>)
-		// Game.Core.IUnRegister Game.Core.IArchitecture.RegisterEvent<SnakeGame.CreateGridEvent>(System.Action<SnakeGame.CreateGridEvent>)
-		// Game.Core.IUnRegister Game.Core.IArchitecture.RegisterEvent<SnakeGame.DirInputEvent>(System.Action<SnakeGame.DirInputEvent>)
-		// Game.Core.IUnRegister Game.Core.IArchitecture.RegisterEvent<SnakeGame.EatFoodEvent>(System.Action<SnakeGame.EatFoodEvent>)
-		// Game.Core.IUnRegister Game.Core.IArchitecture.RegisterEvent<SnakeGame.GameInitEndEvent>(System.Action<SnakeGame.GameInitEndEvent>)
-		// Game.Core.IUnRegister Game.Core.IArchitecture.RegisterEvent<SnakeGame.GameOverEvent>(System.Action<SnakeGame.GameOverEvent>)
-		// Game.Core.IUnRegister Game.Core.IArchitecture.RegisterEvent<SnakeGame.SnakeBiggerEvent>(System.Action<SnakeGame.SnakeBiggerEvent>)
-		// Game.Core.IUnRegister Game.Core.IArchitecture.RegisterEvent<SnakeGame.SnakeMoveEvent>(System.Action<SnakeGame.SnakeMoveEvent>)
-		// Game.Core.IUnRegister Game.Core.IArchitecture.RegisterEvent<SnakeGame.SnakePosUpdateEvent>(System.Action<SnakeGame.SnakePosUpdateEvent>)
-		// Game.Core.IUnRegister Game.Core.IArchitecture.RegisterEvent<object>(System.Action<object>)
-		// System.Void Game.Core.IArchitecture.SendCommand<object>(object)
-		// object Game.Core.IArchitecture.SendCommand<object>(Game.Core.ICommand<object>)
-		// System.Void Game.Core.IArchitecture.SendEvent<SnakeGame.CreateFoodEvent>(SnakeGame.CreateFoodEvent)
-		// System.Void Game.Core.IArchitecture.SendEvent<SnakeGame.CreateGridEvent>(SnakeGame.CreateGridEvent)
-		// System.Void Game.Core.IArchitecture.SendEvent<SnakeGame.DirInputEvent>(SnakeGame.DirInputEvent)
-		// System.Void Game.Core.IArchitecture.SendEvent<SnakeGame.EatFoodEvent>(SnakeGame.EatFoodEvent)
-		// System.Void Game.Core.IArchitecture.SendEvent<SnakeGame.GameInitEndEvent>()
-		// System.Void Game.Core.IArchitecture.SendEvent<SnakeGame.GameOverEvent>()
-		// System.Void Game.Core.IArchitecture.SendEvent<SnakeGame.SnakeBiggerEvent>(SnakeGame.SnakeBiggerEvent)
-		// System.Void Game.Core.IArchitecture.SendEvent<SnakeGame.SnakeMoveEvent>(SnakeGame.SnakeMoveEvent)
-		// System.Void Game.Core.IArchitecture.SendEvent<SnakeGame.SnakePosUpdateEvent>(SnakeGame.SnakePosUpdateEvent)
-		// System.Void Game.Core.IArchitecture.SendEvent<object>()
-		// System.Void Game.Core.IArchitecture.SendEvent<object>(object)
-		// int Game.Core.IArchitecture.SendQuery<int>(Game.Core.IQuery<int>)
-		// System.Void Game.Core.IArchitecture.UnRegisterEvent<object>(System.Action<object>)
 		// System.Void Game.Core.IOCContainer.Register<object>(object)
-		// Game.Core.IUnRegister Game.Core.OnGlobalEventExtension.RegisterEvent<QFramework.Example.InterfaceEventA>(Game.Core.IOnEvent<QFramework.Example.InterfaceEventA>)
-		// Game.Core.IUnRegister Game.Core.OnGlobalEventExtension.RegisterEvent<QFramework.Example.InterfaceEventB>(Game.Core.IOnEvent<QFramework.Example.InterfaceEventB>)
-		// System.Void Game.Core.OnGlobalEventExtension.UnRegisterEvent<QFramework.Example.InterfaceEventB>(Game.Core.IOnEvent<QFramework.Example.InterfaceEventB>)
-		// Game.Core.IUnRegister Game.Core.TypeEventSystem.Register<QFramework.Example.InterfaceEventA>(System.Action<QFramework.Example.InterfaceEventA>)
-		// Game.Core.IUnRegister Game.Core.TypeEventSystem.Register<QFramework.Example.InterfaceEventB>(System.Action<QFramework.Example.InterfaceEventB>)
-		// Game.Core.IUnRegister Game.Core.TypeEventSystem.Register<QFramework.Example.TypeEventSystemBasicExample.TestEventA>(System.Action<QFramework.Example.TypeEventSystemBasicExample.TestEventA>)
-		// Game.Core.IUnRegister Game.Core.TypeEventSystem.Register<QFramework.Example.TypeEventSystemUnRegisterExample.EventA>(System.Action<QFramework.Example.TypeEventSystemUnRegisterExample.EventA>)
-		// Game.Core.IUnRegister Game.Core.TypeEventSystem.Register<QFramework.Example.TypeEventSystemUnRegisterExample.EventB>(System.Action<QFramework.Example.TypeEventSystemUnRegisterExample.EventB>)
-		// Game.Core.IUnRegister Game.Core.TypeEventSystem.Register<object>(System.Action<object>)
-		// System.Void Game.Core.TypeEventSystem.Send<QFramework.Example.InterfaceEventA>()
-		// System.Void Game.Core.TypeEventSystem.Send<QFramework.Example.InterfaceEventB>()
-		// System.Void Game.Core.TypeEventSystem.Send<QFramework.Example.TypeEventSystemBasicExample.TestEventA>()
-		// System.Void Game.Core.TypeEventSystem.Send<QFramework.Example.TypeEventSystemBasicExample.TestEventA>(QFramework.Example.TypeEventSystemBasicExample.TestEventA)
-		// System.Void Game.Core.TypeEventSystem.Send<QFramework.Example.TypeEventSystemInheritEventExample.EventB>()
-		// System.Void Game.Core.TypeEventSystem.Send<object>(object)
-		// System.Void Game.Core.TypeEventSystem.UnRegister<QFramework.Example.InterfaceEventB>(System.Action<QFramework.Example.InterfaceEventB>)
-		// System.Void Game.Core.TypeEventSystem.UnRegister<QFramework.Example.TypeEventSystemUnRegisterExample.EventA>(System.Action<QFramework.Example.TypeEventSystemUnRegisterExample.EventA>)
 		// GameFramework.DataTable.IDataTable<object> GameFramework.DataTable.IDataTableManager.GetDataTable<object>()
 		// System.Void GameFramework.GameFrameworkLog.Error<object,object>(string,object,object)
 		// System.Void GameFramework.GameFrameworkLog.Info<object,object,object,object>(string,object,object,object,object)
@@ -539,28 +367,9 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 		// string GameFramework.Utility.Text.ITextHelper.Format<object,object,object,object>(string,object,object,object,object)
 		// string GameFramework.Utility.Text.ITextHelper.Format<object,object>(string,object,object)
 		// string GameFramework.Utility.Text.ITextHelper.Format<object>(string,object)
-		// QFramework.Example.InterfaceEventA System.Activator.CreateInstance<QFramework.Example.InterfaceEventA>()
-		// QFramework.Example.InterfaceEventB System.Activator.CreateInstance<QFramework.Example.InterfaceEventB>()
-		// QFramework.Example.TypeEventSystemBasicExample.TestEventA System.Activator.CreateInstance<QFramework.Example.TypeEventSystemBasicExample.TestEventA>()
-		// QFramework.Example.TypeEventSystemInheritEventExample.EventB System.Activator.CreateInstance<QFramework.Example.TypeEventSystemInheritEventExample.EventB>()
 		// object System.Activator.CreateInstance<object>()
-		// object[] System.Array.Empty<object>()
-		// bool System.Linq.Enumerable.Any<object>(System.Collections.Generic.IEnumerable<object>,System.Func<object,bool>)
-		// int System.Linq.Enumerable.Count<object>(System.Collections.Generic.IEnumerable<object>,System.Func<object,bool>)
-		// object System.Linq.Enumerable.First<object>(System.Collections.Generic.IEnumerable<object>,System.Func<object,bool>)
 		// System.Linq.IOrderedEnumerable<int> System.Linq.Enumerable.OrderBy<int,int>(System.Collections.Generic.IEnumerable<int>,System.Func<int,int>)
 		// int[] System.Linq.Enumerable.ToArray<int>(System.Collections.Generic.IEnumerable<int>)
-		// System.Collections.Generic.IEnumerable<object> System.Linq.Enumerable.Where<object>(System.Collections.Generic.IEnumerable<object>,System.Func<object,bool>)
-		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<byte>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,QFramework.Example.CommandWithResultExample.TaskACommand.<OnExecute>d__0>(System.Runtime.CompilerServices.TaskAwaiter&,QFramework.Example.CommandWithResultExample.TaskACommand.<OnExecute>d__0&)
-		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<byte>.Start<QFramework.Example.CommandWithResultExample.TaskACommand.<OnExecute>d__0>(QFramework.Example.CommandWithResultExample.TaskACommand.<OnExecute>d__0&)
-		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,QFramework.Example.UnRegisterWhenCurrentSceneUnloadedExample.<Start>d__2>(System.Runtime.CompilerServices.TaskAwaiter&,QFramework.Example.UnRegisterWhenCurrentSceneUnloadedExample.<Start>d__2&)
-		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,QFramework.PointGame.AchievementSystem.<<OnInit>b__2_2>d>(System.Runtime.CompilerServices.TaskAwaiter&,QFramework.PointGame.AchievementSystem.<<OnInit>b__2_2>d&)
-		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<byte>,QFramework.Example.CommandWithResultExample.<SendTaskACommand>d__5>(System.Runtime.CompilerServices.TaskAwaiter<byte>&,QFramework.Example.CommandWithResultExample.<SendTaskACommand>d__5&)
-		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start<QFramework.Example.CommandWithResultExample.<SendTaskACommand>d__5>(QFramework.Example.CommandWithResultExample.<SendTaskACommand>d__5&)
-		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start<QFramework.Example.UnRegisterWhenCurrentSceneUnloadedExample.<Start>d__2>(QFramework.Example.UnRegisterWhenCurrentSceneUnloadedExample.<Start>d__2&)
-		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start<QFramework.PointGame.AchievementSystem.<<OnInit>b__2_2>d>(QFramework.PointGame.AchievementSystem.<<OnInit>b__2_2>d&)
-		// object& System.Runtime.CompilerServices.Unsafe.As<object,object>(object&)
-		// System.Void* System.Runtime.CompilerServices.Unsafe.AsPointer<object>(object&)
 		// Unity.Collections.NativeArray<Game.Client.Stream0> Unity.Collections.LowLevel.Unsafe.NativeArrayUnsafeUtility.ConvertExistingDataToNativeArray<Game.Client.Stream0>(System.Void*,int,Unity.Collections.Allocator)
 		// Unity.Collections.NativeArray<Game.Client.TriangleUInt16> Unity.Collections.LowLevel.Unsafe.NativeArrayUnsafeUtility.ConvertExistingDataToNativeArray<Game.Client.TriangleUInt16>(System.Void*,int,Unity.Collections.Allocator)
 		// Unity.Collections.NativeArray<Unity.Mathematics.float2> Unity.Collections.LowLevel.Unsafe.NativeArrayUnsafeUtility.ConvertExistingDataToNativeArray<Unity.Mathematics.float2>(System.Void*,int,Unity.Collections.Allocator)
@@ -597,8 +406,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 		// object UnityEngine.Object.Instantiate<object>(object)
 		// object UnityEngine.Object.Instantiate<object>(object,UnityEngine.Transform)
 		// object UnityEngine.Object.Instantiate<object>(object,UnityEngine.Transform,bool)
-		// object UnityEngine.Object.Instantiate<object>(object,UnityEngine.Vector3,UnityEngine.Quaternion)
-		// object UnityEngine.Resources.Load<object>(string)
 		// object UnityEngine.Tilemaps.Tilemap.GetTile<object>(UnityEngine.Vector3Int)
 		// object UnityExtension.GetOrAddComponent<object>(UnityEngine.GameObject)
 		// GameFramework.DataTable.IDataTable<object> UnityGameFramework.Runtime.DataTableComponent.GetDataTable<object>()
