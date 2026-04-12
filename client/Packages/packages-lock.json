@@ -38,7 +38,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "3990ccd867279cc96a2906fb370126e555edb2f0"
+      "hash": "f67e7851c345f514e9079819cae16273ff05b33c"
     },
     "com.syomus.proceduraltoolkit": {
       "version": "https://github.com/Syomus/ProceduralToolkit.git#upm",

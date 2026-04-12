@@ -107,3 +107,6 @@ Temp
 
 #wxmini project
 /wxProject
+
+# DLL files (generated on build)
+client/Assets/GameRes/DLL/
