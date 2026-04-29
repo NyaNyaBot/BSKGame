@@ -14,26 +14,16 @@
 
 ## Model routing (Cursor / Task subagents)
 
-In Cursor, delegated work runs through the **Task** tool (subagents). The only
-model hint in this stack is `model: "fast"` for a faster, lower-cost subagent;
-**omit** `model` (or do not set `fast`) for the default subagent run, which should
-be used for the heaviest reasoning.
+In Cursor, delegated work runs through the **Task** tool (subagents). CCGS
+subagents should default to `model: "gpt-5.5"` whenever a model is specified.
 
-| Route | Task invocation | When to use (maps from legacy Claude tiers) |
-|-------|-----------------|----------------------------------------------|
-| **Default** | Main chat, or Task **without** `model: "fast"` | Multi-document synthesis, high-stakes phase gates, cross-system holistic review — former **Opus** tier |
-| **Fast** | Task with `model: "fast"` | Read-only status checks, formatting, simple lookups, implementation, design authoring, single-system analysis — former **Haiku** and **Sonnet** tiers |
+| Route | Task invocation | When to use |
+|-------|-----------------|-------------|
+| **Default** | Main chat, or Task with `model: "gpt-5.5"` | All CCGS delegated work: synthesis, phase gates, reviews, implementation, formatting, and lookups |
 
-Skills that should spawn **fast** subagents when delegating: `/help`, `/sprint-status`,
-`/story-readiness`, `/scope-check`, `/project-stage-detect`, `/changelog`,
-`/patch-notes`, `/onboard`, and **all other skills** unless listed below.
-
-Skills that must use **default** (no `fast`): `/review-all-gdds`, `/architecture-review`,
-`/gate-check`
-
-When creating new skills: prefer **fast** for read-only formatting, narrow lookups,
-and routine implementation; use **default** only if the skill must synthesize many
-documents with high-stakes verdicts.
+When creating new CCGS skills or subagents, set the model to `gpt-5.5` if the
+file supports an explicit `model` field. Do not introduce lower-tier model
+routing for routine tasks.
 
 ## Subagents vs Agent Teams
 
@@ -43,8 +33,7 @@ This project uses two distinct multi-agent patterns:
 Spawned via **Cursor `Task`** within a session. Used by all `team-*` skills and
 orchestration skills. Subagents share the session's permission context, run
 sequentially or in parallel within the session, and return results to the parent.
-Pass `model: "fast"` when the spawned work matches the **Fast** row above; omit it
-for **Default** (leadership / gate / holistic review).
+Use `model: "gpt-5.5"` for CCGS subagent invocations that specify a model.
 
 **When to spawn in parallel**: If two subagents' inputs are independent (neither
 needs the other's output to begin), spawn both Task calls simultaneously rather

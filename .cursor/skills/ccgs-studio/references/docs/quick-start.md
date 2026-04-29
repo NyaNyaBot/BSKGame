@@ -17,19 +17,19 @@ Flow State, Bartle Player Types). Use whichever engine set matches your project.
 
 There are three tiers of agents:
 
-- **Tier 1 (default — no `fast`)**: Directors who make high-level decisions; run in
-  main chat or Task **without** `model: "fast"`
+- **Tier 1 (`gpt-5.5`)**: Directors who make high-level decisions; run in
+  main chat or Task with `model: "gpt-5.5"`
   - `creative-director` -- vision and creative conflict resolution
   - `technical-director` -- architecture and technology decisions
   - `producer` -- scheduling, coordination, and risk management
 
-- **Tier 2 (`fast`)**: Department leads who own their domain — delegate via Task with
-  `model: "fast"` when spawning subagents
+- **Tier 2 (`gpt-5.5`)**: Department leads who own their domain — delegate via Task with
+  `model: "gpt-5.5"` when spawning subagents
   - `game-designer`, `lead-programmer`, `art-director`, `audio-director`,
     `narrative-director`, `qa-lead`, `release-manager`, `localization-lead`
 
-- **Tier 3 (`fast`)**: Specialists who execute within their domain — same Task
-  `model: "fast"` convention
+- **Tier 3 (`gpt-5.5`)**: Specialists who execute within their domain — same Task
+  `model: "gpt-5.5"` convention
   - Designers, programmers, artists, writers, testers, engineers
 
 ### 2. Pick the Right Agent for the Job

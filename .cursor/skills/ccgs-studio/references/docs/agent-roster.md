@@ -5,8 +5,8 @@ The following agents are available. Each has a dedicated definition file in
 spans multiple domains, the coordinating agent (usually `producer` or the
 domain lead) should delegate to specialists.
 
-## Tier 1 -- Leadership Agents (default — no `fast`)
-Run in **main chat** or spawn Task **without** `model: "fast"` for high-stakes synthesis.
+## Tier 1 -- Leadership Agents (`gpt-5.5`)
+Run in **main chat** or spawn Task with `model: "gpt-5.5"` for high-stakes synthesis.
 
 | Agent | Domain | When to Use |
 |-------|--------|-------------|
@@ -14,8 +14,8 @@ Run in **main chat** or spawn Task **without** `model: "fast"` for high-stakes s
 | `technical-director` | Technical vision | Architecture decisions, tech stack choices, performance strategy |
 | `producer` | Production management | Sprint planning, milestone tracking, risk management, coordination |
 
-## Tier 2 -- Department Lead Agents (`fast` subagent)
-Delegate via Task with `model: "fast"` unless the user explicitly keeps the work in main chat.
+## Tier 2 -- Department Lead Agents (`gpt-5.5` subagent)
+Delegate via Task with `model: "gpt-5.5"` unless the user explicitly keeps the work in main chat.
 
 | Agent | Domain | When to Use |
 |-------|--------|-------------|
@@ -28,7 +28,7 @@ Delegate via Task with `model: "fast"` unless the user explicitly keeps the work
 | `release-manager` | Release pipeline | Build management, versioning, changelogs, deployment, rollbacks |
 | `localization-lead` | Internationalization | String externalization, translation pipeline, locale testing |
 
-## Tier 3 -- Specialist Agents (`fast` subagent)
+## Tier 3 -- Specialist Agents (`gpt-5.5` subagent)
 | Agent | Domain | When to Use |
 |-------|--------|-------------|
 | `systems-designer` | Systems design | Specific mechanic implementation, formula design, loops |

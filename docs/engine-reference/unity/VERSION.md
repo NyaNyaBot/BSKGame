@@ -1,21 +1,23 @@
-# Unity — Version Reference
+# Unity — 版本参考
 
-| Field | Value |
-|-------|-------|
-| **Engine Version** | 2022.3.17f1 |
-| **Project Pinned** | 2026-04-12 |
-| **LLM Knowledge Cutoff** | May 2025 |
-| **Risk Level** | LOW — version is within LLM training data |
 
-## Note
+| 字段 | 值 |
+|---|---|
+| **引擎版本** | 2022.3.17f1 |
+| **项目锁定日期** | 2026-04-12 |
+| **LLM 知识截止** | 2025-05 |
+| **风险等级** | 低 — 该版本位于 LLM 训练数据覆盖范围内 |
 
-This engine version (Unity 2022.3 LTS) is well within the LLM's training data.
-Engine reference docs are optional but can be added later if agents suggest incorrect APIs.
 
-Run `/setup-engine refresh` to populate full reference docs at any time.
+## 说明
 
-## Project-Specific Notes
+该引擎版本（Unity 2022.3 LTS）位于 LLM 训练数据覆盖范围内。
+引擎参考文档当前为可选；如果后续 agent 提出疑似错误或不确定的 API，可再补充完整参考。
 
-- Platform target: WeChat Mini Game (WebGL WASM)
-- Existing export pipeline: HybridCLR hot-reload + WeChat WASM export
-- Key constraint: WebGL environment — no threading, limited memory, touch-only input
+可随时运行 `/setup-engine refresh` 填充完整引擎参考文档。
+
+## 项目特定说明
+
+- 目标平台：微信小游戏（WebGL WASM）
+- 现有导出管线：HybridCLR 热更 + 微信 WASM 导出
+- 关键约束：WebGL 环境无线程、内存受限、仅触屏输入

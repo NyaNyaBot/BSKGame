@@ -35,16 +35,16 @@
 
 ## Performance Budgets
 
-- **Target Framerate**: [TO BE CONFIGURED]
-- **Frame Budget**: [TO BE CONFIGURED]
-- **Draw Calls**: [TO BE CONFIGURED]
-- **Memory Ceiling**: [TO BE CONFIGURED]
+- **Target Framerate**: 30 FPS minimum on target WeChat WebGL devices; 60 FPS stretch on high-end devices
+- **Frame Budget**: 33.3 ms at 30 FPS; 16.7 ms stretch at 60 FPS
+- **Draw Calls**: Combat target <= 70 draw calls during PerfectParry peak; normal gameplay target <= 50 draw calls
+- **Memory Ceiling**: 256 MB runtime working set target for MVP WebGL; no unbounded combat event or feedback logs
 
 ## Testing
 
 - **Framework**: NUnit (Unity Test Framework)
-- **Minimum Coverage**: [TO BE CONFIGURED]
-- **Required Tests**: Balance formulas, gameplay systems
+- **Minimum Coverage**: 80% line/branch coverage target for pure gameplay services once implementation begins; 100% contract coverage for timing, HP mutation, idempotency, and stale-context acceptance criteria
+- **Required Tests**: Balance formulas, gameplay systems, combat clock, parry timing boundaries, HP/damage idempotency, input hit area priority, scene unload cleanup, HybridCLR/WebGL smoke evidence
 
 ## Forbidden Patterns
 
@@ -59,7 +59,19 @@
 ## Architecture Decisions Log
 
 <!-- Quick reference linking to full ADRs in docs/architecture/ -->
-- [No ADRs yet — use /architecture-decision to create one]
+- ADR-0001: `docs/architecture/adr-0001-scene-lifecycle-context-routing.md` — 场景生命周期与场景上下文路由
+- ADR-0002: `docs/architecture/adr-0002-battle-event-bus-dto-versioning.md` — 战斗事件总线与 DTO 版本策略
+- ADR-0003: `docs/architecture/adr-0003-gameplay-unity-hybridclr-layering.md` — 玩法逻辑、Unity 适配器与 HybridCLR 的运行时程序集分层
+- ADR-0004: `docs/architecture/adr-0004-combat-clock-deterministic-ordering.md` — 战斗时钟与确定性战斗排序
+- ADR-0005: `docs/architecture/adr-0005-damage-hp-ownership.md` — 伤害与 HP 所有权
+- ADR-0006: `docs/architecture/adr-0006-mobile-touch-timestamp-hit-area-strategy.md` — 移动触摸时间戳与输入触区策略
+- ADR-0007: `docs/architecture/adr-0007-parry-timeline-counter-handoff.md` — 弹反时间轴派生与 Counter Handoff
+- ADR-0008: `docs/architecture/adr-0008-enemy-attack-pattern-ownership.md` — 敌方攻击模式数据与调度所有权
+- ADR-0009: `docs/architecture/adr-0009-battle-feedback-quality-hitstop.md` — 战斗反馈质量分级与 WebGL 降级策略
+- ADR-0010: `docs/architecture/adr-0010-uiframe-battle-hud-composition.md` — UIFrame 战斗 HUD 组成方式
+- ADR-0011: `docs/architecture/adr-0011-character-schema-snapshot-ownership.md` — 角色数据模型 Schema 与快照所有权
+- ADR-0012: `docs/architecture/adr-0012-action-service-boundary.md` — 技能与行动服务边界
+- ADR-0013: `docs/architecture/adr-0013-deterministic-combat-test-strategy.md` — 确定性战斗逻辑测试策略
 
 ## Engine Specialists
 

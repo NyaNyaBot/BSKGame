@@ -5,7 +5,7 @@ argument-hint: "[focus: full | coverage | consistency | engine | single-gdd path
 user-invocable: true
 allowed-tools: Read, Glob, Grep, Write, Task, AskQuestion
 agent: technical-director
-model: default
+model: gpt-5.5
 ---
 
 # Architecture Review

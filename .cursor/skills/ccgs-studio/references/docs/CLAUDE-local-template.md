@@ -7,8 +7,8 @@ This file is gitignored and will not be committed.
 # Personal Preferences
 
 ## Model Preferences (Cursor)
-- Prefer **main chat** or Task **without** `model: "fast"` for complex design tasks and phase gates
-- Use Task with `model: "fast"` for quick lookups, formatting, and routine implementation
+- Prefer **main chat** or Task with `model: "gpt-5.5"` for complex design tasks and phase gates
+- Use Task with `model: "gpt-5.5"` for quick lookups, formatting, and routine implementation
 
 ## Workflow Preferences
 - Always run tests after code changes

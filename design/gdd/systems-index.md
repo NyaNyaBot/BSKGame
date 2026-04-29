@@ -2,7 +2,7 @@
 
 > **Status**: Draft
 > **Created**: 2026-04-12
-> **Last Updated**: 2026-04-12
+> **Last Updated**: 2026-04-27
 > **Source Concept**: design/gdd/game-concept.md
 
 ---
@@ -17,16 +17,16 @@
 
 | # | System Name | Category | Priority | Status | Design Doc | Depends On |
 |---|---|---|---|---|---|---|
-| 1 | 角色数据模型 | Core | MVP | Not Started | — | — |
-| 2 | 输入系统 | Core | MVP | Not Started | — | — |
-| 3 | 场景管理 | Core | MVP | Not Started | — | — |
-| 4 | 回合管理器 | Gameplay | MVP | Not Started | — | 输入系统, 角色数据模型 |
-| 5 | 伤害与生命系统 | Gameplay | MVP | Not Started | — | 角色数据模型 |
-| 6 | 实时弹反系统 | Gameplay | MVP | Not Started | — | 输入系统, 回合管理器, 伤害与生命系统 |
-| 7 | 敌人 AI 与攻击模式 | Gameplay | MVP | Not Started | — | 回合管理器, 角色数据模型, 伤害与生命系统 |
-| 8 | 技能与行动系统 | Gameplay | MVP | Not Started | — | 回合管理器, 角色数据模型, 伤害与生命系统 |
-| 9 | 战斗反馈系统 | Presentation | MVP | Not Started | — | 实时弹反系统, 伤害与生命系统, 回响值系统 |
-| 10 | 战斗 UI | UI | MVP | Not Started | — | 回合管理器, 实时弹反系统, 回响值系统, 技能与行动系统 |
+| 1 | 角色数据模型 | Core | MVP | Approved | [角色数据模型](角色数据模型.md) | — |
+| 2 | 输入系统 | Core | MVP | Approved | [输入系统](输入系统.md) | 角色数据模型 |
+| 3 | 场景管理 | Core | MVP | Approved | [场景管理](场景管理.md) | — |
+| 4 | 回合管理器 | Gameplay | MVP | Approved | [回合管理器](回合管理器.md) | 输入系统, 角色数据模型 |
+| 5 | 伤害与生命系统 | Gameplay | MVP | Approved | [伤害与生命系统](伤害与生命系统.md) | 角色数据模型 |
+| 6 | 实时弹反系统 | Gameplay | MVP | Approved | [实时弹反系统](实时弹反系统.md) | 输入系统, 回合管理器, 伤害与生命系统 |
+| 7 | 敌人 AI 与攻击模式 | Gameplay | MVP | Approved | [敌人 AI 与攻击模式](敌人 AI 与攻击模式.md) | 回合管理器, 角色数据模型, 伤害与生命系统 |
+| 8 | 技能与行动系统 | Gameplay | MVP | Approved | [技能与行动系统](技能与行动系统.md) | 回合管理器, 角色数据模型, 伤害与生命系统 |
+| 9 | 战斗反馈系统 | Presentation | MVP | Approved | [战斗反馈系统](战斗反馈系统.md) | 实时弹反系统, 伤害与生命系统 |
+| 10 | 战斗 UI | UI | MVP | Approved | [战斗 UI](战斗 UI.md) | 回合管理器, 实时弹反系统, 技能与行动系统 |
 | 11 | 箱庭探索 | Gameplay | Vertical Slice | Not Started | — | 输入系统, 场景管理 |
 | 12 | 回响值系统 | Gameplay | Vertical Slice | Not Started | — | 实时弹反系统 |
 | 13 | 记忆碎片系统 | Progression | Vertical Slice | Not Started | — | 角色数据模型, 箱庭探索 |
@@ -150,17 +150,17 @@ Effort: S = 1 session, M = 2-3 sessions, L = 4+ sessions
 | Metric | Count |
 |---|---|
 | Total systems identified | 18 |
-| Design docs started | 0 |
-| Design docs reviewed | 0 |
-| Design docs approved | 0 |
-| MVP systems designed | 0/10 |
+| Design docs started | 10 |
+| Design docs reviewed | 11 |
+| Design docs approved | 10 |
+| MVP systems designed | 10/10 |
 | Vertical Slice systems designed | 0/6 |
 
 ---
 
 ## Next Steps
 
-- [ ] 按设计顺序逐系统撰写 GDD — 从「角色数据模型」开始 (`/design-system 角色数据模型`)
-- [ ] 每完成一个 GDD 运行 `/design-review` 验证质量
-- [ ] MVP 10 个系统全部完成后运行 `/gate-check pre-production`
-- [ ] 最高风险系统（实时弹反 + 输入）尽早原型验证 (`/prototype 弹反战斗`)
+- [x] MVP 10 个核心系统 GDD 完成并 review
+- [ ] 运行 `/gate-check pre-production` 验证是否可进入实现前阶段
+- [ ] 最高风险系统（实时弹反 + 输入 + 反馈）尽早原型验证 (`/prototype 弹反战斗`)
+- [ ] 继续补 Vertical Slice 系统：箱庭探索、回响值系统、记忆碎片、叙事、探索 UI、音频管理

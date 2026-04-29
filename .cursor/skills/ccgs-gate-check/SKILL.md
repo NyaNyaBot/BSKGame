@@ -4,7 +4,7 @@ description: "Validate readiness to advance between development phases. Produces
 argument-hint: "[target-phase: systems-design | technical-setup | pre-production | production | polish | release] [--review full|lean|solo]"
 user-invocable: true
 allowed-tools: Read, Glob, Grep, Bash, Write, Task, AskQuestion
-model: default
+model: gpt-5.5
 ---
 
 # Phase Gate Validation

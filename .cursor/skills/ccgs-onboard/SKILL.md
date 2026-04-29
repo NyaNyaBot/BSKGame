@@ -4,7 +4,7 @@ description: "Generates a contextual onboarding document for a new contributor o
 argument-hint: "[role|area]"
 user-invocable: true
 allowed-tools: Read, Glob, Grep, Write
-model: fast
+model: gpt-5.5
 ---
 
 ## Phase 1: Load Project Context
