@@ -4,7 +4,7 @@ description: "Validate that a story file is implementation-ready. Checks for emb
 argument-hint: "[story-file-path or 'all' or 'sprint']"
 user-invocable: true
 allowed-tools: Read, Glob, Grep, AskQuestion, Task
-model: gpt-5.5
+model: claude-4.5-haiku-thinking
 ---
 
 # Story Readiness

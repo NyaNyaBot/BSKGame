@@ -2,7 +2,7 @@
 name: writer
 description: "The Writer creates dialogue, lore entries, item descriptions, environmental text, and all player-facing written content. Use this agent for dialogue writing, lore creation, item/ability descriptions, or in-game text of any kind."
 tools: Read, Glob, Grep, Write, Edit
-model: gpt-5.5
+model: claude-4.6-sonnet-medium-thinking
 maxTurns: 20
 disallowedTools: Bash
 memory: project

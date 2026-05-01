@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
@@ -55,7 +55,8 @@
     </ItemGroup>
 
     <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-        <Exec Command="CopyDLL.bat" />
+        <Exec Command="CopyDLL.bat" WorkingDirectory="$(MSBuildProjectDirectory)" Condition="$([MSBuild]::IsOSPlatform('Windows'))" />
+        <Exec Command="sh &quot;$(MSBuildProjectDirectory)/CopyDLL.sh&quot;" WorkingDirectory="$(MSBuildProjectDirectory)" Condition="!$([MSBuild]::IsOSPlatform('Windows'))" />
     </Target>
     
 </Project>

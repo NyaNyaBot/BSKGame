@@ -7,8 +7,8 @@ This file is gitignored and will not be committed.
 # Personal Preferences
 
 ## Model Preferences (Cursor)
-- Prefer **main chat** or Task with `model: "gpt-5.5"` for complex design tasks and phase gates
-- Use Task with `model: "gpt-5.5"` for quick lookups, formatting, and routine implementation
+- Prefer **main chat** or Task with `model: "claude-4.6-opus-high-thinking"` for complex design tasks and phase gates
+- Use Task with `model: "claude-4.6-sonnet-medium-thinking"` for routine implementation and `model: "claude-4.5-haiku-thinking"` for quick lookups or formatting
 
 ## Workflow Preferences
 - Always run tests after code changes

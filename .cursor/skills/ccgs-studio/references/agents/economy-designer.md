@@ -2,7 +2,7 @@
 name: economy-designer
 description: "The Economy Designer specializes in resource economies, loot systems, progression curves, and in-game market design. Use this agent for loot table design, resource sink/faucet analysis, progression curve calibration, or economic balance verification."
 tools: Read, Glob, Grep, Write, Edit
-model: gpt-5.5
+model: claude-4.6-sonnet-medium-thinking
 maxTurns: 20
 disallowedTools: Bash
 memory: project

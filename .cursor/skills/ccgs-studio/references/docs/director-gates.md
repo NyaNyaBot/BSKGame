@@ -124,7 +124,7 @@ For phase gates, record in `docs/architecture/architecture.md` or
 
 ## Tier 1 — Creative Director Gates
 
-Agent: `creative-director` | Model: gpt-5.5 | Domain: Vision, pillars, player experience
+Agent: `creative-director` | Model: claude-4.6-opus-high-thinking | Domain: Vision, pillars, player experience
 
 ---
 
@@ -266,7 +266,7 @@ any session that produces player feedback
 
 ## Tier 1 — Technical Director Gates
 
-Agent: `technical-director` | Model: gpt-5.5 | Domain: Architecture, engine risk, performance
+Agent: `technical-director` | Model: claude-4.6-opus-high-thinking | Domain: Architecture, engine risk, performance
 
 ---
 
@@ -412,7 +412,7 @@ or before finalizing any engine-specific implementation approach
 
 ## Tier 1 — Producer Gates
 
-Agent: `producer` | Model: gpt-5.5 | Domain: Scope, timeline, dependencies, production risk
+Agent: `producer` | Model: claude-4.6-opus-high-thinking | Domain: Scope, timeline, dependencies, production risk
 
 ---
 
@@ -538,7 +538,7 @@ is invoked
 
 ## Tier 1 — Art Director Gates
 
-Agent: `art-director` | Model: gpt-5.5 | Domain: Visual identity, art bible, visual production readiness
+Agent: `art-director` | Model: claude-4.6-sonnet-medium-thinking | Domain: Visual identity, art bible, visual production readiness
 
 ---
 
@@ -619,7 +619,7 @@ Agent: `art-director` | Model: gpt-5.5 | Domain: Visual identity, art bible, vis
 ## Tier 2 — Lead Gates
 
 These gates are invoked by orchestration skills and senior skills when a domain
-specialist's feasibility sign-off is needed. Tier 2 leads use Task with `model: "gpt-5.5"` unless the gate is listed as **default** above.
+specialist's feasibility sign-off is needed. Tier 2 leads use Task with `model: "claude-4.6-sonnet-medium-thinking"` unless the gate is listed as **default** above.
 
 ---
 

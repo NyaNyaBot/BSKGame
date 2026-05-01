@@ -12,18 +12,24 @@
 5. **No Unilateral Cross-Domain Changes**: An agent must never modify files
    outside its designated directories without explicit delegation.
 
-## Model routing (Cursor / Task subagents)
+## Model Tier Assignment (Cursor / Task subagents)
 
-In Cursor, delegated work runs through the **Task** tool (subagents). CCGS
-subagents should default to `model: "gpt-5.5"` whenever a model is specified.
+Skills and agents are assigned to model tiers based on task complexity:
 
-| Route | Task invocation | When to use |
-|-------|-----------------|-------------|
-| **Default** | Main chat, or Task with `model: "gpt-5.5"` | All CCGS delegated work: synthesis, phase gates, reviews, implementation, formatting, and lookups |
+| Tier | Cursor model ID | When to use |
+|------|-----------------|-------------|
+| **Haiku** | `claude-4.5-haiku-thinking` | Read-only status checks, formatting, simple lookups -- no creative judgment needed |
+| **Sonnet** | `claude-4.6-sonnet-medium-thinking` | Implementation, design authoring, analysis of individual systems -- default for most work |
+| **Opus** | `claude-4.6-opus-high-thinking` | Multi-document synthesis, high-stakes phase gate verdicts, cross-system holistic review |
 
-When creating new CCGS skills or subagents, set the model to `gpt-5.5` if the
-file supports an explicit `model` field. Do not introduce lower-tier model
-routing for routine tasks.
+Skills with Haiku: `/help`, `/sprint-status`, `/story-readiness`, `/scope-check`,
+`/project-stage-detect`, `/changelog`, `/patch-notes`, `/onboard`.
+
+Skills with Opus: `/review-all-gdds`, `/architecture-review`, `/gate-check`.
+
+All other skills default to Sonnet. When creating new CCGS skills or subagents,
+assign Haiku if the skill only reads and formats; assign Opus if it must
+synthesize 5+ documents with high-stakes output; otherwise use Sonnet.
 
 ## Subagents vs Agent Teams
 
@@ -33,7 +39,7 @@ This project uses two distinct multi-agent patterns:
 Spawned via **Cursor `Task`** within a session. Used by all `team-*` skills and
 orchestration skills. Subagents share the session's permission context, run
 sequentially or in parallel within the session, and return results to the parent.
-Use `model: "gpt-5.5"` for CCGS subagent invocations that specify a model.
+Use the tier mapping above for CCGS subagent invocations that specify a model.
 
 **When to spawn in parallel**: If two subagents' inputs are independent (neither
 needs the other's output to begin), spawn both Task calls simultaneously rather

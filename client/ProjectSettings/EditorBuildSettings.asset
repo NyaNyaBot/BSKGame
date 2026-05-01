@@ -8,13 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/GameRes/Scenes/Launch.unity
     guid: f6a58bd9266333e4392b0ba4707a1a10
-  - enabled: 0
+  - enabled: 1
     path: Assets/GameRes/Scenes/Menu.unity
     guid: f76120db1002cce41ae55c9b0727bc56
-  - enabled: 0
+  - enabled: 1
     path: Assets/GameRes/Scenes/Main.unity
     guid: d6287dfe81f0ab146909eb378b3e972d
-  - enabled: 0
+  - enabled: 1
     path: Assets/GameRes/Scenes/BattleStorm/BattleStorm.unity
     guid: eb17f714ae0672d408e56b634fcc438f
   m_configObjects: {}

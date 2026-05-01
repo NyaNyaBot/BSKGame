@@ -1,8 +1,11 @@
-﻿using Game.Core;
+using System;
+using Game.Core;
 using Game.Gameplay;
+using Game.Gameplay.SceneLifecycle;
 using GameFramework.DataTable;
 using GameFramework.Event;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityGameFramework.Runtime;
 
 namespace Game.Client
@@ -28,6 +31,7 @@ namespace Game.Client
 
             m_SelectBattle = null;
             m_StartBattle = false;
+            GameEntry.SceneContextService.EnterScene(SceneKind.Menu);
             GameEntry.UI.OpenUIForm(UIFormId.MenuForm, this);
         }
 
@@ -58,9 +62,23 @@ namespace Game.Client
         {
             if (m_StartBattle && !m_IsLoadingScene)
             {
-                LeaveMenu();
-                ChangeScene(UnityEngine.SceneManagement.SceneUtility.GetBuildIndexByScenePath(m_SelectBattle.BattleScenePath));
-                m_StartBattle = false;
+                int buildIndex = ResolveBattleSceneBuildIndex(m_SelectBattle.BattleScenePath);
+                IDataTable<DRScene> dtScene = GameEntry.DataTable.GetDataTable<DRScene>();
+                DRScene drScene = dtScene != null ? dtScene.GetDataRow(buildIndex) : null;
+                if (buildIndex < 0 || drScene == null)
+                {
+                    Log.Warning(
+                        "Cannot start battle: scene path '{0}' resolved to build index {1}, but DRScene row is missing. Use paths like 'Assets/GameRes/Scenes/Main.unity' in Battle table and ensure scenes are listed in Build Settings.",
+                        m_SelectBattle.BattleScenePath,
+                        buildIndex);
+                    m_StartBattle = false;
+                }
+                else
+                {
+                    LeaveMenu();
+                    ChangeScene(buildIndex);
+                    m_StartBattle = false;
+                }
             }
             
             if (m_IsChangeSceneComplete)
@@ -72,7 +90,23 @@ namespace Game.Client
         public void ChangeScene(int sceneId)
         {
             m_IsChangeSceneComplete = false;
+
+            IDataTable<DRScene> dtScene = GameEntry.DataTable.GetDataTable<DRScene>();
+            DRScene drScene = dtScene != null ? dtScene.GetDataRow(sceneId) : null;
+
+            if (sceneId < 0 || drScene == null)
+            {
+                Log.Warning("Can not load scene '{0}' from data table.", sceneId.ToString());
+                return;
+            }
+
             m_IsLoadingScene = true;
+            var routing = GameEntry.SceneContextService;
+            if (!string.IsNullOrEmpty(routing.CurrentScene.SceneContextId))
+            {
+                routing.BeginSceneTransition(SceneTransitionReason.UnloadStarting);
+            }
+
             // 卸载所有场景
             string[] loadedSceneAssetNames = GameEntry.Scene.GetLoadedSceneAssetNames();
             for (int i = 0; i < loadedSceneAssetNames.Length; i++)
@@ -82,17 +116,33 @@ namespace Game.Client
 
             // 还原游戏速度
             GameEntry.Base.ResetNormalGameSpeed();
-            
-            IDataTable<DRScene> dtScene = GameEntry.DataTable.GetDataTable<DRScene>();
-            DRScene drScene = dtScene.GetDataRow(sceneId);
-            
-            if (drScene == null)
-            {
-                Log.Warning("Can not load scene '{0}' from data table.", sceneId.ToString());
-                return;
-            }
 
             GameEntry.Scene.LoadScene(AssetUtility.GetSceneAsset(drScene.AssetName), Constant.AssetPriority.SceneAsset, this);
+        }
+
+        /// <summary>
+        /// 将战役表中的场景路径转为 Editor Build Settings 中的路径，再解析 build index。
+        /// 历史表数据常写成 GameRes/... 且无 .unity 后缀，会导致 GetBuildIndexByScenePath 恒为 -1。
+        /// </summary>
+        private static int ResolveBattleSceneBuildIndex(string battleScenePath)
+        {
+            if (string.IsNullOrWhiteSpace(battleScenePath))
+            {
+                return -1;
+            }
+
+            var p = battleScenePath.Trim().Replace('\\', '/');
+            if (!p.StartsWith("Assets/", StringComparison.Ordinal))
+            {
+                p = "Assets/" + p.TrimStart('/');
+            }
+
+            if (!p.EndsWith(".unity", StringComparison.OrdinalIgnoreCase))
+            {
+                p += ".unity";
+            }
+
+            return SceneUtility.GetBuildIndexByScenePath(p);
         }
         
         
@@ -112,7 +162,11 @@ namespace Game.Client
             }
 
             Log.Info("Load scene '{0}' OK.", ne.SceneAssetName);
-            
+
+            var routing = GameEntry.SceneContextService;
+            routing.CompleteSceneTransition();
+            routing.EnterScene(SceneKind.Battle);
+            routing.CreateBattleContext(default);
 
             m_IsChangeSceneComplete = true;
             m_IsLoadingScene = false;
@@ -127,6 +181,7 @@ namespace Game.Client
             }
 
             Log.Error("Load scene '{0}' failure, error message '{1}'.", ne.SceneAssetName, ne.ErrorMessage);
+            GameEntry.SceneContextService.CompleteSceneTransition();
             m_IsLoadingScene = false;
         }
 

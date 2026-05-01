@@ -1,4 +1,4 @@
-﻿
+
 using Game.Core;
 using Game.Gameplay;
 using Game.UIFramework;
@@ -48,23 +48,13 @@ namespace Game.Client
         public void OnBattleSelectConfirm()
         {
             var menuModel = this.GetModel<MenuModel>();
-            
-            //先单纯Show一个Player，场景加载的逻辑需要一个状态机维护
-            //可以参考ProcedureChange
-            var playerRoleModel = new RoleEntityModel()
-             {
-                 Id = EntityId.GenerateSerialId(),
-                 TypeId = Constant.Entity.PlayerTypeId,
-                 //@TEMP:
-                 ResourceId = 10000
-             };
-             GameEntry.Entity.ShowGameplayEntity("Player", playerRoleModel);
-            
-             GameEntry.UI.GetUIForm(UIFormId.MenuForm).Close();
-             
-            //@TODO：启动逻辑放到游戏状态机中
-            //m_ProcedureMenu.StartBattle(menuModel.SelectBattle);
-            
+            if (menuModel.SelectBattle == null)
+            {
+                Log.Warning("OnBattleSelectConfirm: no battle selected.");
+                return;
+            }
+
+            GameStarter.Instance.RequestStartBattle(menuModel.SelectBattle);
         }
         
         private void EnterSelectBattle(bool enable)

@@ -7,7 +7,7 @@ allowed-tools: Read, Glob, Grep, Bash, Write
 context: |
   !git log --oneline -30 2>/dev/null
   !git tag --list --sort=-v:refname 2>/dev/null | head -5
-model: gpt-5.5
+model: claude-4.5-haiku-thinking
 ---
 
 ## Phase 1: Parse Arguments

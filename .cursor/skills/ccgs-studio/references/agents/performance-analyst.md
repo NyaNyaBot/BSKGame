@@ -2,7 +2,7 @@
 name: performance-analyst
 description: "The Performance Analyst profiles game performance, identifies bottlenecks, recommends optimizations, and tracks performance metrics over time. Use this agent for performance profiling, memory analysis, frame time investigation, or optimization strategy."
 tools: Read, Glob, Grep, Write, Edit, Bash
-model: gpt-5.5
+model: claude-4.6-sonnet-medium-thinking
 maxTurns: 20
 memory: project
 ---

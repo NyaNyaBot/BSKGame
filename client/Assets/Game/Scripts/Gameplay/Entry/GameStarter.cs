@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using Game.Core;
 using Game.Gameplay;
@@ -15,19 +16,43 @@ namespace Game.Client
 
     public class GameStarter:MonoBehaviour
     {
-            
+#if UNITY_EDITOR
+        /// <summary>与 <c>PreProductionFlowValidateMenu</c> 中菜单项共用，勿改名。</summary>
+        private const string EditorPrefsAutoLoadMainScene = "BSK.PreProduction.AutoLoadMainSceneAfterMenu";
+#endif
+
+        /// <summary>
+        /// 热更入口单例，供菜单等 UI 触发局内流程（如开战加载场景）。
+        /// </summary>
+        public static GameStarter Instance { get; private set; } = null!;
+
         private TempGameState m_GameState;
-        
-        
+
         private List<IUpdateable> m_UpdateableUtilities = new List<IUpdateable>();
         private List<IShutdown> m_ShutdownUtilities = new List<IShutdown>();
 
         private LinkedList<IUpdateable> m_UpdatableSystems = new LinkedList<IUpdateable>();
         private LinkedList<ISystem> m_Systems = new LinkedList<ISystem>();
+
         private void Awake()
         {
+            Instance = this;
             DontDestroyOnLoad(gameObject);
             InitGame();
+        }
+
+        /// <summary>
+        /// 从主菜单发起一场战斗：下一帧 <see cref="TempGameState.OnUpdate"/> 会关菜单并加载战役配置表中的场景。
+        /// </summary>
+        public void RequestStartBattle(DRBattle battle)
+        {
+            if (battle == null)
+            {
+                Log.Warning("RequestStartBattle ignored: battle is null.");
+                return;
+            }
+
+            m_GameState?.StartBattle(battle);
         }
 
         private void Start()
@@ -63,7 +88,14 @@ namespace Game.Client
             //@TODO:局内用状态机逻辑接管，目前先简单处理
             m_GameState = new TempGameState();
             m_GameState.EnterMenu();
-            
+
+#if UNITY_EDITOR
+            if (EditorPrefs.GetBool(EditorPrefsAutoLoadMainScene, false))
+            {
+                StartCoroutine(EditorAutoStartMainSceneForFlowValidate());
+            }
+#endif
+
             Log.Info("Hello StartGame Success!");
             Log.Info("HotUpdate Success!==!");
 
@@ -71,6 +103,37 @@ namespace Game.Client
             test.GetNumber();
 
         }
+
+#if UNITY_EDITOR
+        /// <summary>
+        /// Pre-production：菜单打开后自动选中含 Main 的战役并开战，用于 Launch→Procedure→热更 全链路验证，无需进 BattleStorm。
+        /// </summary>
+        private IEnumerator EditorAutoStartMainSceneForFlowValidate()
+        {
+            yield return null;
+            yield return null;
+
+            var dtBattle = GameEntry.DataTable.GetDataTable<DRBattle>();
+            if (dtBattle == null)
+            {
+                Log.Warning("Editor flow validate: DRBattle table missing.");
+                yield break;
+            }
+
+            foreach (var row in dtBattle.GetAllDataRows())
+            {
+                if (row.BattleScenePath != null
+                    && row.BattleScenePath.IndexOf("Main", StringComparison.OrdinalIgnoreCase) >= 0)
+                {
+                    Log.Info("Editor flow validate: auto RequestStartBattle -> '{0}'.", row.BattleScenePath);
+                    RequestStartBattle(row);
+                    yield break;
+                }
+            }
+
+            Log.Warning("Editor flow validate: no DRBattle row with path containing \"Main\".");
+        }
+#endif
         private void RegisterListener()
         {
             GameEntry.Event.Subscribe(ShowEntitySuccessEventArgs.EventId, EntityExtension.OnShowEntitySuccess);
@@ -170,6 +233,11 @@ namespace Game.Client
         //@TEMP:
         private void OnDestroy()
         {
+            if (ReferenceEquals(Instance, this))
+            {
+                Instance = null!;
+            }
+
             foreach (var shutdownUtility in m_ShutdownUtilities)
             {
                 shutdownUtility.Shutdown();

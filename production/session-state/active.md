@@ -55,3 +55,17 @@
 - Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
 - Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
 - Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives

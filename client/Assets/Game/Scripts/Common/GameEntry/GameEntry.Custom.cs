@@ -1,10 +1,16 @@
-﻿using GameFramework;
+using Game.Gameplay.SceneLifecycle;
+using GameFramework;
 using UnityEngine;
 
 namespace Game.Client
 {
     public partial class GameEntry
     {
+        /// <summary>
+        /// 场景与战斗上下文（ADR-0001），单一实例；由场景管理在加载/卸载时驱动。
+        /// </summary>
+        public static ISceneContextService SceneContextService { get; private set; } = null!;
+
         // public static BuiltinDataComponent BuiltinData
         // {
         //     get;
@@ -12,6 +18,7 @@ namespace Game.Client
         // }
         private static void InitCustomComponents()
         {
+            SceneContextService = new SceneContextService();
             //BuiltinData = UnityGameFramework.Runtime.GameEntry.GetComponent<BuiltinDataComponent>();
         }
         

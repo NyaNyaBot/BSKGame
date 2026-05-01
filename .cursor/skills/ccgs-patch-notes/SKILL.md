@@ -4,7 +4,7 @@ description: "Generate player-facing patch notes from git history, sprint data, 
 argument-hint: "[version] [--style brief|detailed|full]"
 user-invocable: true
 allowed-tools: Read, Glob, Grep, Write, Bash
-model: gpt-5.5
+model: claude-4.5-haiku-thinking
 agent: community-manager
 ---
 

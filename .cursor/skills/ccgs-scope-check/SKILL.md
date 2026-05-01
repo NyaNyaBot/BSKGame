@@ -4,7 +4,7 @@ description: "Analyze a feature or sprint for scope creep by comparing current s
 argument-hint: "[feature-name or sprint-N]"
 user-invocable: true
 allowed-tools: Read, Glob, Grep, Bash
-model: gpt-5.5
+model: claude-4.5-haiku-thinking
 ---
 
 # Scope Check
