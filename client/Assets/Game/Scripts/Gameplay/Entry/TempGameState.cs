@@ -7,7 +7,6 @@ using Game.Gameplay.SceneLifecycle;
 using GameFramework.DataTable;
 using GameFramework.Event;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityGameFramework.Runtime;
 
 namespace Game.Client
@@ -64,21 +63,18 @@ namespace Game.Client
         {
             if (m_StartBattle && !m_IsLoadingScene)
             {
-                int buildIndex = ResolveBattleSceneBuildIndex(m_SelectBattle.BattleScenePath);
-                IDataTable<DRScene> dtScene = GameEntry.DataTable.GetDataTable<DRScene>();
-                DRScene drScene = dtScene != null ? dtScene.GetDataRow(buildIndex) : null;
-                if (buildIndex < 0 || drScene == null)
+                int sceneId = ResolveBattleSceneId(m_SelectBattle.BattleScenePath);
+                if (sceneId < 0)
                 {
                     Log.Warning(
-                        "Cannot start battle: scene path '{0}' resolved to build index {1}, but DRScene row is missing. Use paths like 'Assets/GameRes/Scenes/Main.unity' in Battle table and ensure scenes are listed in Build Settings.",
-                        m_SelectBattle.BattleScenePath,
-                        buildIndex);
+                        "Cannot start battle: scene path '{0}' has no matching DRScene row.",
+                        m_SelectBattle.BattleScenePath);
                     m_StartBattle = false;
                 }
                 else
                 {
                     LeaveMenu();
-                    ChangeScene(buildIndex);
+                    ChangeScene(sceneId);
                     m_StartBattle = false;
                 }
             }
@@ -123,28 +119,38 @@ namespace Game.Client
         }
 
         /// <summary>
-        /// 将战役表中的场景路径转为 Editor Build Settings 中的路径，再解析 build index。
-        /// 历史表数据常写成 GameRes/... 且无 .unity 后缀，会导致 GetBuildIndexByScenePath 恒为 -1。
+        /// 从 DRBattle.BattleScenePath 匹配 DRScene 表中的行。
+        /// 例: "Assets/GameRes/Scenes/Main.unity" → 匹配 DRScene.AssetName="Main" → 返回 DRScene.Id。
         /// </summary>
-        private static int ResolveBattleSceneBuildIndex(string battleScenePath)
+        private static int ResolveBattleSceneId(string battleScenePath)
         {
             if (string.IsNullOrWhiteSpace(battleScenePath))
-            {
                 return -1;
-            }
+
+            IDataTable<DRScene> dtScene = GameEntry.DataTable.GetDataTable<DRScene>();
+            if (dtScene == null)
+                return -1;
 
             var p = battleScenePath.Trim().Replace('\\', '/');
-            if (!p.StartsWith("Assets/", StringComparison.Ordinal))
+            if (p.EndsWith(".unity", StringComparison.OrdinalIgnoreCase))
+                p = p.Substring(0, p.Length - 6);
+
+            int lastSlash = p.LastIndexOf('/');
+            string sceneDirAndName = lastSlash >= 0 ? p.Substring(lastSlash + 1) : p;
+
+            int scenesPrefix = p.IndexOf("/Scenes/", StringComparison.OrdinalIgnoreCase);
+            string relativeFromScenes = scenesPrefix >= 0 ? p.Substring(scenesPrefix + 8) : sceneDirAndName;
+
+            foreach (var row in dtScene.GetAllDataRows())
             {
-                p = "Assets/" + p.TrimStart('/');
+                if (string.Equals(row.AssetName, relativeFromScenes, StringComparison.OrdinalIgnoreCase)
+                    || string.Equals(row.AssetName, sceneDirAndName, StringComparison.OrdinalIgnoreCase))
+                {
+                    return row.Id;
+                }
             }
 
-            if (!p.EndsWith(".unity", StringComparison.OrdinalIgnoreCase))
-            {
-                p += ".unity";
-            }
-
-            return SceneUtility.GetBuildIndexByScenePath(p);
+            return -1;
         }
         
         

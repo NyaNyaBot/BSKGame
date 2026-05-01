@@ -6,6 +6,7 @@ using Game.Gameplay.Damage;
 using Game.Gameplay.Events;
 using Game.Gameplay.Parry;
 using Game.Gameplay.TurnManager;
+using Game.Gameplay.Integration;
 using Game.Gameplay.UI;
 using UnityEngine;
 using UnityEngine.UI;
@@ -283,13 +284,4 @@ namespace Game.Client
         #endregion
     }
 
-    /// <summary>
-    /// BattleHudForm 打开时传入的数据。
-    /// </summary>
-    public class BattleHudOpenData
-    {
-        public BattleEventBus Bus { get; set; }
-        public ICharacterReadModel ReadModel { get; set; }
-        public ICombatClock Clock { get; set; }
-    }
 }
