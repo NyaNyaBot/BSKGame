@@ -1,7 +1,7 @@
 # Story 004: 同 tick 事件 drain 与 ADR-0004 顺序编排
 
 > **Epic**: turn-manager-combat-clock  
-> **Status**: Ready  
+> **Status**: Complete  
 > **Layer**: Core  
 > **Type**: Integration  
 > **Manifest Version**: 2026-05-01

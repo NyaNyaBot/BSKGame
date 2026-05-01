@@ -1,7 +1,7 @@
 # Story 003: DamageApplied / DamageRejected / CharacterDefeated 事件
 
 > **Epic**: damage-hp-ownership  
-> **Status**: Ready  
+> **Status**: Complete  
 > **Layer**: Core  
 > **Type**: Integration  
 > **Manifest Version**: 2026-05-01

@@ -1,7 +1,7 @@
 # Story 001: 显式战斗输入阶段状态机
 
 > **Epic**: turn-manager-combat-clock  
-> **Status**: Ready  
+> **Status**: Complete  
 > **Layer**: Core  
 > **Type**: Logic  
 > **Manifest Version**: 2026-05-01

@@ -1,7 +1,7 @@
 # Story 003: CombatClockMs 推进与只读暴露
 
 > **Epic**: turn-manager-combat-clock  
-> **Status**: Ready  
+> **Status**: Complete  
 > **Layer**: Core  
 > **Type**: Logic  
 > **Manifest Version**: 2026-05-01

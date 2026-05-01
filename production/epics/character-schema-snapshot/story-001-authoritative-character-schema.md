@@ -1,7 +1,7 @@
 # Story 001: 权威角色 Schema
 
 > **Epic**: character-schema-snapshot  
-> **Status**: Ready  
+> **Status**: Complete  
 > **Layer**: Core  
 > **Type**: Logic  
 > **Manifest Version**: 2026-05-01

@@ -1,7 +1,7 @@
 # Story 002: CharacterBattleSnapshot 不可变与版本
 
 > **Epic**: character-schema-snapshot  
-> **Status**: Ready  
+> **Status**: Complete  
 > **Layer**: Core  
 > **Type**: Logic  
 > **Manifest Version**: 2026-05-01

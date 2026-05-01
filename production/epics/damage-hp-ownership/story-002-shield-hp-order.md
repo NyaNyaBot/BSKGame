@@ -1,7 +1,7 @@
 # Story 002: 护盾吸收与 HP 扣减顺序
 
 > **Epic**: damage-hp-ownership  
-> **Status**: Ready  
+> **Status**: Complete  
 > **Layer**: Core  
 > **Type**: Logic  
 > **Manifest Version**: 2026-05-01

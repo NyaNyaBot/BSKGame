@@ -1,7 +1,7 @@
 # Story 002: BattleInputPhaseChanged 事件发布
 
 > **Epic**: turn-manager-combat-clock  
-> **Status**: Ready  
+> **Status**: Complete  
 > **Layer**: Core  
 > **Type**: Integration  
 > **Manifest Version**: 2026-05-01

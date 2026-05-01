@@ -1,7 +1,7 @@
 # Story 001: 权威 DamagePipeline 与 DamageRequestId
 
 > **Epic**: damage-hp-ownership  
-> **Status**: Ready  
+> **Status**: Complete  
 > **Layer**: Core  
 > **Type**: Logic  
 > **Manifest Version**: 2026-05-01
