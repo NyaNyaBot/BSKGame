@@ -1,7 +1,7 @@
 # Story 002: CounterAction 授权与 counter 消耗
 
 > **Epic**: action-system
-> **Status**: Ready
+> **Status**: Complete
 > **Layer**: Feature
 > **Type**: Logic
 > **Manifest Version**: 2026-05-01

@@ -1,7 +1,7 @@
 # Story 001: FrozenAttackSegmentTimeline 派生与验证
 
 > **Epic**: parry-system
-> **Status**: Ready
+> **Status**: Complete
 > **Layer**: Feature
 > **Type**: Logic
 > **Manifest Version**: 2026-05-01

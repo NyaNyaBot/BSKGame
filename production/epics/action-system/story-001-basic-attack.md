@@ -1,7 +1,7 @@
 # Story 001: BasicAttackAction 授权与 DamageRequest 提交
 
 > **Epic**: action-system
-> **Status**: Ready
+> **Status**: Complete
 > **Layer**: Feature
 > **Type**: Logic
 > **Manifest Version**: 2026-05-01

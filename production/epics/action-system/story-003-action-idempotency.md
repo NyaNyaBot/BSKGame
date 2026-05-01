@@ -1,7 +1,7 @@
 # Story 003: 行动幂等与场景/阶段过期拒绝
 
 > **Epic**: action-system
-> **Status**: Ready
+> **Status**: Complete
 > **Layer**: Feature
 > **Type**: Integration
 > **Manifest Version**: 2026-05-01

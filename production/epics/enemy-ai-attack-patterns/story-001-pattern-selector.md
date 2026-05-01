@@ -1,7 +1,7 @@
 # Story 001: 攻击模式选择器（权重/冷却/HP 阶段）
 
 > **Epic**: enemy-ai-attack-patterns
-> **Status**: Ready
+> **Status**: Complete
 > **Layer**: Feature
 > **Type**: Logic
 > **Manifest Version**: 2026-05-01

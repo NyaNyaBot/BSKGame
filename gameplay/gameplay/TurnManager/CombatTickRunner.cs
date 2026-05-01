@@ -1,7 +1,7 @@
-using System;
 using System.Collections.Generic;
 using Game.Gameplay.Combat;
 using Game.Gameplay.Events;
+using SysAction = System.Action;
 
 namespace Game.Gameplay.TurnManager
 {
@@ -22,7 +22,7 @@ namespace Game.Gameplay.TurnManager
 
         private readonly ICombatClockController _clock;
         private readonly BattleEventBus _bus;
-        private readonly Action?[] _steps = new Action?[StepCount];
+        private readonly SysAction?[] _steps = new SysAction?[StepCount];
 
         public int LastTickStepsExecuted { get; private set; }
 
@@ -35,7 +35,7 @@ namespace Game.Gameplay.TurnManager
         /// <summary>
         /// 注册子步骤回调。stepIndex 必须在 [0, StepCount) 范围内。
         /// </summary>
-        public void RegisterStep(int stepIndex, Action callback)
+        public void RegisterStep(int stepIndex, SysAction callback)
         {
             if (stepIndex < 0 || stepIndex >= StepCount)
                 throw new System.ArgumentOutOfRangeException(nameof(stepIndex));

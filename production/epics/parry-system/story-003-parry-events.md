@@ -1,7 +1,7 @@
 # Story 003: 弹反结果与异常事件发布
 
 > **Epic**: parry-system
-> **Status**: Ready
+> **Status**: Complete
 > **Layer**: Feature
 > **Type**: Integration
 > **Manifest Version**: 2026-05-01

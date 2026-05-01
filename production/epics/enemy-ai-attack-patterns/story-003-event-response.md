@@ -1,7 +1,7 @@
 # Story 003: 弹反/counter/重叠事件响应
 
 > **Epic**: enemy-ai-attack-patterns
-> **Status**: Ready
+> **Status**: Complete
 > **Layer**: Feature
 > **Type**: Integration
 > **Manifest Version**: 2026-05-01

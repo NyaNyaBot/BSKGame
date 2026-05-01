@@ -1,7 +1,7 @@
 # Story 002: AttackSegment 内容事实与 seed 提交
 
 > **Epic**: enemy-ai-attack-patterns
-> **Status**: Ready
+> **Status**: Complete
 > **Layer**: Feature
 > **Type**: Logic
 > **Manifest Version**: 2026-05-01

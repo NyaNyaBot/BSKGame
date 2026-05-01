@@ -1,7 +1,7 @@
 # Story 004: Counter 入口开启与关闭生命周期
 
 > **Epic**: parry-system
-> **Status**: Ready
+> **Status**: Complete
 > **Layer**: Feature
 > **Type**: Integration
 > **Manifest Version**: 2026-05-01
