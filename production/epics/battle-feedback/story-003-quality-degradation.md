@@ -1,7 +1,7 @@
 # Story 003: 性能降级与质量分层
 
 > **Epic**: battle-feedback
-> **Status**: Ready
+> **Status**: Complete
 > **Layer**: Presentation
 > **Type**: Integration
 > **Manifest Version**: 2026-05-01

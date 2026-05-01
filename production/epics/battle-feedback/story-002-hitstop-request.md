@@ -1,7 +1,7 @@
 # Story 002: HitStopRequest 构建与提交
 
 > **Epic**: battle-feedback
-> **Status**: Ready
+> **Status**: Complete
 > **Layer**: Presentation
 > **Type**: Integration
 > **Manifest Version**: 2026-05-01

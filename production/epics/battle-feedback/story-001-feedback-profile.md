@@ -1,7 +1,7 @@
 # Story 001: 反馈事件消费与 profile 查表
 
 > **Epic**: battle-feedback
-> **Status**: Ready
+> **Status**: Complete
 > **Layer**: Presentation
 > **Type**: Logic
 > **Manifest Version**: 2026-05-01

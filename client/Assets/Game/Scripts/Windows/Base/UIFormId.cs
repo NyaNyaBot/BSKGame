@@ -33,5 +33,10 @@ namespace Game.Client
         /// 战斗主界面
         /// </summary>
         BattleMainForm = 201,
+
+        /// <summary>
+        /// 战斗 HUD（ADR-0010）。
+        /// </summary>
+        BattleHudForm = 202,
     }
 }
