@@ -1,0 +1,19 @@
+{
+    "name": "BSK.Game.Editor.BattleHud",
+    "rootNamespace": "",
+    "references": [
+        "GUID:8090baf8378afa145b1fa6a546329a0e",
+        "GUID:2bafac87e7f4b9b418d9448d219b01ab"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,6 +1,6 @@
 # Sprint 003 — Presentation Layer
 
-> **Status**: Code Complete — 代码全部完成，Unity prefab + PlayMode 测试待人工
+> **Status**: Prefab Ready — Editor 脚本 + 预制体生成器就绪，打开 Unity 运行菜单即可
 > **Start**: 2026-05-01
 > **Layer**: Presentation (battle-feedback + battle-ui)
 
@@ -40,13 +40,21 @@
 - 225 EditMode 测试全绿
 - FeedbackProfileTests (10)、HitStopControllerTests (12)、QualityDegradationTests (9)、BattleHudViewModelTests (9)
 
+## 预制体自动生成
+
+- **BattleHudPrefabBuilder** (`client/Assets/Editor/BattleHud/BattleHudPrefabBuilder.cs`)
+  - Unity Editor 菜单: `BSKGame > Build BattleHud Prefab`
+  - 一键生成 BattleHudForm UGUI 预制体到 `Assets/GameRes/UI/UIForms/BattleHud/BattleHudForm.prefab`
+  - 自动绑定所有 SerializeField：PlayerHpBar、EnemyHpBar、ParryReadyIndicator、CounterReadyIndicator、PhaseText、ResultPanel、DebugOverlay 等
+  - 色板遵循 Art Bible §4.4：深底 #222831、主文字 #D8E4EC、危险橙 #E85D2C、金 #C9A227
+  - 参考布局图：`.cursor/projects/.../assets/battle_hud_layout.png`
+
 ## 需要人工干预（完成 Sprint 003 的最终条件）
 
-1. **BattleHudForm prefab** — 创建 UGUI 预制体，绑定 Slider/Text/CanvasGroup 引用
-2. **Panel 组件** — PlayerStatusPanel、EnemyStatusPanel、ActionCommandPanel 子物体布局
-3. **触区 RectTransform** — Parry/Counter 触区的 dp 尺寸和安全区适配
-4. **PlayMode 测试** — HUD 打开/关闭/场景卸载清理验证 ActiveSubscriptionCount == 0
-5. **设备测试** — WebGL 安全区、触区最小 dp
+1. **打开 Unity → 菜单 BSKGame > Build BattleHud Prefab** — 自动生成预制体并绑定引用
+2. **触区 RectTransform 微调** — Parry/Counter 触区的 dp 尺寸和安全区适配
+3. **PlayMode 测试** — HUD 打开/关闭/场景卸载清理验证 ActiveSubscriptionCount == 0
+4. **设备测试** — WebGL 安全区、触区最小 dp
 
 ## 测试结果
 
@@ -56,6 +64,6 @@
 
 ## Next Sprint
 
-Sprint 003 代码全部完成。
-人工任务：创建 BattleHudForm prefab → PlayMode 测试 → 设备验证。
+Sprint 003 代码 + 预制体生成器全部完成。
+人工任务：Unity Editor 运行菜单生成 prefab → PlayMode 测试 → 设备验证。
 完成后可进入联调阶段。
