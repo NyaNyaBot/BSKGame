@@ -48,7 +48,7 @@ namespace Game.Client.Editor
                 new Vector2(0.15f, 0.4f), new Vector2(0.95f, 0.7f));
             form.PlayerHpBar = playerHpBar;
 
-            var playerHpText = CreateText("PlayerHpText", playerPanel, "100/100", 14,
+            var playerHpText = CreateText("PlayerHpText", playerPanel.transform, "100/100", 14,
                 new Vector2(0.15f, 0.4f), new Vector2(0.95f, 0.7f));
             form.PlayerHpText = playerHpText;
 
@@ -62,7 +62,7 @@ namespace Game.Client.Editor
                 new Vector2(0.05f, 0.4f), new Vector2(0.85f, 0.7f));
             form.EnemyHpBar = enemyHpBar;
 
-            var enemyHpText = CreateText("EnemyHpText", enemyPanel, "80/80", 14,
+            var enemyHpText = CreateText("EnemyHpText", enemyPanel.transform, "80/80", 14,
                 new Vector2(0.05f, 0.4f), new Vector2(0.85f, 0.7f));
             form.EnemyHpText = enemyHpText;
 
