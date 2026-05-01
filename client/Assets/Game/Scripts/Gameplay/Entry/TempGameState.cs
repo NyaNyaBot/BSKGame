@@ -1,6 +1,8 @@
 using System;
 using Game.Core;
 using Game.Gameplay;
+using Game.Gameplay.Character;
+using Game.Gameplay.Integration;
 using Game.Gameplay.SceneLifecycle;
 using GameFramework.DataTable;
 using GameFramework.Event;
@@ -168,8 +170,52 @@ namespace Game.Client
             routing.EnterScene(SceneKind.Battle);
             routing.CreateBattleContext(default);
 
+            SpawnBattleFlowController(routing);
+
             m_IsChangeSceneComplete = true;
             m_IsLoadingScene = false;
+        }
+
+        private void SpawnBattleFlowController(ISceneContextService sceneContext)
+        {
+            var go = new GameObject("[BattleFlowController]");
+            var controller = go.AddComponent<BattleFlowController>();
+
+            var config = new BattleStartConfig();
+            if (sceneContext.TryGetActiveBattle(out var bc))
+                config.BattleContextId = bc.BattleContextId;
+
+            var playerDef = BuildCharacterDef(m_SelectBattle.Role1, "Player");
+            var enemyDef = BuildCharacterDef(m_SelectBattle.Role2, "Enemy");
+
+            controller.Initialize(sceneContext, config, playerDef, enemyDef);
+        }
+
+        /// <summary>
+        /// 从数据表构建角色定义。ATK/DEF 目前未在 DRProperty 中定义，使用占位默认值。
+        /// </summary>
+        private CharacterDefinition BuildCharacterDef(int roleId, string fallbackName)
+        {
+            IDataTable<DRRole> dtRole = GameEntry.DataTable.GetDataTable<DRRole>();
+            DRRole role = dtRole?.GetDataRow(roleId);
+            string name = role?.Name ?? fallbackName;
+            int maxHp = 100;
+            int maxMp = 0;
+            int atk = 20;
+            int def = 5;
+
+            if (role != null)
+            {
+                IDataTable<DRProperty> dtProp = GameEntry.DataTable.GetDataTable<DRProperty>();
+                DRProperty prop = dtProp?.GetDataRow(role.PropertyId);
+                if (prop != null)
+                {
+                    maxHp = System.Math.Max(1, (int)prop.MaxHealth);
+                    maxMp = (int)prop.MaxMana;
+                }
+            }
+
+            return new CharacterDefinition($"role_{roleId}", name, maxHp, maxMp, atk, def);
         }
 
         private void OnLoadSceneFailure(object sender, GameEventArgs e)
