@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Game.Gameplay.BattleAction;
 using Game.Gameplay.Character;
 using Game.Gameplay.Combat;
@@ -53,6 +54,10 @@ namespace Game.Gameplay.Integration
         // ── State ──
         public int TurnNumber { get; private set; }
         public bool IsRunning { get; private set; }
+        public string PlayerInstanceId { get; private set; }
+        public string EnemyInstanceId { get; private set; }
+
+        private readonly List<AttackPatternDefinition> _defaultEnemyPatterns = new List<AttackPatternDefinition>();
 
         public BattleOrchestrator(ISceneContextService sceneContext, BattleStartConfig config)
         {
@@ -92,8 +97,13 @@ namespace Game.Gameplay.Integration
         {
             if (IsRunning) return;
 
-            CharacterRepo.CreateInstance(playerDef);
-            CharacterRepo.CreateInstance(enemyDef);
+            var player = CharacterRepo.CreateInstance(playerDef);
+            var enemy = CharacterRepo.CreateInstance(enemyDef);
+            PlayerInstanceId = player.InstanceId;
+            EnemyInstanceId = enemy.InstanceId;
+
+            _defaultEnemyPatterns.Add(new AttackPatternDefinition("basic_attack", 100, 0, HpPhaseRequirement.Any, enemy.Atk));
+            _defaultEnemyPatterns.Add(new AttackPatternDefinition("heavy_attack", 30, 2, HpPhaseRequirement.BelowHalf, enemy.Atk * 2));
 
             PhaseMachine.PhaseChanged += OnPhaseChanged;
             PhaseMachine.TryTransition(BattleInputPhase.BattleStart, out _);
@@ -135,11 +145,13 @@ namespace Game.Gameplay.Integration
         }
 
         /// <summary>
-        /// 推进到敌人行动结算，然后回到玩家回合。
+        /// 执行敌人行动 → 结算 → 回合结束 → 判定胜负 → 回到玩家回合。
         /// </summary>
         public void AdvanceToResolution()
         {
             if (PhaseMachine.CurrentPhase != BattleInputPhase.EnemyAction) return;
+
+            ExecuteEnemyAttack();
 
             PhaseMachine.TryTransition(BattleInputPhase.Resolution, out _);
             PhaseMachine.TryTransition(BattleInputPhase.TurnEnd, out _);
@@ -213,6 +225,32 @@ namespace Game.Gameplay.Integration
         {
             var ctx = GetEventContext();
             Bus.Publish(new BattleInputPhaseChanged(ctx, Clock.NowMs, previous, current));
+        }
+
+        private void ExecuteEnemyAttack()
+        {
+            var enemy = CharacterRepo.GetInstance(EnemyInstanceId);
+            if (enemy == null || enemy.Status != CharacterStatus.Active) return;
+            var player = CharacterRepo.GetInstance(PlayerInstanceId);
+            if (player == null || player.Status != CharacterStatus.Active) return;
+
+            var query = new EnemyActionQuery(EnemyInstanceId, PlayerInstanceId, TurnNumber);
+            var plan = AttackPlanner.SelectAction(query, _defaultEnemyPatterns, TurnNumber);
+
+            if (plan.HasValue)
+            {
+                int damage = plan.Value.BaseDamage;
+                var dmgRequest = new DamageRequest($"enemy_dmg_t{TurnNumber}", PlayerInstanceId, damage);
+                var dmgResult = DamageService.ApplyDamage(dmgRequest);
+                PublishDamageEvents(dmgResult);
+
+                if (plan.Value.PatternId != null)
+                {
+                    var pattern = _defaultEnemyPatterns.Find(p => p.PatternId == plan.Value.PatternId);
+                    if (pattern != null && pattern.CooldownTurns > 0)
+                        AttackPlanner.ApplyCooldown(pattern.PatternId, pattern.CooldownTurns);
+                }
+            }
         }
 
         private bool ShouldEndBattle()
