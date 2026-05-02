@@ -64,6 +64,19 @@ namespace Game.Client
         {
             base.OnInit(userData);
             _viewModel = new BattleHudViewModel();
+
+            ClearDynamicTexts();
+        }
+
+        private void ClearDynamicTexts()
+        {
+            if (PlayerHpText != null) PlayerHpText.text = string.Empty;
+            if (EnemyHpText != null) EnemyHpText.text = string.Empty;
+            if (PhaseText != null) PhaseText.text = string.Empty;
+            if (ResultText != null) ResultText.text = string.Empty;
+            if (DebugClockText != null) DebugClockText.text = string.Empty;
+            if (DebugPhaseText != null) DebugPhaseText.text = string.Empty;
+            if (DebugSegmentIdText != null) DebugSegmentIdText.text = string.Empty;
         }
 
         protected override void OnOpen(object userData)
@@ -146,12 +159,20 @@ namespace Game.Client
             if (_readModel == null) return;
 
             var snapshots = _readModel.GetAllSnapshots();
+            bool playerSet = false;
             for (int i = 0; i < snapshots.Count; i++)
             {
                 var snap = snapshots[i];
-                if (snap.InstanceId != null)
+                if (snap.InstanceId == null) continue;
+
+                if (!playerSet)
                 {
                     _viewModel.UpdatePlayerSnapshot(snap);
+                    playerSet = true;
+                }
+                else
+                {
+                    _viewModel.UpdateEnemySnapshot(snap);
                     break;
                 }
             }

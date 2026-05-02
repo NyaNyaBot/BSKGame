@@ -63,6 +63,7 @@ namespace Game.Client
         {
             if (m_StartBattle && !m_IsLoadingScene)
             {
+                Debug.Log($"[TempGameState] OnUpdate: StartBattle triggered, path={m_SelectBattle?.BattleScenePath}");
                 int sceneId = ResolveBattleSceneId(m_SelectBattle.BattleScenePath);
                 if (sceneId < 0)
                 {
@@ -73,15 +74,11 @@ namespace Game.Client
                 }
                 else
                 {
+                    Debug.Log($"[TempGameState] Resolved sceneId={sceneId}, leaving menu and loading scene...");
                     LeaveMenu();
                     ChangeScene(sceneId);
                     m_StartBattle = false;
                 }
-            }
-            
-            if (m_IsChangeSceneComplete)
-            {
-                Debug.Log("Load scene complete, enter main");
             }
         }
 
@@ -166,17 +163,33 @@ namespace Game.Client
             LoadSceneSuccessEventArgs ne = (LoadSceneSuccessEventArgs)e;
             if (ne.UserData != this)
             {
+                Debug.Log($"[TempGameState] OnLoadSceneSuccess: userData mismatch, ignoring. expected=this, got={ne.UserData}");
                 return;
             }
 
             Log.Info("Load scene '{0}' OK.", ne.SceneAssetName);
 
-            var routing = GameEntry.SceneContextService;
-            routing.CompleteSceneTransition();
-            routing.EnterScene(SceneKind.Battle);
-            routing.CreateBattleContext(default);
+            try
+            {
+                var routing = GameEntry.SceneContextService;
+                if (routing == null)
+                {
+                    Log.Error("[TempGameState] SceneContextService is null!");
+                    return;
+                }
 
-            SpawnBattleFlowController(routing);
+                routing.CompleteSceneTransition();
+                routing.EnterScene(SceneKind.Battle);
+                routing.CreateBattleContext(default);
+
+                Debug.Log("[TempGameState] Battle context created, spawning BattleFlowController...");
+                SpawnBattleFlowController(routing);
+                Debug.Log("[TempGameState] BattleFlowController spawned successfully.");
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"[TempGameState] OnLoadSceneSuccess exception: {ex}");
+            }
 
             m_IsChangeSceneComplete = true;
             m_IsLoadingScene = false;
@@ -184,6 +197,14 @@ namespace Game.Client
 
         private void SpawnBattleFlowController(ISceneContextService sceneContext)
         {
+            if (m_SelectBattle == null)
+            {
+                Debug.LogError("[TempGameState] SpawnBattleFlowController: m_SelectBattle is null!");
+                return;
+            }
+
+            Debug.Log($"[TempGameState] SpawnBattleFlowController: Role1={m_SelectBattle.Role1}, Role2={m_SelectBattle.Role2}");
+
             var go = new GameObject("[BattleFlowController]");
             var controller = go.AddComponent<BattleFlowController>();
 
@@ -194,6 +215,7 @@ namespace Game.Client
             var playerDef = BuildCharacterDef(m_SelectBattle.Role1, "Player");
             var enemyDef = BuildCharacterDef(m_SelectBattle.Role2, "Enemy");
 
+            Debug.Log($"[TempGameState] Calling controller.Initialize(player={playerDef.DisplayName}, enemy={enemyDef.DisplayName})");
             controller.Initialize(sceneContext, config, playerDef, enemyDef);
         }
 

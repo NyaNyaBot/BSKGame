@@ -32,11 +32,23 @@ namespace Game.Client
                 return;
             }
 
-            _orchestrator = new BattleOrchestrator(sceneContext, config);
-            _orchestrator.Start(playerDef, enemyDef);
+            try
+            {
+                UnityEngine.Debug.Log("[BattleFlowController] Creating BattleOrchestrator...");
+                _orchestrator = new BattleOrchestrator(sceneContext, config);
 
-            OpenBattleHud();
-            Log.Info("[Battle] Started. Player={0} Enemy={1}", _orchestrator.PlayerInstanceId, _orchestrator.EnemyInstanceId);
+                UnityEngine.Debug.Log("[BattleFlowController] Calling orchestrator.Start...");
+                _orchestrator.Start(playerDef, enemyDef);
+
+                UnityEngine.Debug.Log("[BattleFlowController] Opening BattleHud...");
+                OpenBattleHud();
+
+                Log.Info("[Battle] Started. Player={0} Enemy={1}", _orchestrator.PlayerInstanceId, _orchestrator.EnemyInstanceId);
+            }
+            catch (System.Exception ex)
+            {
+                UnityEngine.Debug.LogError($"[BattleFlowController] Initialize failed: {ex}");
+            }
         }
 
         private void Update()
@@ -122,7 +134,10 @@ namespace Game.Client
                 ReadModel = _orchestrator.ReadModel,
                 Clock = _orchestrator.Clock,
             };
-            GameEntry.UI.OpenUIForm(UIFormId.BattleHudForm, openData);
+
+            UnityEngine.Debug.Log($"[BattleFlowController] OpenBattleHud: calling GameEntry.UI.OpenUIForm(BattleHudForm=202)");
+            var serialId = GameEntry.UI.OpenUIForm(UIFormId.BattleHudForm, openData);
+            UnityEngine.Debug.Log($"[BattleFlowController] OpenUIForm returned serialId={serialId}");
         }
     }
 }
