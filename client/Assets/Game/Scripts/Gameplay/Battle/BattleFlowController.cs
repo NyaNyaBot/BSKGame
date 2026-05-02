@@ -1,5 +1,6 @@
 using Game.Gameplay.BattleAction;
 using Game.Gameplay.Character;
+using Game.Gameplay.Input;
 using Game.Gameplay.Integration;
 using Game.Gameplay.SceneLifecycle;
 using Game.Gameplay.TurnManager;
@@ -15,6 +16,7 @@ namespace Game.Client
     public class BattleFlowController : MonoBehaviour
     {
         private BattleOrchestrator _orchestrator;
+        private BattleHudTouchAreaManager _touchAreaManager;
         private bool _hudOpened;
         private float _enemyActionDelay;
         private bool _waitingForEnemyResolve;
@@ -39,6 +41,9 @@ namespace Game.Client
 
                 UnityEngine.Debug.Log("[BattleFlowController] Calling orchestrator.Start...");
                 _orchestrator.Start(playerDef, enemyDef);
+
+                UnityEngine.Debug.Log("[BattleFlowController] Creating BattleHudTouchAreaManager...");
+                _touchAreaManager = new BattleHudTouchAreaManager(_orchestrator.HitAreaRegistry, _orchestrator.Bus);
 
                 UnityEngine.Debug.Log("[BattleFlowController] Opening BattleHud...");
                 OpenBattleHud();
@@ -116,6 +121,9 @@ namespace Game.Client
 
         private void OnDestroy()
         {
+            _touchAreaManager?.Dispose();
+            _touchAreaManager = null;
+
             if (_orchestrator != null)
             {
                 _orchestrator.Dispose();

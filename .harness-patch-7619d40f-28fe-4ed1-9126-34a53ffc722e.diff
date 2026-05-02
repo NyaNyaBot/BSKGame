@@ -1,0 +1,82 @@
+diff --git a/client/Assets/Game/Scripts/Gameplay/Battle/BattleFlowController.cs b/client/Assets/Game/Scripts/Gameplay/Battle/BattleFlowController.cs
+index 5d8e0a5..3d9027f 100644
+--- a/client/Assets/Game/Scripts/Gameplay/Battle/BattleFlowController.cs
++++ b/client/Assets/Game/Scripts/Gameplay/Battle/BattleFlowController.cs
+@@ -1,5 +1,6 @@
+ using Game.Gameplay.BattleAction;
+ using Game.Gameplay.Character;
++using Game.Gameplay.Input;
+ using Game.Gameplay.Integration;
+ using Game.Gameplay.SceneLifecycle;
+ using Game.Gameplay.TurnManager;
+@@ -15,6 +16,7 @@ namespace Game.Client
+     public class BattleFlowController : MonoBehaviour
+     {
+         private BattleOrchestrator _orchestrator;
++        private BattleHudTouchAreaManager _touchAreaManager;
+         private bool _hudOpened;
+         private float _enemyActionDelay;
+         private bool _waitingForEnemyResolve;
+@@ -40,6 +42,9 @@ namespace Game.Client
+                 UnityEngine.Debug.Log("[BattleFlowController] Calling orchestrator.Start...");
+                 _orchestrator.Start(playerDef, enemyDef);
+ 
++                UnityEngine.Debug.Log("[BattleFlowController] Creating BattleHudTouchAreaManager...");
++                _touchAreaManager = new BattleHudTouchAreaManager(_orchestrator.HitAreaRegistry, _orchestrator.Bus);
++
+                 UnityEngine.Debug.Log("[BattleFlowController] Opening BattleHud...");
+                 OpenBattleHud();
+ 
+@@ -116,6 +121,9 @@ namespace Game.Client
+ 
+         private void OnDestroy()
+         {
++            _touchAreaManager?.Dispose();
++            _touchAreaManager = null;
++
+             if (_orchestrator != null)
+             {
+                 _orchestrator.Dispose();
+diff --git a/client/Assets/Game/Scripts/Windows/Hud/TestHud.cs b/client/Assets/Game/Scripts/Windows/Hud/TestHud.cs
+index edefb34..d3a76ac 100644
+--- a/client/Assets/Game/Scripts/Windows/Hud/TestHud.cs
++++ b/client/Assets/Game/Scripts/Windows/Hud/TestHud.cs
+@@ -1,18 +1,3 @@
+-using System.Collections;
+-using System.Collections.Generic;
+-using UnityEngine;
+-
+-public class TestHud : MonoBehaviour
+-{
+-    // Start is called before the first frame update
+-    void Start()
+-    {
+-        
+-    }
+-
+-    // Update is called once per frame
+-    void Update()
+-    {
+-        
+-    }
+-}
++// 此文件为空占位，待删除。
++// 原始内容为 Unity 自动生成的 MonoBehaviour 模板，无实际业务逻辑。
++// 请手动在 Unity 编辑器中删除此文件以避免多余编译目标。
+diff --git a/client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudForm.cs b/client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudForm.cs
+index 6719ad0..999e168 100644
+--- a/client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudForm.cs
++++ b/client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudForm.cs
+@@ -183,9 +183,11 @@ namespace Game.Client
+             if (_readModel == null) return;
+ 
+             var snap = _readModel.GetSnapshot(evt.TargetInstanceId);
++            if (snap.InstanceId == null) return;
++
+             if (snap.InstanceId == _viewModel.PlayerSnapshot.InstanceId)
+                 _viewModel.UpdatePlayerSnapshot(snap);
+-            else
++            else if (snap.InstanceId == _viewModel.EnemySnapshot.InstanceId)
+                 _viewModel.UpdateEnemySnapshot(snap);
+         }
+ 

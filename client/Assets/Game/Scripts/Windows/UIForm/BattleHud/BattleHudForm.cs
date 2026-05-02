@@ -183,9 +183,11 @@ namespace Game.Client
             if (_readModel == null) return;
 
             var snap = _readModel.GetSnapshot(evt.TargetInstanceId);
+            if (snap.InstanceId == null) return;
+
             if (snap.InstanceId == _viewModel.PlayerSnapshot.InstanceId)
                 _viewModel.UpdatePlayerSnapshot(snap);
-            else
+            else if (snap.InstanceId == _viewModel.EnemySnapshot.InstanceId)
                 _viewModel.UpdateEnemySnapshot(snap);
         }
 

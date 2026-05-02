@@ -1,18 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class TestHud : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-}
+// 此文件为空占位，待删除。
+// 原始内容为 Unity 自动生成的 MonoBehaviour 模板，无实际业务逻辑。
+// 请手动在 Unity 编辑器中删除此文件以避免多余编译目标。
