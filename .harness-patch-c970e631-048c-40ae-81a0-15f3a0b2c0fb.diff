@@ -1,0 +1,3321 @@
+diff --git a/.DS_Store b/.DS_Store
+index 645befe..506909c 100644
+Binary files a/.DS_Store and b/.DS_Store differ
+diff --git a/.cursor/.DS_Store b/.cursor/.DS_Store
+index 370f031..c0466cc 100644
+Binary files a/.cursor/.DS_Store and b/.cursor/.DS_Store differ
+diff --git a/client/.DS_Store b/client/.DS_Store
+index cd2b6ef..6575ff1 100644
+Binary files a/client/.DS_Store and b/client/.DS_Store differ
+diff --git a/client/UserSettings/EditorUserSettings.asset b/client/UserSettings/EditorUserSettings.asset
+index 1284166..8f4c829 100644
+--- a/client/UserSettings/EditorUserSettings.asset
++++ b/client/UserSettings/EditorUserSettings.asset
+@@ -6,34 +6,34 @@ EditorUserSettings:
+   serializedVersion: 4
+   m_ConfigSettings:
+     RecentlyUsedSceneGuid-0:
+-      value: 5709000406060d0e5c0f55724470084441164e7f7a7a2463747d4966e1b2303b
++      value: 570605045d005d025a5f5b2746705c4410151e2f2f2b20662b7b4935bab66c68
+       flags: 0
+     RecentlyUsedSceneGuid-1:
+-      value: 570605045d005d025a5f5b2746705c4410151e2f2f2b20662b7b4935bab66c68
++      value: 0750055652540c025f5d5a2113700e4444154d79282e7131757f1f62bbb6326d
+       flags: 0
+     RecentlyUsedSceneGuid-2:
+-      value: 0750055652540c025f5d5a2113700e4444154d79282e7131757f1f62bbb6326d
++      value: 5a5757560101590a5d0c0e24427b5d44434e4c7a7b7a23677f2b4565b7b5353a
+       flags: 0
+     RecentlyUsedSceneGuid-3:
+-      value: 5a5757560101590a5d0c0e24427b5d44434e4c7a7b7a23677f2b4565b7b5353a
++      value: 5a500155060758590b0f0e26477a5a4415161a2f287b71312b7c4b65e6b76c6d
+       flags: 0
+     RecentlyUsedSceneGuid-4:
+-      value: 5a500155060758590b0f0e26477a5a4415161a2f287b71312b7c4b65e6b76c6d
++      value: 065305510302580f0c0b5c7447715b44464f1d7f7a2a7063792f1e30b6b36c3e
+       flags: 0
+     RecentlyUsedSceneGuid-5:
+-      value: 065305510302580f0c0b5c7447715b44464f1d7f7a2a7063792f1e30b6b36c3e
++      value: 0707065e52510f5e555f0a7211210e44404e4873292a7567752b4e36bbb7663c
+       flags: 0
+     RecentlyUsedSceneGuid-6:
+-      value: 0707065e52510f5e555f0a7211210e44404e4873292a7567752b4e36bbb7663c
++      value: 0506025757050d595c5e5c7013205a4447161d7f792b7f327d7e4f64e0e3616e
+       flags: 0
+     RecentlyUsedSceneGuid-7:
+-      value: 0506025757050d595c5e5c7013205a4447161d7f792b7f327d7e4f64e0e3616e
++      value: 0252555203010b030b5e0e7348770c464e4f4e2c2e7976322f2b1963b6b8666c
+       flags: 0
+     RecentlyUsedSceneGuid-8:
+-      value: 050755535d570d025f585a7143705a44454e4a287c2a27647a794a32b3e16568
++      value: 5703075750030f0d5d5f5e201426094412151a2e7e2971662c7d4a63e0b26c61
+       flags: 0
+     RecentlyUsedSceneGuid-9:
+-      value: 0252555203010b030b5e0e7348770c464e4f4e2c2e7976322f2b1963b6b8666c
++      value: 050755535d570d025f585a7143705a44454e4a287c2a27647a794a32b3e16568
+       flags: 0
+     vcSharedLogLevel:
+       value: 0d5e400f0650
+diff --git a/client/UserSettings/Layouts/default-2022.dwlt b/client/UserSettings/Layouts/default-2022.dwlt
+index 3091f9d..9509fff 100644
+--- a/client/UserSettings/Layouts/default-2022.dwlt
++++ b/client/UserSettings/Layouts/default-2022.dwlt
+@@ -14,16 +14,16 @@ MonoBehaviour:
+   m_EditorClassIdentifier: 
+   m_PixelRect:
+     serializedVersion: 2
+-    x: 0
+-    y: 43
+-    width: 2560
+-    height: 1349
+-  m_ShowMode: 4
+-  m_Title: Inspector
+-  m_RootView: {fileID: 2}
+-  m_MinSize: {x: 875, y: 300}
+-  m_MaxSize: {x: 10000, y: 10000}
+-  m_Maximized: 1
++    x: 528
++    y: 113
++    width: 614
++    height: 573
++  m_ShowMode: 0
++  m_Title: UOS CDN
++  m_RootView: {fileID: 8}
++  m_MinSize: {x: 100, y: 121}
++  m_MaxSize: {x: 4000, y: 4021}
++  m_Maximized: 0
+ --- !u!114 &2
+ MonoBehaviour:
+   m_ObjectHideFlags: 52
+@@ -32,26 +32,22 @@ MonoBehaviour:
+   m_PrefabAsset: {fileID: 0}
+   m_GameObject: {fileID: 0}
+   m_Enabled: 1
+-  m_EditorHideFlags: 1
+-  m_Script: {fileID: 12008, guid: 0000000000000000e000000000000000, type: 0}
++  m_EditorHideFlags: 0
++  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
+   m_Name: 
+   m_EditorClassIdentifier: 
+-  m_Children:
+-  - {fileID: 3}
+-  - {fileID: 5}
+-  - {fileID: 4}
+-  m_Position:
++  m_PixelRect:
+     serializedVersion: 2
+-    x: 0
+-    y: 0
+-    width: 2560
+-    height: 1349
+-  m_MinSize: {x: 875, y: 300}
+-  m_MaxSize: {x: 10000, y: 10000}
+-  m_UseTopView: 1
+-  m_TopViewHeight: 30
+-  m_UseBottomView: 1
+-  m_BottomViewHeight: 20
++    x: 737
++    y: 293
++    width: 800
++    height: 561
++  m_ShowMode: 0
++  m_Title: Package Manager
++  m_RootView: {fileID: 10}
++  m_MinSize: {x: 800, y: 271}
++  m_MaxSize: {x: 4000, y: 4021}
++  m_Maximized: 0
+ --- !u!114 &3
+ MonoBehaviour:
+   m_ObjectHideFlags: 52
+@@ -60,20 +56,22 @@ MonoBehaviour:
+   m_PrefabAsset: {fileID: 0}
+   m_GameObject: {fileID: 0}
+   m_Enabled: 1
+-  m_EditorHideFlags: 1
+-  m_Script: {fileID: 12011, guid: 0000000000000000e000000000000000, type: 0}
++  m_EditorHideFlags: 0
++  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
+   m_Name: 
+   m_EditorClassIdentifier: 
+-  m_Children: []
+-  m_Position:
++  m_PixelRect:
+     serializedVersion: 2
+-    x: 0
+-    y: 0
+-    width: 2560
+-    height: 30
+-  m_MinSize: {x: 0, y: 0}
+-  m_MaxSize: {x: 0, y: 0}
+-  m_LastLoadedLayoutName: 
++    x: 570
++    y: 278
++    width: 780
++    height: 545
++  m_ShowMode: 0
++  m_Title: Welcome
++  m_RootView: {fileID: 14}
++  m_MinSize: {x: 780, y: 545.16}
++  m_MaxSize: {x: 780, y: 545.16}
++  m_Maximized: 1
+ --- !u!114 &4
+ MonoBehaviour:
+   m_ObjectHideFlags: 52
+@@ -82,19 +80,22 @@ MonoBehaviour:
+   m_PrefabAsset: {fileID: 0}
+   m_GameObject: {fileID: 0}
+   m_Enabled: 1
+-  m_EditorHideFlags: 1
+-  m_Script: {fileID: 12042, guid: 0000000000000000e000000000000000, type: 0}
++  m_EditorHideFlags: 0
++  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
+   m_Name: 
+   m_EditorClassIdentifier: 
+-  m_Children: []
+-  m_Position:
++  m_PixelRect:
+     serializedVersion: 2
+-    x: 0
+-    y: 1329
+-    width: 2560
+-    height: 20
+-  m_MinSize: {x: 0, y: 0}
+-  m_MaxSize: {x: 0, y: 0}
++    x: -1
++    y: 59
++    width: 1920
++    height: 933
++  m_ShowMode: 4
++  m_Title: MCP For Unity
++  m_RootView: {fileID: 20}
++  m_MinSize: {x: 875, y: 300}
++  m_MaxSize: {x: 10000, y: 10000}
++  m_Maximized: 1
+ --- !u!114 &5
+ MonoBehaviour:
+   m_ObjectHideFlags: 52
+@@ -103,23 +104,24 @@ MonoBehaviour:
+   m_PrefabAsset: {fileID: 0}
+   m_GameObject: {fileID: 0}
+   m_Enabled: 1
+-  m_EditorHideFlags: 1
+-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+-  m_Name: 
++  m_EditorHideFlags: 0
++  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
++  m_Name: MCPForUnityEditorWindow
+   m_EditorClassIdentifier: 
+-  m_Children:
+-  - {fileID: 6}
+-  - {fileID: 15}
++  m_Children: []
+   m_Position:
+     serializedVersion: 2
+     x: 0
+-    y: 30
+-    width: 2560
+-    height: 1299
+-  m_MinSize: {x: 300, y: 150}
+-  m_MaxSize: {x: 24288, y: 24288}
+-  vertical: 0
+-  controlID: 19519
++    y: 508
++    width: 587
++    height: 375
++  m_MinSize: {x: 501, y: 361}
++  m_MaxSize: {x: 4001, y: 4021}
++  m_ActualView: {fileID: 25}
++  m_Panes:
++  - {fileID: 25}
++  m_Selected: 0
++  m_LastSelected: 0
+ --- !u!114 &6
+ MonoBehaviour:
+   m_ObjectHideFlags: 52
+@@ -128,23 +130,23 @@ MonoBehaviour:
+   m_PrefabAsset: {fileID: 0}
+   m_GameObject: {fileID: 0}
+   m_Enabled: 1
+-  m_EditorHideFlags: 1
++  m_EditorHideFlags: 0
+   m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+   m_Name: 
+   m_EditorClassIdentifier: 
+   m_Children:
+-  - {fileID: 7}
+-  - {fileID: 12}
++  - {fileID: 17}
++  - {fileID: 5}
+   m_Position:
+     serializedVersion: 2
+-    x: 0
++    x: 1333
+     y: 0
+-    width: 1769
+-    height: 1299
+-  m_MinSize: {x: 200, y: 150}
+-  m_MaxSize: {x: 16192, y: 24288}
++    width: 587
++    height: 883
++  m_MinSize: {x: 100, y: 100}
++  m_MaxSize: {x: 8096, y: 16192}
+   vertical: 1
+-  controlID: 19466
++  controlID: 1001
+ --- !u!114 &7
+ MonoBehaviour:
+   m_ObjectHideFlags: 52
+@@ -153,23 +155,24 @@ MonoBehaviour:
+   m_PrefabAsset: {fileID: 0}
+   m_GameObject: {fileID: 0}
+   m_Enabled: 1
+-  m_EditorHideFlags: 1
+-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+-  m_Name: 
++  m_EditorHideFlags: 0
++  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
++  m_Name: UosCdnManager
+   m_EditorClassIdentifier: 
+-  m_Children:
+-  - {fileID: 8}
+-  - {fileID: 9}
++  m_Children: []
+   m_Position:
+     serializedVersion: 2
+     x: 0
+     y: 0
+-    width: 1769
+-    height: 858
+-  m_MinSize: {x: 200, y: 100}
+-  m_MaxSize: {x: 16192, y: 16192}
+-  vertical: 0
+-  controlID: 19467
++    width: 614
++    height: 573
++  m_MinSize: {x: 100, y: 100}
++  m_MaxSize: {x: 4000, y: 4000}
++  m_ActualView: {fileID: 26}
++  m_Panes:
++  - {fileID: 26}
++  m_Selected: 0
++  m_LastSelected: 0
+ --- !u!114 &8
+ MonoBehaviour:
+   m_ObjectHideFlags: 52
+@@ -178,24 +181,22 @@ MonoBehaviour:
+   m_PrefabAsset: {fileID: 0}
+   m_GameObject: {fileID: 0}
+   m_Enabled: 1
+-  m_EditorHideFlags: 1
+-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
++  m_EditorHideFlags: 0
++  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+   m_Name: 
+   m_EditorClassIdentifier: 
+-  m_Children: []
++  m_Children:
++  - {fileID: 7}
+   m_Position:
+     serializedVersion: 2
+     x: 0
+     y: 0
+-    width: 427
+-    height: 858
+-  m_MinSize: {x: 201, y: 221}
+-  m_MaxSize: {x: 4001, y: 4021}
+-  m_ActualView: {fileID: 19}
+-  m_Panes:
+-  - {fileID: 19}
+-  m_Selected: 0
+-  m_LastSelected: 0
++    width: 614
++    height: 573
++  m_MinSize: {x: 100, y: 121}
++  m_MaxSize: {x: 4000, y: 4021}
++  vertical: 0
++  controlID: 4835
+ --- !u!114 &9
+ MonoBehaviour:
+   m_ObjectHideFlags: 52
+@@ -205,22 +206,23 @@ MonoBehaviour:
+   m_GameObject: {fileID: 0}
+   m_Enabled: 1
+   m_EditorHideFlags: 0
+-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+-  m_Name: 
++  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
++  m_Name: PackageManagerWindow
+   m_EditorClassIdentifier: 
+-  m_Children:
+-  - {fileID: 10}
+-  - {fileID: 11}
++  m_Children: []
+   m_Position:
+     serializedVersion: 2
+-    x: 427
++    x: 0
+     y: 0
+-    width: 1342
+-    height: 858
+-  m_MinSize: {x: 100, y: 100}
+-  m_MaxSize: {x: 8096, y: 16192}
+-  vertical: 1
+-  controlID: 19468
++    width: 800
++    height: 561
++  m_MinSize: {x: 800, y: 271}
++  m_MaxSize: {x: 4000, y: 4021}
++  m_ActualView: {fileID: 27}
++  m_Panes:
++  - {fileID: 27}
++  m_Selected: 0
++  m_LastSelected: 0
+ --- !u!114 &10
+ MonoBehaviour:
+   m_ObjectHideFlags: 52
+@@ -230,24 +232,21 @@ MonoBehaviour:
+   m_GameObject: {fileID: 0}
+   m_Enabled: 1
+   m_EditorHideFlags: 0
+-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+-  m_Name: WXEditorWin
++  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
++  m_Name: 
+   m_EditorClassIdentifier: 
+-  m_Children: []
++  m_Children:
++  - {fileID: 9}
+   m_Position:
+     serializedVersion: 2
+     x: 0
+     y: 0
+-    width: 1342
+-    height: 471
+-  m_MinSize: {x: 352, y: 421}
+-  m_MaxSize: {x: 4002, y: 4021}
+-  m_ActualView: {fileID: 21}
+-  m_Panes:
+-  - {fileID: 20}
+-  - {fileID: 21}
+-  m_Selected: 1
+-  m_LastSelected: 0
++    width: 800
++    height: 561
++  m_MinSize: {x: 800, y: 271}
++  m_MaxSize: {x: 4000, y: 4021}
++  vertical: 0
++  controlID: 3423
+ --- !u!114 &11
+ MonoBehaviour:
+   m_ObjectHideFlags: 52
+@@ -258,22 +257,23 @@ MonoBehaviour:
+   m_Enabled: 1
+   m_EditorHideFlags: 0
+   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+-  m_Name: SceneView
++  m_Name: ProjectBrowser
+   m_EditorClassIdentifier: 
+   m_Children: []
+   m_Position:
+     serializedVersion: 2
+-    x: 0
+-    y: 471
+-    width: 1342
+-    height: 387
+-  m_MinSize: {x: 202, y: 221}
+-  m_MaxSize: {x: 4002, y: 4021}
+-  m_ActualView: {fileID: 22}
++    x: 887
++    y: 0
++    width: 446
++    height: 284
++  m_MinSize: {x: 232, y: 271}
++  m_MaxSize: {x: 10002, y: 10021}
++  m_ActualView: {fileID: 28}
+   m_Panes:
+-  - {fileID: 22}
+-  m_Selected: 0
+-  m_LastSelected: 1
++  - {fileID: 29}
++  - {fileID: 28}
++  m_Selected: 1
++  m_LastSelected: 0
+ --- !u!114 &12
+ MonoBehaviour:
+   m_ObjectHideFlags: 52
+@@ -287,18 +287,18 @@ MonoBehaviour:
+   m_Name: 
+   m_EditorClassIdentifier: 
+   m_Children:
+-  - {fileID: 13}
+-  - {fileID: 14}
++  - {fileID: 19}
++  - {fileID: 11}
+   m_Position:
+     serializedVersion: 2
+     x: 0
+-    y: 858
+-    width: 1769
+-    height: 441
++    y: 599
++    width: 1333
++    height: 284
+   m_MinSize: {x: 200, y: 50}
+   m_MaxSize: {x: 16192, y: 8096}
+   vertical: 0
+-  controlID: 19513
++  controlID: 680
+ --- !u!114 &13
+ MonoBehaviour:
+   m_ObjectHideFlags: 52
+@@ -307,26 +307,49 @@ MonoBehaviour:
+   m_PrefabAsset: {fileID: 0}
+   m_GameObject: {fileID: 0}
+   m_Enabled: 1
+-  m_EditorHideFlags: 1
++  m_EditorHideFlags: 0
+   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+-  m_Name: ConsoleWindow
++  m_Name: WelcomeWindow
+   m_EditorClassIdentifier: 
+   m_Children: []
+   m_Position:
+     serializedVersion: 2
+     x: 0
+     y: 0
+-    width: 1252
+-    height: 441
+-  m_MinSize: {x: 101, y: 121}
+-  m_MaxSize: {x: 4001, y: 4021}
+-  m_ActualView: {fileID: 24}
++    width: 780
++    height: 545
++  m_MinSize: {x: 780, y: 545.16}
++  m_MaxSize: {x: 780, y: 545.16}
++  m_ActualView: {fileID: 32}
+   m_Panes:
+-  - {fileID: 23}
+-  - {fileID: 24}
+-  m_Selected: 1
++  - {fileID: 32}
++  m_Selected: 0
+   m_LastSelected: 0
+ --- !u!114 &14
++MonoBehaviour:
++  m_ObjectHideFlags: 52
++  m_CorrespondingSourceObject: {fileID: 0}
++  m_PrefabInstance: {fileID: 0}
++  m_PrefabAsset: {fileID: 0}
++  m_GameObject: {fileID: 0}
++  m_Enabled: 1
++  m_EditorHideFlags: 0
++  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
++  m_Name: 
++  m_EditorClassIdentifier: 
++  m_Children:
++  - {fileID: 13}
++  m_Position:
++    serializedVersion: 2
++    x: 0
++    y: 0
++    width: 780
++    height: 545
++  m_MinSize: {x: 780, y: 545.16}
++  m_MaxSize: {x: 780, y: 545.16}
++  vertical: 0
++  controlID: 370
++--- !u!114 &15
+ MonoBehaviour:
+   m_ObjectHideFlags: 52
+   m_CorrespondingSourceObject: {fileID: 0}
+@@ -336,23 +359,24 @@ MonoBehaviour:
+   m_Enabled: 1
+   m_EditorHideFlags: 0
+   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+-  m_Name: ReGoapNodeBaseEditor
++  m_Name: GameView
+   m_EditorClassIdentifier: 
+   m_Children: []
+   m_Position:
+     serializedVersion: 2
+-    x: 1252
++    x: 314
+     y: 0
+-    width: 517
+-    height: 441
+-  m_MinSize: {x: 100, y: 100}
+-  m_MaxSize: {x: 4000, y: 4000}
+-  m_ActualView: {fileID: 25}
++    width: 1019
++    height: 599
++  m_MinSize: {x: 202, y: 221}
++  m_MaxSize: {x: 4002, y: 4021}
++  m_ActualView: {fileID: 37}
+   m_Panes:
+-  - {fileID: 25}
++  - {fileID: 37}
++  - {fileID: 36}
+   m_Selected: 0
+-  m_LastSelected: -1
+---- !u!114 &15
++  m_LastSelected: 1
++--- !u!114 &16
+ MonoBehaviour:
+   m_ObjectHideFlags: 52
+   m_CorrespondingSourceObject: {fileID: 0}
+@@ -360,24 +384,52 @@ MonoBehaviour:
+   m_PrefabAsset: {fileID: 0}
+   m_GameObject: {fileID: 0}
+   m_Enabled: 1
+-  m_EditorHideFlags: 0
++  m_EditorHideFlags: 1
+   m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+   m_Name: 
+   m_EditorClassIdentifier: 
+   m_Children:
+-  - {fileID: 16}
+-  - {fileID: 17}
++  - {fileID: 23}
++  - {fileID: 6}
++  m_Position:
++    serializedVersion: 2
++    x: 0
++    y: 30
++    width: 1920
++    height: 883
++  m_MinSize: {x: 300, y: 100}
++  m_MaxSize: {x: 24288, y: 16192}
++  vertical: 0
++  controlID: 218
++--- !u!114 &17
++MonoBehaviour:
++  m_ObjectHideFlags: 52
++  m_CorrespondingSourceObject: {fileID: 0}
++  m_PrefabInstance: {fileID: 0}
++  m_PrefabAsset: {fileID: 0}
++  m_GameObject: {fileID: 0}
++  m_Enabled: 1
++  m_EditorHideFlags: 1
++  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
++  m_Name: InspectorWindow
++  m_EditorClassIdentifier: 
++  m_Children: []
+   m_Position:
+     serializedVersion: 2
+-    x: 1769
++    x: 0
+     y: 0
+-    width: 791
+-    height: 1299
+-  m_MinSize: {x: 100, y: 100}
+-  m_MaxSize: {x: 8096, y: 16192}
+-  vertical: 1
+-  controlID: 19520
+---- !u!114 &16
++    width: 587
++    height: 508
++  m_MinSize: {x: 276, y: 71}
++  m_MaxSize: {x: 4001, y: 4021}
++  m_ActualView: {fileID: 34}
++  m_Panes:
++  - {fileID: 34}
++  - {fileID: 31}
++  - {fileID: 30}
++  m_Selected: 0
++  m_LastSelected: 1
++--- !u!114 &18
+ MonoBehaviour:
+   m_ObjectHideFlags: 52
+   m_CorrespondingSourceObject: {fileID: 0}
+@@ -394,16 +446,16 @@ MonoBehaviour:
+     serializedVersion: 2
+     x: 0
+     y: 0
+-    width: 791
+-    height: 636
+-  m_MinSize: {x: 276, y: 71}
++    width: 314
++    height: 599
++  m_MinSize: {x: 201, y: 221}
+   m_MaxSize: {x: 4001, y: 4021}
+-  m_ActualView: {fileID: 26}
++  m_ActualView: {fileID: 35}
+   m_Panes:
+-  - {fileID: 26}
++  - {fileID: 35}
+   m_Selected: 0
+   m_LastSelected: 0
+---- !u!114 &17
++--- !u!114 &19
+ MonoBehaviour:
+   m_ObjectHideFlags: 52
+   m_CorrespondingSourceObject: {fileID: 0}
+@@ -411,26 +463,26 @@ MonoBehaviour:
+   m_PrefabAsset: {fileID: 0}
+   m_GameObject: {fileID: 0}
+   m_Enabled: 1
+-  m_EditorHideFlags: 0
++  m_EditorHideFlags: 1
+   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+-  m_Name: UosCdnManager
++  m_Name: ConsoleWindow
+   m_EditorClassIdentifier: 
+   m_Children: []
+   m_Position:
+     serializedVersion: 2
+     x: 0
+-    y: 636
+-    width: 791
+-    height: 663
++    y: 0
++    width: 887
++    height: 284
+   m_MinSize: {x: 101, y: 121}
+   m_MaxSize: {x: 4001, y: 4021}
+-  m_ActualView: {fileID: 18}
++  m_ActualView: {fileID: 38}
+   m_Panes:
+-  - {fileID: 18}
+-  - {fileID: 27}
+-  m_Selected: 0
+-  m_LastSelected: 1
+---- !u!114 &18
++  - {fileID: 33}
++  - {fileID: 38}
++  m_Selected: 1
++  m_LastSelected: 0
++--- !u!114 &20
+ MonoBehaviour:
+   m_ObjectHideFlags: 52
+   m_CorrespondingSourceObject: {fileID: 0}
+@@ -438,25 +490,180 @@ MonoBehaviour:
+   m_PrefabAsset: {fileID: 0}
+   m_GameObject: {fileID: 0}
+   m_Enabled: 1
+-  m_EditorHideFlags: 0
+-  m_Script: {fileID: 11500000, guid: caee5921d8cb84b9b85d87ec6736e605, type: 3}
++  m_EditorHideFlags: 1
++  m_Script: {fileID: 12008, guid: 0000000000000000e000000000000000, type: 0}
+   m_Name: 
+   m_EditorClassIdentifier: 
+-  m_MinSize: {x: 100, y: 100}
+-  m_MaxSize: {x: 4000, y: 4000}
+-  m_TitleContent:
+-    m_Text: UOS CDN
+-    m_Image: {fileID: 0}
+-    m_Tooltip: 
+-  m_Pos:
++  m_Children:
++  - {fileID: 21}
++  - {fileID: 16}
++  - {fileID: 22}
++  m_Position:
+     serializedVersion: 2
+-    x: 1769
+-    y: 709
+-    width: 790
+-    height: 642
+-  m_SerializedDataModeController:
+-    m_DataMode: 0
+-    m_PreferredDataMode: 0
++    x: 0
++    y: 0
++    width: 1920
++    height: 933
++  m_MinSize: {x: 875, y: 300}
++  m_MaxSize: {x: 10000, y: 10000}
++  m_UseTopView: 1
++  m_TopViewHeight: 30
++  m_UseBottomView: 1
++  m_BottomViewHeight: 20
++--- !u!114 &21
++MonoBehaviour:
++  m_ObjectHideFlags: 52
++  m_CorrespondingSourceObject: {fileID: 0}
++  m_PrefabInstance: {fileID: 0}
++  m_PrefabAsset: {fileID: 0}
++  m_GameObject: {fileID: 0}
++  m_Enabled: 1
++  m_EditorHideFlags: 1
++  m_Script: {fileID: 12011, guid: 0000000000000000e000000000000000, type: 0}
++  m_Name: 
++  m_EditorClassIdentifier: 
++  m_Children: []
++  m_Position:
++    serializedVersion: 2
++    x: 0
++    y: 0
++    width: 1920
++    height: 30
++  m_MinSize: {x: 0, y: 0}
++  m_MaxSize: {x: 0, y: 0}
++  m_LastLoadedLayoutName: 
++--- !u!114 &22
++MonoBehaviour:
++  m_ObjectHideFlags: 52
++  m_CorrespondingSourceObject: {fileID: 0}
++  m_PrefabInstance: {fileID: 0}
++  m_PrefabAsset: {fileID: 0}
++  m_GameObject: {fileID: 0}
++  m_Enabled: 1
++  m_EditorHideFlags: 1
++  m_Script: {fileID: 12042, guid: 0000000000000000e000000000000000, type: 0}
++  m_Name: 
++  m_EditorClassIdentifier: 
++  m_Children: []
++  m_Position:
++    serializedVersion: 2
++    x: 0
++    y: 913
++    width: 1920
++    height: 20
++  m_MinSize: {x: 0, y: 0}
++  m_MaxSize: {x: 0, y: 0}
++--- !u!114 &23
++MonoBehaviour:
++  m_ObjectHideFlags: 52
++  m_CorrespondingSourceObject: {fileID: 0}
++  m_PrefabInstance: {fileID: 0}
++  m_PrefabAsset: {fileID: 0}
++  m_GameObject: {fileID: 0}
++  m_Enabled: 1
++  m_EditorHideFlags: 1
++  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
++  m_Name: 
++  m_EditorClassIdentifier: 
++  m_Children:
++  - {fileID: 24}
++  - {fileID: 12}
++  m_Position:
++    serializedVersion: 2
++    x: 0
++    y: 0
++    width: 1333
++    height: 883
++  m_MinSize: {x: 200, y: 100}
++  m_MaxSize: {x: 16192, y: 16192}
++  vertical: 1
++  controlID: 219
++--- !u!114 &24
++MonoBehaviour:
++  m_ObjectHideFlags: 52
++  m_CorrespondingSourceObject: {fileID: 0}
++  m_PrefabInstance: {fileID: 0}
++  m_PrefabAsset: {fileID: 0}
++  m_GameObject: {fileID: 0}
++  m_Enabled: 1
++  m_EditorHideFlags: 1
++  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
++  m_Name: 
++  m_EditorClassIdentifier: 
++  m_Children:
++  - {fileID: 18}
++  - {fileID: 15}
++  m_Position:
++    serializedVersion: 2
++    x: 0
++    y: 0
++    width: 1333
++    height: 599
++  m_MinSize: {x: 200, y: 50}
++  m_MaxSize: {x: 16192, y: 8096}
++  vertical: 0
++  controlID: 220
++--- !u!114 &25
++MonoBehaviour:
++  m_ObjectHideFlags: 52
++  m_CorrespondingSourceObject: {fileID: 0}
++  m_PrefabInstance: {fileID: 0}
++  m_PrefabAsset: {fileID: 0}
++  m_GameObject: {fileID: 0}
++  m_Enabled: 1
++  m_EditorHideFlags: 0
++  m_Script: {fileID: 11500000, guid: 9f0c6e1d3e4d5e6f7a8b9c0d1e2f3a4d, type: 3}
++  m_Name: 
++  m_EditorClassIdentifier: 
++  m_MinSize: {x: 500, y: 340}
++  m_MaxSize: {x: 4000, y: 4000}
++  m_TitleContent:
++    m_Text: MCP For Unity
++    m_Image: {fileID: 0}
++    m_Tooltip: 
++  m_Pos:
++    serializedVersion: 2
++    x: 1332
++    y: 597
++    width: 586
++    height: 354
++  m_SerializedDataModeController:
++    m_DataMode: 0
++    m_PreferredDataMode: 0
++    m_SupportedDataModes: 
++    isAutomatic: 1
++  m_ViewDataDictionary: {fileID: 0}
++  m_OverlayCanvas:
++    m_LastAppliedPresetName: Default
++    m_SaveData: []
++    m_OverlaysVisible: 1
++--- !u!114 &26
++MonoBehaviour:
++  m_ObjectHideFlags: 52
++  m_CorrespondingSourceObject: {fileID: 0}
++  m_PrefabInstance: {fileID: 0}
++  m_PrefabAsset: {fileID: 0}
++  m_GameObject: {fileID: 0}
++  m_Enabled: 1
++  m_EditorHideFlags: 0
++  m_Script: {fileID: 11500000, guid: caee5921d8cb84b9b85d87ec6736e605, type: 3}
++  m_Name: 
++  m_EditorClassIdentifier: 
++  m_MinSize: {x: 100, y: 100}
++  m_MaxSize: {x: 4000, y: 4000}
++  m_TitleContent:
++    m_Text: UOS CDN
++    m_Image: {fileID: 0}
++    m_Tooltip: 
++  m_Pos:
++    serializedVersion: 2
++    x: 528
++    y: 113
++    width: 614
++    height: 552
++  m_SerializedDataModeController:
++    m_DataMode: 0
++    m_PreferredDataMode: 0
+     m_SupportedDataModes: 
+     isAutomatic: 1
+   m_ViewDataDictionary: {fileID: 0}
+@@ -489,9 +696,15 @@ MonoBehaviour:
+   pr:
+     showReleaseArea: 1
+     showReleaseAreaText: Release
+-    selectedReleaseName: 66
+-    selectedReleaseId: 58837609-a010-4f92-b511-9caac63a08d0
++    selectedReleaseName: 67
++    selectedReleaseId: 9b7dc244-9ee5-4994-a4ca-8b23a65e3790
+     releaseList:
++    - releaseid: 9b7dc244-9ee5-4994-a4ca-8b23a65e3790
++      releasenum: 67
++      created_by: 
++      entries_link: /api/v1/buckets/0d7910a3-89be-4c14-b1a5-5aaa6a55e597/releases/9b7dc244-9ee5-4994-a4ca-8b23a65e3790/entries/
++      content_hash: 82a5eadf85e67057d0945e696d660ed0
++      content_size: 3197183
+     - releaseid: 58837609-a010-4f92-b511-9caac63a08d0
+       releasenum: 66
+       created_by: 
+@@ -546,13 +759,8 @@ MonoBehaviour:
+       entries_link: /api/v1/buckets/0d7910a3-89be-4c14-b1a5-5aaa6a55e597/releases/792c105a-db6e-4240-af72-426b7c8e7758/entries/
+       content_hash: 5b35a1295c62472329c5ee1cf16e26f3
+       content_size: 6467336
+-    - releaseid: b482cf07-fe99-4df7-baa0-04666a02736e
+-      releasenum: 57
+-      created_by: 
+-      entries_link: /api/v1/buckets/0d7910a3-89be-4c14-b1a5-5aaa6a55e597/releases/b482cf07-fe99-4df7-baa0-04666a02736e/entries/
+-      content_hash: e4cad4c9b88df9c78099d79cb6a26ca4
+-      content_size: 6465911
+     releaseNameList:
++    - 67
+     - 66
+     - 65
+     - 64
+@@ -562,95 +770,94 @@ MonoBehaviour:
+     - 60
+     - 59
+     - 58
+-    - 57
+     currentReleasePage: 1
+     selectedReleaseIndex: 0
+-    totalReleaseCounts: 66
++    totalReleaseCounts: 67
+     totalReleasePages: 7
+     releasePreviousButton: 0
+     releaseNextButton: 1
+   pe:
+     showEntryArea: 1
+     showEntryAreaText: Entry
+-    syncPath: G:/Repos/BSKGame/outputResource/Full
++    syncPath: 
+     selectedEntryIndex: 0
+     selectedEntryUuid: bfcbec86-3622-44a3-8671-053a831db346
+     selectedEntryName: WebGLVersion.txt
+     entryList:
+-    - content_hash: c06d462d27a860a102261797c52a047a
++    - content_hash: af6756486185cdf6388b387e603afac4
+       entryid: bfcbec86-3622-44a3-8671-053a831db346
+       path: WebGLVersion.txt
+       content_type: text/plain
+       content_size: 427
+-      last_modified: 2025-01-08T23:00:48.863+08:00
+-    - content_hash: 48d1ee637c5d959a9860894bac24d6bb
+-      entryid: 58932361-ab97-44c7-80f5-3c2f80d8cf6e
+-      path: 0_1_1/WebGL/DLL/UnityGameFramework.80476e83.dat
++      last_modified: 2025-01-10T21:08:09.207+08:00
++    - content_hash: 65435fe467984ffd6e55f1a89dd11a73
++      entryid: 177b9ab5-0ea8-4910-80a3-5316c11113f3
++      path: 0_1_1/WebGL/UI/UIForms/UpdateResource/UIUpdateResourceForm_93cebb9b.dat
+       content_type: application/octet-stream
+-      content_size: 166082
+-      last_modified: 2025-01-08T23:00:48.719+08:00
+-    - content_hash: 8979296fd64ddf128c13c407160f95b4
+-      entryid: 8b6d0859-7896-4e65-bc1d-c3fd82ddc293
+-      path: 0_1_1/WebGL/DLL/Unity.ca869c7b.dat
++      content_size: 7202
++      last_modified: 2025-01-10T21:08:09.053+08:00
++    - content_hash: 91c87840d031d337b4d2361ed3d0c368
++      entryid: 7ccec114-f6ba-4a7e-bf20-0ff6101d87b5
++      path: 0_1_1/WebGL/UI/UIForms/Menu/SelectBattleItem_b017e89b.dat
+       content_type: application/octet-stream
+-      content_size: 38449
+-      last_modified: 2025-01-08T23:00:48.529+08:00
+-    - content_hash: d88a0426bbc3d8632ae2ef4de772d3e3
+-      entryid: defbb1a0-b4f8-41dc-be74-f8c8c1625626
+-      path: 0_1_1/WebGL/DLL/ReGoap.ae2c3202.dat
++      content_size: 10654
++      last_modified: 2025-01-10T21:08:08.932+08:00
++    - content_hash: 30e388119ad915716e07aaac139a6f85
++      entryid: 3b3ef58f-b96f-4fc1-8939-5e6b2541ad44
++      path: 0_1_1/WebGL/UI/UIForms/Menu/MenuForm_f855d04b.dat
+       content_type: application/octet-stream
+-      content_size: 25153
+-      last_modified: 2025-01-08T23:00:48.361+08:00
+-    - content_hash: 9b7ab170d34ee457e2a61a155723838b
+-      entryid: dc08b20f-1d1a-4ab1-97d6-43170322362a
+-      path: 0_1_1/WebGL/DLL/GameFramework.be27f4fa.dat
++      content_size: 16867
++      last_modified: 2025-01-10T21:08:08.792+08:00
++    - content_hash: 16e7060838671d2525f98e72d3da89ff
++      entryid: 425b22d7-9a0d-4eb2-82d7-9b9dd5ccaf08
++      path: 0_1_1/WebGL/VFX/TestVFX_98a8d0a0.dat
+       content_type: application/octet-stream
+-      content_size: 3382
+-      last_modified: 2025-01-08T23:00:48.221+08:00
+-    - content_hash: 786ec3f78f354d912315824313340eca
+-      entryid: fd2636f0-6947-4307-a668-bd85c7fe28dd
+-      path: 0_1_1/WebGL/DLL/game.ed216e27.dat
++      content_size: 46495
++      last_modified: 2025-01-10T21:08:08.631+08:00
++    - content_hash: 14dc685992d2d7c49a0f827b4e22e788
++      entryid: 1e4d135a-5726-4555-8526-9c77e632d744
++      path: 0_1_1/WebGL/Scenes/Launch_f7c2cafc.dat
+       content_type: application/octet-stream
+-      content_size: 292491
+-      last_modified: 2025-01-08T23:00:48.086+08:00
+-    - content_hash: 1236f51386bec6cd27880cbcb1a23f84
+-      entryid: b80bef95-e6d7-409f-a4fd-65ff23bc0b1f
+-      path: 0_1_1/WebGL/DLL/BSK.6d05586e.dat
++      content_size: 72752
++      last_modified: 2025-01-10T21:08:08.460+08:00
++    - content_hash: e59897d9ae438d3df4a30734a4a4eec6
++      entryid: 25dcb458-bce6-40ec-874a-03a4a46f1ef9
++      path: 0_1_1/WebGL/Prefab/DefaultPlayer_6017ed0a.dat
+       content_type: application/octet-stream
+-      content_size: 163791
+-      last_modified: 2025-01-08T23:00:47.878+08:00
+-    - content_hash: ed053b1a41f68a8964a2339101aafc77
+-      entryid: 7c2f7583-8825-4a85-91a8-edb2caaf6050
+-      path: 0_1_1/WebGL/GameFrameworkVersion.6ef9c245.dat
++      content_size: 43372
++      last_modified: 2025-01-10T21:08:08.278+08:00
++    - content_hash: b64c164c35ec49f7bfe735f3c59d6bee
++      entryid: 4da7c89f-48a8-4e44-8cff-d6d818ded595
++      path: 0_1_1/WebGL/Entities/Role_c55790a8.dat
+       content_type: application/octet-stream
+-      content_size: 1399
+-      last_modified: 2025-01-08T23:00:47.700+08:00
+-    - content_hash: 18d60c8c822a22ad69298b452c063b48
+-      entryid: e7cf88f9-566a-4e74-a823-ffdaf7bd3669
+-      path: 0_1_1/WebGL/GameFrameworkVersion.94da7469.dat
++      content_size: 3020
++      last_modified: 2025-01-10T21:08:08.127+08:00
++    - content_hash: b3cb0ce6ce5395cba6dc356f506b0d6c
++      entryid: d653b0e8-da0f-47fd-a4eb-122d014903a4
++      path: 0_1_1/WebGL/Entities/RoleController_9dec4a27.dat
+       content_type: application/octet-stream
+-      content_size: 1401
+-      last_modified: 2025-01-08T22:39:54.362+08:00
+-    - content_hash: 85f3ff3323f994dc591a605e8a43a61a
+-      entryid: 1fff2fc8-07ae-4f56-8e66-28baa84c64b2
+-      path: 0_1_1/WebGL/DLL/UnityGameFramework.591659e9.dat
++      content_size: 2474
++      last_modified: 2025-01-10T21:08:08.011+08:00
++    - content_hash: 00681fa6f25ac1ec07f0aa8c8b0a049f
++      entryid: b74aece5-fd4c-44e5-b6d8-b1cbea6f7ba4
++      path: 0_1_1/WebGL/Entities/Player_764499b1.dat
+       content_type: application/octet-stream
+-      content_size: 166083
+-      last_modified: 2025-01-08T22:38:09.688+08:00
++      content_size: 2833
++      last_modified: 2025-01-10T21:08:07.882+08:00
+     entryNameList:
+     - WebGLVersion.txt
+-    - 0_1_1/WebGL/DLL/UnityGameFramework.80476e83.dat
+-    - 0_1_1/WebGL/DLL/Unity.ca869c7b.dat
+-    - 0_1_1/WebGL/DLL/ReGoap.ae2c3202.dat
+-    - 0_1_1/WebGL/DLL/GameFramework.be27f4fa.dat
+-    - 0_1_1/WebGL/DLL/game.ed216e27.dat
+-    - 0_1_1/WebGL/DLL/BSK.6d05586e.dat
+-    - 0_1_1/WebGL/GameFrameworkVersion.6ef9c245.dat
+-    - 0_1_1/WebGL/GameFrameworkVersion.94da7469.dat
+-    - 0_1_1/WebGL/DLL/UnityGameFramework.591659e9.dat
++    - 0_1_1/WebGL/UI/UIForms/UpdateResource/UIUpdateResourceForm_93cebb9b.dat
++    - 0_1_1/WebGL/UI/UIForms/Menu/SelectBattleItem_b017e89b.dat
++    - 0_1_1/WebGL/UI/UIForms/Menu/MenuForm_f855d04b.dat
++    - 0_1_1/WebGL/VFX/TestVFX_98a8d0a0.dat
++    - 0_1_1/WebGL/Scenes/Launch_f7c2cafc.dat
++    - 0_1_1/WebGL/Prefab/DefaultPlayer_6017ed0a.dat
++    - 0_1_1/WebGL/Entities/Role_c55790a8.dat
++    - 0_1_1/WebGL/Entities/RoleController_9dec4a27.dat
++    - 0_1_1/WebGL/Entities/Player_764499b1.dat
+     currentEntryPage: 1
+-    totalEntryCounts: 116
+-    totalEntryPages: 12
++    totalEntryCounts: 32
++    totalEntryPages: 4
+     entryPreviousButton: 0
+     entryNextButton: 1
+   pba:
+@@ -658,15 +865,15 @@ MonoBehaviour:
+     showBadgeAreaText: Badge
+     badgeName: 
+     selectedBadgeName: latest
+-    selectedBadgeLinkedRelease: 66 (58837609-a010-4f92-b511-9caac63a08d0)
++    selectedBadgeLinkedRelease: 67 (9b7dc244-9ee5-4994-a4ca-8b23a65e3790)
+     badgeList:
+     - name: latest
+-      releaseid: 58837609-a010-4f92-b511-9caac63a08d0
+-      releasenum: 66
+-      created: 2025-01-08T23:00:50.386+08:00
++      releaseid: 9b7dc244-9ee5-4994-a4ca-8b23a65e3790
++      releasenum: 67
++      created: 2025-01-10T21:08:11.631+08:00
+     - name: Dev
+-      releaseid: 58837609-a010-4f92-b511-9caac63a08d0
+-      releasenum: 66
++      releaseid: 9b7dc244-9ee5-4994-a4ca-8b23a65e3790
++      releasenum: 67
+       created: 2025-01-01T16:29:12.212+08:00
+     badgeNameList:
+     - latest
+@@ -684,7 +891,7 @@ MonoBehaviour:
+       m_Image: {fileID: 0}
+       m_Tooltip: 
+     remoteLoadUrl: https://a.unity.cn/client_api/v1/buckets/0d7910a3-89be-4c14-b1a5-5aaa6a55e597/release_by_badge/latest/content/
+---- !u!114 &19
++--- !u!114 &27
+ MonoBehaviour:
+   m_ObjectHideFlags: 52
+   m_CorrespondingSourceObject: {fileID: 0}
+@@ -692,22 +899,22 @@ MonoBehaviour:
+   m_PrefabAsset: {fileID: 0}
+   m_GameObject: {fileID: 0}
+   m_Enabled: 1
+-  m_EditorHideFlags: 1
+-  m_Script: {fileID: 12061, guid: 0000000000000000e000000000000000, type: 0}
++  m_EditorHideFlags: 0
++  m_Script: {fileID: 13953, guid: 0000000000000000e000000000000000, type: 0}
+   m_Name: 
+   m_EditorClassIdentifier: 
+-  m_MinSize: {x: 200, y: 200}
++  m_MinSize: {x: 800, y: 250}
+   m_MaxSize: {x: 4000, y: 4000}
+   m_TitleContent:
+-    m_Text: Hierarchy
+-    m_Image: {fileID: 7966133145522015247, guid: 0000000000000000d000000000000000, type: 0}
++    m_Text: Package Manager
++    m_Image: {fileID: -2824328813065806953, guid: 0000000000000000d000000000000000, type: 0}
+     m_Tooltip: 
+   m_Pos:
+     serializedVersion: 2
+-    x: 0
+-    y: 73
+-    width: 426
+-    height: 837
++    x: 737
++    y: 293
++    width: 800
++    height: 540
+   m_SerializedDataModeController:
+     m_DataMode: 0
+     m_PreferredDataMode: 0
+@@ -718,36 +925,7 @@ MonoBehaviour:
+     m_LastAppliedPresetName: Default
+     m_SaveData: []
+     m_OverlaysVisible: 1
+-  m_SceneHierarchy:
+-    m_TreeViewState:
+-      scrollPos: {x: 0, y: 0}
+-      m_SelectedIDs: 
+-      m_LastClickedID: 0
+-      m_ExpandedIDs: 1483fbff6683fbff7087fbfff089fbff428afbff4c8efbff7c98fbffce98fbffdc9cfbff0af8fbff5cf8fbff66fcfbffd2fefbff24fffbff2e03fcffc80cfcff1a0dfcfffa10fcffea1bfcff3c1cfcff4620fcffc622fcff1823fcff2227fcff1431fcff6631fcff7035fcffbc45fcff0e46fcff184afcff7cddfcffceddfcffd8e1fcff66b8fdffc8b8fdffd2bcfdff34c0fdff98c0fdffa2c4fdffa062fefff462feff0667feffa499fefff699feffd29dfeff02a8feff54a8feff38acfeffd4b5feff26b6feff0abafeffeec3feff40c4feff24c8feff74d2feffc6d2feffd6d6feff7eedfeffd0edfeffdaf1feff94f5feffeaf5fefff4f9feff9205ffffe805ffffcc09ffff6613ffffbc13ffffc617ffffac32ffffbcc0000016c100006e220100c822010074380100ce380100
+-      m_RenameOverlay:
+-        m_UserAcceptedRename: 0
+-        m_Name: 
+-        m_OriginalName: 
+-        m_EditFieldRect:
+-          serializedVersion: 2
+-          x: 0
+-          y: 0
+-          width: 0
+-          height: 0
+-        m_UserData: 0
+-        m_IsWaitingForDelay: 0
+-        m_IsRenaming: 0
+-        m_OriginalEventType: 11
+-        m_IsRenamingFilename: 0
+-        m_ClientGUIView: {fileID: 8}
+-      m_SearchString: 
+-    m_ExpandedScenes: []
+-    m_CurrenRootInstanceID: 0
+-    m_LockTracker:
+-      m_IsLocked: 0
+-    m_CurrentSortingName: TransformSorting
+-  m_WindowGUID: 4c969a2b90040154d917609493e03593
+---- !u!114 &20
++--- !u!114 &28
+ MonoBehaviour:
+   m_ObjectHideFlags: 52
+   m_CorrespondingSourceObject: {fileID: 0}
+@@ -755,22 +933,22 @@ MonoBehaviour:
+   m_PrefabAsset: {fileID: 0}
+   m_GameObject: {fileID: 0}
+   m_Enabled: 1
+-  m_EditorHideFlags: 1
+-  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
++  m_EditorHideFlags: 0
++  m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
+   m_Name: 
+   m_EditorClassIdentifier: 
+-  m_MinSize: {x: 200, y: 200}
+-  m_MaxSize: {x: 4000, y: 4000}
++  m_MinSize: {x: 230, y: 250}
++  m_MaxSize: {x: 10000, y: 10000}
+   m_TitleContent:
+-    m_Text: Game
+-    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000, type: 0}
++    m_Text: Project
++    m_Image: {fileID: -5467254957812901981, guid: 0000000000000000d000000000000000, type: 0}
+     m_Tooltip: 
+   m_Pos:
+     serializedVersion: 2
+-    x: 418
+-    y: 73
+-    width: 1291
+-    height: 497
++    x: 888
++    y: 19
++    width: 444
++    height: 263
+   m_SerializedDataModeController:
+     m_DataMode: 0
+     m_PreferredDataMode: 0
+@@ -781,75 +959,184 @@ MonoBehaviour:
+     m_LastAppliedPresetName: Default
+     m_SaveData: []
+     m_OverlaysVisible: 1
+-  m_SerializedViewNames: []
+-  m_SerializedViewValues: []
+-  m_PlayModeViewName: GameView
+-  m_ShowGizmos: 0
+-  m_TargetDisplay: 0
+-  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+-  m_TargetSize: {x: 1920, y: 1080}
+-  m_TextureFilterMode: 0
+-  m_TextureHideFlags: 61
+-  m_RenderIMGUI: 1
+-  m_EnterPlayModeBehavior: 0
+-  m_UseMipMap: 0
+-  m_VSyncEnabled: 0
+-  m_Gizmos: 0
+-  m_Stats: 0
+-  m_SelectedSizes: 03000000000000000000000000000000000000000000000000000000000000000000000000000000
+-  m_ZoomArea:
+-    m_HRangeLocked: 0
+-    m_VRangeLocked: 0
+-    hZoomLockedByDefault: 0
+-    vZoomLockedByDefault: 0
+-    m_HBaseRangeMin: -960
+-    m_HBaseRangeMax: 960
+-    m_VBaseRangeMin: -540
+-    m_VBaseRangeMax: 540
+-    m_HAllowExceedBaseRangeMin: 1
+-    m_HAllowExceedBaseRangeMax: 1
+-    m_VAllowExceedBaseRangeMin: 1
+-    m_VAllowExceedBaseRangeMax: 1
+-    m_ScaleWithWindow: 0
+-    m_HSlider: 0
+-    m_VSlider: 0
+-    m_IgnoreScrollWheelUntilClicked: 0
+-    m_EnableMouseInput: 1
+-    m_EnableSliderZoomHorizontal: 0
+-    m_EnableSliderZoomVertical: 0
+-    m_UniformScale: 1
+-    m_UpDirection: 1
+-    m_DrawArea:
+-      serializedVersion: 2
+-      x: 0
+-      y: 21
+-      width: 1291
+-      height: 476
+-    m_Scale: {x: 0.44074073, y: 0.44074073}
+-    m_Translation: {x: 645.5, y: 238}
+-    m_MarginLeft: 0
+-    m_MarginRight: 0
+-    m_MarginTop: 0
+-    m_MarginBottom: 0
+-    m_LastShownAreaInsideMargins:
+-      serializedVersion: 2
+-      x: -1464.5798
+-      y: -540
+-      width: 2929.1597
+-      height: 1080
+-    m_MinimalGUI: 1
+-  m_defaultScale: 0.44074073
+-  m_LastWindowPixelSize: {x: 1291, y: 497}
+-  m_ClearInEditMode: 1
+-  m_NoCameraWarning: 1
+-  m_LowResolutionForAspectRatios: 01000000000000000000
+-  m_XRRenderMode: 0
+-  m_RenderTexture: {fileID: 0}
+---- !u!114 &21
+-MonoBehaviour:
+-  m_ObjectHideFlags: 52
+-  m_CorrespondingSourceObject: {fileID: 0}
+-  m_PrefabInstance: {fileID: 0}
++  m_SearchFilter:
++    m_NameFilter: 
++    m_ClassNames: []
++    m_AssetLabels: []
++    m_AssetBundleNames: []
++    m_ReferencingInstanceIDs: 
++    m_SceneHandles: 
++    m_ShowAllHits: 0
++    m_SkipHidden: 0
++    m_SearchArea: 1
++    m_Folders:
++    - Assets
++    m_Globs: []
++    m_OriginalText: 
++    m_ImportLogFlags: 0
++    m_FilterByTypeIntersection: 0
++  m_ViewMode: 1
++  m_StartGridSize: 16
++  m_LastFolders:
++  - Assets
++  m_LastFoldersGridSize: -1
++  m_LastProjectPath: /Users/sulequan/repository/BSKGame/client
++  m_LockTracker:
++    m_IsLocked: 0
++  m_FolderTreeState:
++    scrollPos: {x: 0, y: 0}
++    m_SelectedIDs: 04060000
++    m_LastClickedID: 1540
++    m_ExpandedIDs: 000000000406000000ca9a3bffffff7f
++    m_RenameOverlay:
++      m_UserAcceptedRename: 0
++      m_Name: 
++      m_OriginalName: 
++      m_EditFieldRect:
++        serializedVersion: 2
++        x: 0
++        y: 0
++        width: 0
++        height: 0
++      m_UserData: 0
++      m_IsWaitingForDelay: 0
++      m_IsRenaming: 0
++      m_OriginalEventType: 11
++      m_IsRenamingFilename: 1
++      m_ClientGUIView: {fileID: 0}
++    m_SearchString: 
++    m_CreateAssetUtility:
++      m_EndAction: {fileID: 0}
++      m_InstanceID: 0
++      m_Path: 
++      m_Icon: {fileID: 0}
++      m_ResourceFile: 
++  m_AssetTreeState:
++    scrollPos: {x: 0, y: 0}
++    m_SelectedIDs: 
++    m_LastClickedID: 0
++    m_ExpandedIDs: 
++    m_RenameOverlay:
++      m_UserAcceptedRename: 0
++      m_Name: 
++      m_OriginalName: 
++      m_EditFieldRect:
++        serializedVersion: 2
++        x: 0
++        y: 0
++        width: 0
++        height: 0
++      m_UserData: 0
++      m_IsWaitingForDelay: 0
++      m_IsRenaming: 0
++      m_OriginalEventType: 11
++      m_IsRenamingFilename: 1
++      m_ClientGUIView: {fileID: 0}
++    m_SearchString: 
++    m_CreateAssetUtility:
++      m_EndAction: {fileID: 0}
++      m_InstanceID: 0
++      m_Path: 
++      m_Icon: {fileID: 0}
++      m_ResourceFile: 
++  m_ListAreaState:
++    m_SelectedInstanceIDs: 
++    m_LastClickedInstanceID: 0
++    m_HadKeyboardFocusLastEvent: 1
++    m_ExpandedInstanceIDs: 
++    m_RenameOverlay:
++      m_UserAcceptedRename: 0
++      m_Name: 
++      m_OriginalName: 
++      m_EditFieldRect:
++        serializedVersion: 2
++        x: 0
++        y: 0
++        width: 0
++        height: 0
++      m_UserData: 0
++      m_IsWaitingForDelay: 0
++      m_IsRenaming: 0
++      m_OriginalEventType: 11
++      m_IsRenamingFilename: 1
++      m_ClientGUIView: {fileID: 0}
++    m_CreateAssetUtility:
++      m_EndAction: {fileID: 0}
++      m_InstanceID: 0
++      m_Path: 
++      m_Icon: {fileID: 0}
++      m_ResourceFile: 
++    m_NewAssetIndexInList: -1
++    m_ScrollPosition: {x: 0, y: 0}
++    m_GridSize: 16
++  m_SkipHiddenPackages: 0
++  m_DirectoriesAreaWidth: 200
++--- !u!114 &29
++MonoBehaviour:
++  m_ObjectHideFlags: 52
++  m_CorrespondingSourceObject: {fileID: 0}
++  m_PrefabInstance: {fileID: 0}
++  m_PrefabAsset: {fileID: 0}
++  m_GameObject: {fileID: 0}
++  m_Enabled: 1
++  m_EditorHideFlags: 0
++  m_Script: {fileID: 13854, guid: 0000000000000000e000000000000000, type: 0}
++  m_Name: 
++  m_EditorClassIdentifier: 
++  m_MinSize: {x: 310, y: 200}
++  m_MaxSize: {x: 4000, y: 4000}
++  m_TitleContent:
++    m_Text: Project Settings
++    m_Image: {fileID: -5712115415447495865, guid: 0000000000000000d000000000000000, type: 0}
++    m_Tooltip: 
++  m_Pos:
++    serializedVersion: 2
++    x: 731
++    y: 547
++    width: 598
++    height: 408
++  m_SerializedDataModeController:
++    m_DataMode: 0
++    m_PreferredDataMode: 0
++    m_SupportedDataModes: 
++    isAutomatic: 1
++  m_ViewDataDictionary: {fileID: 0}
++  m_OverlayCanvas:
++    m_LastAppliedPresetName: Default
++    m_SaveData: []
++    m_OverlaysVisible: 1
++  m_PosLeft: {x: 0, y: 0}
++  m_PosRight: {x: 0, y: 302.998}
++  m_Scope: 1
++  m_SplitterFlex: 0.2
++  m_SearchText: 
++  m_TreeViewState:
++    scrollPos: {x: 0, y: 0}
++    m_SelectedIDs: 66b98436
++    m_LastClickedID: 914667878
++    m_ExpandedIDs: 53336be200000000f430812b
++    m_RenameOverlay:
++      m_UserAcceptedRename: 0
++      m_Name: 
++      m_OriginalName: 
++      m_EditFieldRect:
++        serializedVersion: 2
++        x: 0
++        y: 0
++        width: 0
++        height: 0
++      m_UserData: 0
++      m_IsWaitingForDelay: 0
++      m_IsRenaming: 0
++      m_OriginalEventType: 11
++      m_IsRenamingFilename: 0
++      m_ClientGUIView: {fileID: 0}
++    m_SearchString: 
++--- !u!114 &30
++MonoBehaviour:
++  m_ObjectHideFlags: 52
++  m_CorrespondingSourceObject: {fileID: 0}
++  m_PrefabInstance: {fileID: 0}
+   m_PrefabAsset: {fileID: 0}
+   m_GameObject: {fileID: 0}
+   m_Enabled: 1
+@@ -865,10 +1152,10 @@ MonoBehaviour:
+     m_Tooltip: 
+   m_Pos:
+     serializedVersion: 2
+-    x: 427
+-    y: 73
+-    width: 1340
+-    height: 450
++    x: 1331
++    y: 89
++    width: 588
++    height: 866
+   m_SerializedDataModeController:
+     m_DataMode: 0
+     m_PreferredDataMode: 0
+@@ -879,7 +1166,7 @@ MonoBehaviour:
+     m_LastAppliedPresetName: Default
+     m_SaveData: []
+     m_OverlaysVisible: 1
+---- !u!114 &22
++--- !u!114 &31
+ MonoBehaviour:
+   m_ObjectHideFlags: 52
+   m_CorrespondingSourceObject: {fileID: 0}
+@@ -887,22 +1174,22 @@ MonoBehaviour:
+   m_PrefabAsset: {fileID: 0}
+   m_GameObject: {fileID: 0}
+   m_Enabled: 1
+-  m_EditorHideFlags: 1
+-  m_Script: {fileID: 12013, guid: 0000000000000000e000000000000000, type: 0}
++  m_EditorHideFlags: 0
++  m_Script: {fileID: 11500000, guid: 1b3443ca3989244658ca14e91763b343, type: 3}
+   m_Name: 
+   m_EditorClassIdentifier: 
+-  m_MinSize: {x: 200, y: 200}
++  m_MinSize: {x: 503, y: 600}
+   m_MaxSize: {x: 4000, y: 4000}
+   m_TitleContent:
+-    m_Text: Scene
+-    m_Image: {fileID: 2593428753322112591, guid: 0000000000000000d000000000000000, type: 0}
++    m_Text: Unity Online Services
++    m_Image: {fileID: 0}
+     m_Tooltip: 
+   m_Pos:
+     serializedVersion: 2
+-    x: 427
+-    y: 544
+-    width: 1340
+-    height: 366
++    x: 1331
++    y: 89
++    width: 588
++    height: 866
+   m_SerializedDataModeController:
+     m_DataMode: 0
+     m_PreferredDataMode: 0
+@@ -911,410 +1198,43 @@ MonoBehaviour:
+   m_ViewDataDictionary: {fileID: 0}
+   m_OverlayCanvas:
+     m_LastAppliedPresetName: Default
+-    m_SaveData:
+-    - dockPosition: 0
+-      containerId: overlay-toolbar__top
+-      floating: 0
+-      collapsed: 0
+-      displayed: 1
+-      snapOffset: {x: -161, y: -26}
+-      snapOffsetDelta: {x: 0, y: 0}
+-      snapCorner: 3
+-      id: Tool Settings
+-      index: 0
+-      layout: 1
+-      size: {x: 0, y: 0}
+-      sizeOverriden: 0
+-    - dockPosition: 0
+-      containerId: overlay-toolbar__top
+-      floating: 0
+-      collapsed: 0
+-      displayed: 1
+-      snapOffset: {x: -141, y: 149}
+-      snapOffsetDelta: {x: 0, y: 0}
+-      snapCorner: 1
+-      id: unity-grid-and-snap-toolbar
+-      index: 1
+-      layout: 1
+-      size: {x: 0, y: 0}
+-      sizeOverriden: 0
+-    - dockPosition: 1
+-      containerId: overlay-toolbar__top
+-      floating: 0
+-      collapsed: 0
+-      displayed: 1
+-      snapOffset: {x: 0, y: 0}
+-      snapOffsetDelta: {x: 0, y: 0}
+-      snapCorner: 0
+-      id: unity-scene-view-toolbar
+-      index: 0
+-      layout: 1
+-      size: {x: 0, y: 0}
+-      sizeOverriden: 0
+-    - dockPosition: 1
+-      containerId: overlay-toolbar__top
+-      floating: 0
+-      collapsed: 0
+-      displayed: 0
+-      snapOffset: {x: 0, y: 0}
+-      snapOffsetDelta: {x: 0, y: 0}
+-      snapCorner: 1
+-      id: unity-search-toolbar
+-      index: 1
+-      layout: 1
+-      size: {x: 0, y: 0}
+-      sizeOverriden: 0
+-    - dockPosition: 0
+-      containerId: overlay-container--left
+-      floating: 0
+-      collapsed: 0
+-      displayed: 1
+-      snapOffset: {x: 0, y: 0}
+-      snapOffsetDelta: {x: 0, y: 0}
+-      snapCorner: 0
+-      id: unity-transform-toolbar
+-      index: 0
+-      layout: 2
+-      size: {x: 0, y: 0}
+-      sizeOverriden: 0
+-    - dockPosition: 0
+-      containerId: overlay-container--left
+-      floating: 0
+-      collapsed: 0
+-      displayed: 1
+-      snapOffset: {x: 0, y: 197}
+-      snapOffsetDelta: {x: 0, y: 0}
+-      snapCorner: 0
+-      id: unity-component-tools
+-      index: 1
+-      layout: 2
+-      size: {x: 0, y: 0}
+-      sizeOverriden: 0
+-    - dockPosition: 0
+-      containerId: overlay-container--right
+-      floating: 0
+-      collapsed: 0
+-      displayed: 1
+-      snapOffset: {x: 67.5, y: 11}
+-      snapOffsetDelta: {x: 0, y: 0}
+-      snapCorner: 0
+-      id: Orientation
+-      index: 0
+-      layout: 4
+-      size: {x: 0, y: 0}
+-      sizeOverriden: 0
+-    - dockPosition: 1
+-      containerId: overlay-container--right
+-      floating: 0
+-      collapsed: 0
+-      displayed: 0
+-      snapOffset: {x: 0, y: 0}
+-      snapOffsetDelta: {x: 0, y: 0}
+-      snapCorner: 0
+-      id: Scene View/Light Settings
+-      index: 2
+-      layout: 4
+-      size: {x: 0, y: 0}
+-      sizeOverriden: 0
+-    - dockPosition: 1
+-      containerId: overlay-container--right
+-      floating: 0
+-      collapsed: 0
+-      displayed: 0
+-      snapOffset: {x: 0, y: 0}
+-      snapOffsetDelta: {x: 0, y: 0}
+-      snapCorner: 0
+-      id: Scene View/Camera
+-      index: 1
+-      layout: 4
+-      size: {x: 0, y: 0}
+-      sizeOverriden: 0
+-    - dockPosition: 1
+-      containerId: overlay-container--right
+-      floating: 0
+-      collapsed: 0
+-      displayed: 0
+-      snapOffset: {x: 0, y: 0}
+-      snapOffsetDelta: {x: 0, y: 0}
+-      snapCorner: 0
+-      id: Scene View/Cloth Constraints
+-      index: 3
+-      layout: 4
+-      size: {x: 0, y: 0}
+-      sizeOverriden: 0
+-    - dockPosition: 1
+-      containerId: overlay-container--right
+-      floating: 0
+-      collapsed: 0
+-      displayed: 0
+-      snapOffset: {x: 0, y: 0}
+-      snapOffsetDelta: {x: 0, y: 0}
+-      snapCorner: 0
+-      id: Scene View/Cloth Collisions
+-      index: 4
+-      layout: 4
+-      size: {x: 0, y: 0}
+-      sizeOverriden: 0
+-    - dockPosition: 1
+-      containerId: overlay-container--right
+-      floating: 0
+-      collapsed: 0
+-      displayed: 0
+-      snapOffset: {x: 0, y: 0}
+-      snapOffsetDelta: {x: 0, y: 0}
+-      snapCorner: 0
+-      id: Scene View/Navmesh Display
+-      index: 4
+-      layout: 4
+-      size: {x: 0, y: 0}
+-      sizeOverriden: 0
+-    - dockPosition: 1
+-      containerId: overlay-container--right
+-      floating: 0
+-      collapsed: 0
+-      displayed: 0
+-      snapOffset: {x: 0, y: 0}
+-      snapOffsetDelta: {x: 0, y: 0}
+-      snapCorner: 0
+-      id: Scene View/Agent Display
+-      index: 5
+-      layout: 4
+-      size: {x: 0, y: 0}
+-      sizeOverriden: 0
+-    - dockPosition: 1
+-      containerId: overlay-container--right
+-      floating: 0
+-      collapsed: 0
+-      displayed: 0
+-      snapOffset: {x: 0, y: 0}
+-      snapOffsetDelta: {x: 0, y: 0}
+-      snapCorner: 0
+-      id: Scene View/Obstacle Display
+-      index: 6
+-      layout: 4
+-      size: {x: 0, y: 0}
+-      sizeOverriden: 0
+-    - dockPosition: 1
+-      containerId: overlay-container--right
+-      floating: 0
+-      collapsed: 0
+-      displayed: 0
+-      snapOffset: {x: 0, y: 0}
+-      snapOffsetDelta: {x: 0, y: 0}
+-      snapCorner: 0
+-      id: Scene View/Occlusion Culling
+-      index: 5
+-      layout: 4
+-      size: {x: 0, y: 0}
+-      sizeOverriden: 0
+-    - dockPosition: 1
+-      containerId: overlay-container--right
+-      floating: 0
+-      collapsed: 0
+-      displayed: 0
+-      snapOffset: {x: 0, y: 0}
+-      snapOffsetDelta: {x: 0, y: 0}
+-      snapCorner: 0
+-      id: Scene View/Physics Debugger
+-      index: 6
+-      layout: 4
+-      size: {x: 0, y: 0}
+-      sizeOverriden: 0
+-    - dockPosition: 1
+-      containerId: overlay-container--right
+-      floating: 0
+-      collapsed: 0
+-      displayed: 0
+-      snapOffset: {x: 0, y: 0}
+-      snapOffsetDelta: {x: 0, y: 0}
+-      snapCorner: 0
+-      id: Scene View/Scene Visibility
+-      index: 7
+-      layout: 4
+-      size: {x: 0, y: 0}
+-      sizeOverriden: 0
+-    - dockPosition: 1
+-      containerId: overlay-container--right
+-      floating: 0
+-      collapsed: 0
+-      displayed: 0
+-      snapOffset: {x: 0, y: 0}
+-      snapOffsetDelta: {x: 0, y: 0}
+-      snapCorner: 0
+-      id: Scene View/Particles
+-      index: 8
+-      layout: 4
+-      size: {x: 0, y: 0}
+-      sizeOverriden: 0
+-    - dockPosition: 1
+-      containerId: overlay-container--right
+-      floating: 0
+-      collapsed: 0
+-      displayed: 0
+-      snapOffset: {x: 0, y: 0}
+-      snapOffsetDelta: {x: 0, y: 0}
+-      snapCorner: 0
+-      id: Scene View/Tilemap
+-      index: 11
+-      layout: 4
+-      size: {x: 0, y: 0}
+-      sizeOverriden: 0
+-    - dockPosition: 1
+-      containerId: overlay-container--right
+-      floating: 0
+-      collapsed: 0
+-      displayed: 0
+-      snapOffset: {x: 0, y: 0}
+-      snapOffsetDelta: {x: 0, y: 0}
+-      snapCorner: 0
+-      id: Scene View/Tilemap Palette Helper
+-      index: 12
+-      layout: 4
+-      size: {x: 0, y: 0}
+-      sizeOverriden: 0
+-    - dockPosition: 1
+-      containerId: overlay-container--right
+-      floating: 0
+-      collapsed: 0
+-      displayed: 0
+-      snapOffset: {x: 48, y: 48}
+-      snapOffsetDelta: {x: 0, y: 0}
+-      snapCorner: 0
+-      id: Scene View/Open Tile Palette
+-      index: 0
+-      layout: 4
+-      size: {x: 0, y: 0}
+-      sizeOverriden: 0
+-    - dockPosition: 1
+-      containerId: overlay-container--right
+-      floating: 0
+-      collapsed: 0
+-      displayed: 0
+-      snapOffset: {x: 48, y: 48}
+-      snapOffsetDelta: {x: 0, y: 0}
+-      snapCorner: 0
+-      id: Scene View/Tilemap Focus
+-      index: 1
+-      layout: 4
+-      size: {x: 0, y: 0}
+-      sizeOverriden: 0
+-    - dockPosition: 1
+-      containerId: overlay-container--right
+-      floating: 0
+-      collapsed: 0
+-      displayed: 0
+-      snapOffset: {x: 48, y: 48}
+-      snapOffsetDelta: {x: 0, y: 0}
+-      snapCorner: 0
+-      id: APV Overlay
+-      index: 9
+-      layout: 4
+-      size: {x: 0, y: 0}
+-      sizeOverriden: 0
+-    - dockPosition: 1
+-      containerId: overlay-container--right
+-      floating: 0
+-      collapsed: 0
+-      displayed: 0
+-      snapOffset: {x: 48, y: 48}
+-      snapOffsetDelta: {x: 0, y: 0}
+-      snapCorner: 0
+-      id: Scene View/TrailRenderer
+-      index: 10
+-      layout: 4
+-      size: {x: 0, y: 0}
+-      sizeOverriden: 0
++    m_SaveData: []
+     m_OverlaysVisible: 1
+-  m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
+-  m_Gizmos: 1
+-  m_OverrideSceneCullingMask: 6917529027641081856
+-  m_SceneIsLit: 1
+-  m_SceneLighting: 1
+-  m_2DMode: 0
+-  m_isRotationLocked: 0
+-  m_PlayAudio: 0
+-  m_AudioPlay: 0
+-  m_Position:
+-    m_Target: {x: 0, y: 0, z: 0}
+-    speed: 2
+-    m_Value: {x: 0, y: 0, z: 0}
+-  m_RenderMode: 0
+-  m_CameraMode:
+-    drawMode: 0
+-    name: Shaded
+-    section: Shading Mode
+-  m_ValidateTrueMetals: 0
+-  m_DoValidateTrueMetals: 0
+-  m_SceneViewState:
+-    m_AlwaysRefresh: 0
+-    showFog: 1
+-    showSkybox: 1
+-    showFlares: 1
+-    showImageEffects: 1
+-    showParticleSystems: 1
+-    showVisualEffectGraphs: 1
+-    m_FxEnabled: 1
+-  m_Grid:
+-    xGrid:
+-      m_Fade:
+-        m_Target: 0
+-        speed: 2
+-        m_Value: 0
+-      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+-      m_Pivot: {x: 0, y: 0, z: 0}
+-      m_Size: {x: 0, y: 0}
+-    yGrid:
+-      m_Fade:
+-        m_Target: 1
+-        speed: 2
+-        m_Value: 1
+-      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+-      m_Pivot: {x: 0, y: 0, z: 0}
+-      m_Size: {x: 1, y: 1}
+-    zGrid:
+-      m_Fade:
+-        m_Target: 0
+-        speed: 2
+-        m_Value: 0
+-      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+-      m_Pivot: {x: 0, y: 0, z: 0}
+-      m_Size: {x: 1, y: 1}
+-    m_ShowGrid: 1
+-    m_GridAxis: 1
+-    m_gridOpacity: 0.5
+-  m_Rotation:
+-    m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+-    speed: 2
+-    m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+-  m_Size:
+-    m_Target: 10
+-    speed: 2
+-    m_Value: 10
+-  m_Ortho:
+-    m_Target: 0
+-    speed: 2
+-    m_Value: 0
+-  m_CameraSettings:
+-    m_Speed: 1
+-    m_SpeedNormalized: 0.5
+-    m_SpeedMin: 0.001
+-    m_SpeedMax: 2
+-    m_EasingEnabled: 1
+-    m_EasingDuration: 0.4
+-    m_AccelerationEnabled: 1
+-    m_FieldOfViewHorizontalOrVertical: 60
+-    m_NearClip: 0.03
+-    m_FarClip: 10000
+-    m_DynamicClip: 1
+-    m_OcclusionCulling: 0
+-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+-  m_LastSceneViewOrtho: 0
+-  m_ReplacementShader: {fileID: 0}
+-  m_ReplacementString: 
+-  m_SceneVisActive: 1
+-  m_LastLockedObject: {fileID: 0}
+-  m_ViewIsLockedToObject: 0
+---- !u!114 &23
++--- !u!114 &32
++MonoBehaviour:
++  m_ObjectHideFlags: 52
++  m_CorrespondingSourceObject: {fileID: 0}
++  m_PrefabInstance: {fileID: 0}
++  m_PrefabAsset: {fileID: 0}
++  m_GameObject: {fileID: 0}
++  m_Enabled: 1
++  m_EditorHideFlags: 0
++  m_Script: {fileID: 11500000, guid: 8fb1f7ae6feabbb45a49882112690050, type: 3}
++  m_Name: 
++  m_EditorClassIdentifier: 
++  m_MinSize: {x: 780, y: 524.16}
++  m_MaxSize: {x: 780, y: 524.16}
++  m_TitleContent:
++    m_Text: Welcome
++    m_Image: {fileID: 0}
++    m_Tooltip: 
++  m_Pos:
++    serializedVersion: 2
++    x: 570
++    y: 278
++    width: 780
++    height: 524
++  m_SerializedDataModeController:
++    m_DataMode: 0
++    m_PreferredDataMode: 0
++    m_SupportedDataModes: 
++    isAutomatic: 1
++  m_ViewDataDictionary: {fileID: 0}
++  m_OverlayCanvas:
++    m_LastAppliedPresetName: Default
++    m_SaveData: []
++    m_OverlaysVisible: 1
++--- !u!114 &33
+ MonoBehaviour:
+   m_ObjectHideFlags: 52
+   m_CorrespondingSourceObject: {fileID: 0}
+@@ -1335,9 +1255,9 @@ MonoBehaviour:
+   m_Pos:
+     serializedVersion: 2
+     x: 0
+-    y: 872
+-    width: 1409
+-    height: 479
++    y: 665
++    width: 730
++    height: 290
+   m_SerializedDataModeController:
+     m_DataMode: 0
+     m_PreferredDataMode: 0
+@@ -1349,7 +1269,7 @@ MonoBehaviour:
+     m_SaveData: []
+     m_OverlaysVisible: 1
+   m_SearchFilter:
+-    m_NameFilter: link
++    m_NameFilter: 
+     m_ClassNames: []
+     m_AssetLabels: []
+     m_AssetBundleNames: []
+@@ -1359,24 +1279,24 @@ MonoBehaviour:
+     m_SkipHidden: 0
+     m_SearchArea: 1
+     m_Folders:
+-    - Assets/3rdPart/GameFramework/Scripts/Runtime/Entity
++    - Assets/GameRes/Scenes
+     m_Globs: []
+-    m_OriginalText: link
++    m_OriginalText: 
+     m_ImportLogFlags: 0
+     m_FilterByTypeIntersection: 0
+   m_ViewMode: 1
+-  m_StartGridSize: 64
++  m_StartGridSize: 16
+   m_LastFolders:
+-  - Assets/3rdPart/GameFramework/Scripts/Runtime/Entity
+-  m_LastFoldersGridSize: -1
+-  m_LastProjectPath: G:\Repos\BSKGame\client
++  - Assets/GameRes/Scenes
++  m_LastFoldersGridSize: 74
++  m_LastProjectPath: /Users/sulequan/repository/BSKGame/client
+   m_LockTracker:
+     m_IsLocked: 0
+   m_FolderTreeState:
+-    scrollPos: {x: 0, y: 351}
+-    m_SelectedIDs: ea900000
+-    m_LastClickedID: 37098
+-    m_ExpandedIDs: 00000000448d0000488d00004e8d0000588d00005c8d00007c8d0000808d0000828d0000908d0000948d0000968d0000a68d0000ae8d00009692000000ca9a3bffffff7f
++    scrollPos: {x: 0, y: 31}
++    m_SelectedIDs: c0080000
++    m_LastClickedID: 2240
++    m_ExpandedIDs: 00000000040600009c060000c008000000ca9a3bffffff7f
+     m_RenameOverlay:
+       m_UserAcceptedRename: 0
+       m_Name: 
+@@ -1404,7 +1324,7 @@ MonoBehaviour:
+     scrollPos: {x: 0, y: 0}
+     m_SelectedIDs: 
+     m_LastClickedID: 0
+-    m_ExpandedIDs: 00000000448d0000488d00004e8d00005c8d00007c8d0000808d0000828d0000908d0000948d0000968d0000a68d0000ae8d00009692000000ca9a3bffffff7f
++    m_ExpandedIDs: 000000000406000000ca9a3bffffff7f
+     m_RenameOverlay:
+       m_UserAcceptedRename: 0
+       m_Name: 
+@@ -1429,9 +1349,9 @@ MonoBehaviour:
+       m_Icon: {fileID: 0}
+       m_ResourceFile: 
+   m_ListAreaState:
+-    m_SelectedInstanceIDs: 
+-    m_LastClickedInstanceID: 0
+-    m_HadKeyboardFocusLastEvent: 1
++    m_SelectedInstanceIDs: 2c28deff
++    m_LastClickedInstanceID: -2217940
++    m_HadKeyboardFocusLastEvent: 0
+     m_ExpandedInstanceIDs: c6230000
+     m_RenameOverlay:
+       m_UserAcceptedRename: 0
+@@ -1448,7 +1368,7 @@ MonoBehaviour:
+       m_IsRenaming: 0
+       m_OriginalEventType: 11
+       m_IsRenamingFilename: 1
+-      m_ClientGUIView: {fileID: 13}
++      m_ClientGUIView: {fileID: 19}
+     m_CreateAssetUtility:
+       m_EndAction: {fileID: 0}
+       m_InstanceID: 0
+@@ -1457,10 +1377,10 @@ MonoBehaviour:
+       m_ResourceFile: 
+     m_NewAssetIndexInList: -1
+     m_ScrollPosition: {x: 0, y: 0}
+-    m_GridSize: 64
++    m_GridSize: 16
+   m_SkipHiddenPackages: 0
+   m_DirectoriesAreaWidth: 207
+---- !u!114 &24
++--- !u!114 &34
+ MonoBehaviour:
+   m_ObjectHideFlags: 52
+   m_CorrespondingSourceObject: {fileID: 0}
+@@ -1469,21 +1389,21 @@ MonoBehaviour:
+   m_GameObject: {fileID: 0}
+   m_Enabled: 1
+   m_EditorHideFlags: 1
+-  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
++  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
+   m_Name: 
+   m_EditorClassIdentifier: 
+-  m_MinSize: {x: 100, y: 100}
++  m_MinSize: {x: 275, y: 50}
+   m_MaxSize: {x: 4000, y: 4000}
+   m_TitleContent:
+-    m_Text: Console
+-    m_Image: {fileID: -4327648978806127646, guid: 0000000000000000d000000000000000, type: 0}
++    m_Text: Inspector
++    m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000, type: 0}
+     m_Tooltip: 
+   m_Pos:
+     serializedVersion: 2
+-    x: 0
+-    y: 931
+-    width: 1251
+-    height: 420
++    x: 1332
++    y: 89
++    width: 586
++    height: 487
+   m_SerializedDataModeController:
+     m_DataMode: 0
+     m_PreferredDataMode: 0
+@@ -1494,7 +1414,83 @@ MonoBehaviour:
+     m_LastAppliedPresetName: Default
+     m_SaveData: []
+     m_OverlaysVisible: 1
+---- !u!114 &25
++  m_ObjectsLockedBeforeSerialization: []
++  m_InstanceIDsLockedBeforeSerialization: 
++  m_PreviewResizer:
++    m_CachedPref: 160
++    m_ControlHash: -371814159
++    m_PrefName: Preview_InspectorPreview
++  m_LastInspectedObjectInstanceID: -1
++  m_LastVerticalScrollValue: 0
++  m_GlobalObjectId: 
++  m_InspectorMode: 0
++  m_LockTracker:
++    m_IsLocked: 0
++  m_PreviewWindow: {fileID: 0}
++--- !u!114 &35
++MonoBehaviour:
++  m_ObjectHideFlags: 52
++  m_CorrespondingSourceObject: {fileID: 0}
++  m_PrefabInstance: {fileID: 0}
++  m_PrefabAsset: {fileID: 0}
++  m_GameObject: {fileID: 0}
++  m_Enabled: 1
++  m_EditorHideFlags: 1
++  m_Script: {fileID: 12061, guid: 0000000000000000e000000000000000, type: 0}
++  m_Name: 
++  m_EditorClassIdentifier: 
++  m_MinSize: {x: 200, y: 200}
++  m_MaxSize: {x: 4000, y: 4000}
++  m_TitleContent:
++    m_Text: Hierarchy
++    m_Image: {fileID: 7966133145522015247, guid: 0000000000000000d000000000000000, type: 0}
++    m_Tooltip: 
++  m_Pos:
++    serializedVersion: 2
++    x: -1
++    y: 89
++    width: 313
++    height: 578
++  m_SerializedDataModeController:
++    m_DataMode: 0
++    m_PreferredDataMode: 0
++    m_SupportedDataModes: 
++    isAutomatic: 1
++  m_ViewDataDictionary: {fileID: 0}
++  m_OverlayCanvas:
++    m_LastAppliedPresetName: Default
++    m_SaveData: []
++    m_OverlaysVisible: 1
++  m_SceneHierarchy:
++    m_TreeViewState:
++      scrollPos: {x: 0, y: 0}
++      m_SelectedIDs: 
++      m_LastClickedID: 0
++      m_ExpandedIDs: e002deff3403deff6c05deff6407deff5e08defff80fdeffa228deffa428deff8c29deffca2adeffd82bdeff422cdeffd62ddeff562edeff822bfdff3a2dfdfffc39fdff763afdffc03dfdffae46fdff2847fdff6a4afdff5c56fdffd656fdff4e5afdffa06bfdffa26bfdfff48ffdff6090fdffd093fdff74b0fdffe0b0fdff50b4fdff2cbefdfff4ffffff1ceb000022eb0000ccf60000d2f60000
++      m_RenameOverlay:
++        m_UserAcceptedRename: 0
++        m_Name: 
++        m_OriginalName: 
++        m_EditFieldRect:
++          serializedVersion: 2
++          x: 0
++          y: 0
++          width: 0
++          height: 0
++        m_UserData: 0
++        m_IsWaitingForDelay: 0
++        m_IsRenaming: 0
++        m_OriginalEventType: 11
++        m_IsRenamingFilename: 0
++        m_ClientGUIView: {fileID: 18}
++      m_SearchString: 
++    m_ExpandedScenes: []
++    m_CurrenRootInstanceID: 0
++    m_LockTracker:
++      m_IsLocked: 0
++    m_CurrentSortingName: TransformSorting
++  m_WindowGUID: 4c969a2b90040154d917609493e03593
++--- !u!114 &36
+ MonoBehaviour:
+   m_ObjectHideFlags: 52
+   m_CorrespondingSourceObject: {fileID: 0}
+@@ -1502,22 +1498,22 @@ MonoBehaviour:
+   m_PrefabAsset: {fileID: 0}
+   m_GameObject: {fileID: 0}
+   m_Enabled: 1
+-  m_EditorHideFlags: 0
+-  m_Script: {fileID: 11500000, guid: 358e37f2a4677134582ff78f45dc28ae, type: 3}
++  m_EditorHideFlags: 1
++  m_Script: {fileID: 12013, guid: 0000000000000000e000000000000000, type: 0}
+   m_Name: 
+   m_EditorClassIdentifier: 
+-  m_MinSize: {x: 100, y: 100}
++  m_MinSize: {x: 200, y: 200}
+   m_MaxSize: {x: 4000, y: 4000}
+   m_TitleContent:
+-    m_Text: ReGoap Debugger
+-    m_Image: {fileID: 0}
++    m_Text: Scene
++    m_Image: {fileID: 2593428753322112591, guid: 0000000000000000d000000000000000, type: 0}
+     m_Tooltip: 
+   m_Pos:
+     serializedVersion: 2
+-    x: 1252
+-    y: 931
+-    width: 515
+-    height: 420
++    x: 314
++    y: 88
++    width: 1017
++    height: 578
+   m_SerializedDataModeController:
+     m_DataMode: 0
+     m_PreferredDataMode: 0
+@@ -1526,9 +1522,423 @@ MonoBehaviour:
+   m_ViewDataDictionary: {fileID: 0}
+   m_OverlayCanvas:
+     m_LastAppliedPresetName: Default
+-    m_SaveData: []
++    m_SaveData:
++    - dockPosition: 0
++      containerId: overlay-toolbar__top
++      floating: 0
++      collapsed: 0
++      displayed: 1
++      snapOffset: {x: -166, y: -26}
++      snapOffsetDelta: {x: 0, y: 0}
++      snapCorner: 3
++      id: Tool Settings
++      index: 0
++      layout: 1
++      size: {x: 0, y: 0}
++      sizeOverriden: 0
++    - dockPosition: 0
++      containerId: overlay-toolbar__top
++      floating: 0
++      collapsed: 0
++      displayed: 1
++      snapOffset: {x: -141, y: -163}
++      snapOffsetDelta: {x: 0, y: 0}
++      snapCorner: 3
++      id: unity-grid-and-snap-toolbar
++      index: 1
++      layout: 1
++      size: {x: 0, y: 0}
++      sizeOverriden: 0
++    - dockPosition: 1
++      containerId: overlay-toolbar__top
++      floating: 0
++      collapsed: 0
++      displayed: 1
++      snapOffset: {x: 0, y: 0}
++      snapOffsetDelta: {x: 0, y: 0}
++      snapCorner: 0
++      id: unity-scene-view-toolbar
++      index: 0
++      layout: 1
++      size: {x: 0, y: 0}
++      sizeOverriden: 0
++    - dockPosition: 1
++      containerId: overlay-toolbar__top
++      floating: 0
++      collapsed: 0
++      displayed: 0
++      snapOffset: {x: 0, y: 0}
++      snapOffsetDelta: {x: 0, y: 0}
++      snapCorner: 1
++      id: unity-search-toolbar
++      index: 1
++      layout: 1
++      size: {x: 0, y: 0}
++      sizeOverriden: 0
++    - dockPosition: 0
++      containerId: overlay-container--left
++      floating: 0
++      collapsed: 0
++      displayed: 1
++      snapOffset: {x: 0, y: 0}
++      snapOffsetDelta: {x: 0, y: 0}
++      snapCorner: 0
++      id: unity-transform-toolbar
++      index: 0
++      layout: 2
++      size: {x: 0, y: 0}
++      sizeOverriden: 0
++    - dockPosition: 0
++      containerId: overlay-container--left
++      floating: 0
++      collapsed: 0
++      displayed: 1
++      snapOffset: {x: 0, y: 197}
++      snapOffsetDelta: {x: 0, y: 0}
++      snapCorner: 0
++      id: unity-component-tools
++      index: 1
++      layout: 2
++      size: {x: 0, y: 0}
++      sizeOverriden: 0
++    - dockPosition: 0
++      containerId: overlay-container--right
++      floating: 0
++      collapsed: 0
++      displayed: 1
++      snapOffset: {x: 67.5, y: 11}
++      snapOffsetDelta: {x: 0, y: 0}
++      snapCorner: 0
++      id: Orientation
++      index: 0
++      layout: 4
++      size: {x: 0, y: 0}
++      sizeOverriden: 0
++    - dockPosition: 1
++      containerId: overlay-container--right
++      floating: 0
++      collapsed: 0
++      displayed: 0
++      snapOffset: {x: 0, y: 0}
++      snapOffsetDelta: {x: 0, y: 0}
++      snapCorner: 0
++      id: Scene View/Light Settings
++      index: 2
++      layout: 4
++      size: {x: 0, y: 0}
++      sizeOverriden: 0
++    - dockPosition: 1
++      containerId: overlay-container--right
++      floating: 0
++      collapsed: 0
++      displayed: 0
++      snapOffset: {x: 0, y: 0}
++      snapOffsetDelta: {x: 0, y: 0}
++      snapCorner: 0
++      id: Scene View/Camera
++      index: 1
++      layout: 4
++      size: {x: 0, y: 0}
++      sizeOverriden: 0
++    - dockPosition: 1
++      containerId: overlay-container--right
++      floating: 0
++      collapsed: 0
++      displayed: 0
++      snapOffset: {x: 0, y: 0}
++      snapOffsetDelta: {x: 0, y: 0}
++      snapCorner: 0
++      id: Scene View/Cloth Constraints
++      index: 3
++      layout: 4
++      size: {x: 0, y: 0}
++      sizeOverriden: 0
++    - dockPosition: 1
++      containerId: overlay-container--right
++      floating: 0
++      collapsed: 0
++      displayed: 0
++      snapOffset: {x: 0, y: 0}
++      snapOffsetDelta: {x: 0, y: 0}
++      snapCorner: 0
++      id: Scene View/Cloth Collisions
++      index: 4
++      layout: 4
++      size: {x: 0, y: 0}
++      sizeOverriden: 0
++    - dockPosition: 1
++      containerId: overlay-container--right
++      floating: 0
++      collapsed: 0
++      displayed: 0
++      snapOffset: {x: 0, y: 0}
++      snapOffsetDelta: {x: 0, y: 0}
++      snapCorner: 0
++      id: Scene View/Navmesh Display
++      index: 4
++      layout: 4
++      size: {x: 0, y: 0}
++      sizeOverriden: 0
++    - dockPosition: 1
++      containerId: overlay-container--right
++      floating: 0
++      collapsed: 0
++      displayed: 0
++      snapOffset: {x: 0, y: 0}
++      snapOffsetDelta: {x: 0, y: 0}
++      snapCorner: 0
++      id: Scene View/Agent Display
++      index: 5
++      layout: 4
++      size: {x: 0, y: 0}
++      sizeOverriden: 0
++    - dockPosition: 1
++      containerId: overlay-container--right
++      floating: 0
++      collapsed: 0
++      displayed: 0
++      snapOffset: {x: 0, y: 0}
++      snapOffsetDelta: {x: 0, y: 0}
++      snapCorner: 0
++      id: Scene View/Obstacle Display
++      index: 6
++      layout: 4
++      size: {x: 0, y: 0}
++      sizeOverriden: 0
++    - dockPosition: 1
++      containerId: overlay-container--right
++      floating: 0
++      collapsed: 0
++      displayed: 0
++      snapOffset: {x: 0, y: 0}
++      snapOffsetDelta: {x: 0, y: 0}
++      snapCorner: 0
++      id: Scene View/Occlusion Culling
++      index: 5
++      layout: 4
++      size: {x: 0, y: 0}
++      sizeOverriden: 0
++    - dockPosition: 1
++      containerId: overlay-container--right
++      floating: 0
++      collapsed: 0
++      displayed: 0
++      snapOffset: {x: 0, y: 0}
++      snapOffsetDelta: {x: 0, y: 0}
++      snapCorner: 0
++      id: Scene View/Physics Debugger
++      index: 6
++      layout: 4
++      size: {x: 0, y: 0}
++      sizeOverriden: 0
++    - dockPosition: 1
++      containerId: overlay-container--right
++      floating: 0
++      collapsed: 0
++      displayed: 0
++      snapOffset: {x: 0, y: 0}
++      snapOffsetDelta: {x: 0, y: 0}
++      snapCorner: 0
++      id: Scene View/Scene Visibility
++      index: 7
++      layout: 4
++      size: {x: 0, y: 0}
++      sizeOverriden: 0
++    - dockPosition: 1
++      containerId: overlay-container--right
++      floating: 0
++      collapsed: 0
++      displayed: 0
++      snapOffset: {x: 0, y: 0}
++      snapOffsetDelta: {x: 0, y: 0}
++      snapCorner: 0
++      id: Scene View/Particles
++      index: 8
++      layout: 4
++      size: {x: 0, y: 0}
++      sizeOverriden: 0
++    - dockPosition: 1
++      containerId: overlay-container--right
++      floating: 0
++      collapsed: 0
++      displayed: 0
++      snapOffset: {x: 0, y: 0}
++      snapOffsetDelta: {x: 0, y: 0}
++      snapCorner: 0
++      id: Scene View/Tilemap
++      index: 11
++      layout: 4
++      size: {x: 0, y: 0}
++      sizeOverriden: 0
++    - dockPosition: 1
++      containerId: overlay-container--right
++      floating: 0
++      collapsed: 0
++      displayed: 0
++      snapOffset: {x: 0, y: 0}
++      snapOffsetDelta: {x: 0, y: 0}
++      snapCorner: 0
++      id: Scene View/Tilemap Palette Helper
++      index: 12
++      layout: 4
++      size: {x: 0, y: 0}
++      sizeOverriden: 0
++    - dockPosition: 1
++      containerId: overlay-container--right
++      floating: 0
++      collapsed: 0
++      displayed: 0
++      snapOffset: {x: 48, y: 48}
++      snapOffsetDelta: {x: 0, y: 0}
++      snapCorner: 0
++      id: Scene View/Open Tile Palette
++      index: 0
++      layout: 4
++      size: {x: 0, y: 0}
++      sizeOverriden: 0
++    - dockPosition: 1
++      containerId: overlay-container--right
++      floating: 0
++      collapsed: 0
++      displayed: 0
++      snapOffset: {x: 48, y: 48}
++      snapOffsetDelta: {x: 0, y: 0}
++      snapCorner: 0
++      id: Scene View/Tilemap Focus
++      index: 1
++      layout: 4
++      size: {x: 0, y: 0}
++      sizeOverriden: 0
++    - dockPosition: 1
++      containerId: overlay-container--right
++      floating: 0
++      collapsed: 0
++      displayed: 0
++      snapOffset: {x: 48, y: 48}
++      snapOffsetDelta: {x: 0, y: 0}
++      snapCorner: 0
++      id: APV Overlay
++      index: 9
++      layout: 4
++      size: {x: 0, y: 0}
++      sizeOverriden: 0
++    - dockPosition: 1
++      containerId: overlay-container--right
++      floating: 0
++      collapsed: 0
++      displayed: 0
++      snapOffset: {x: 48, y: 48}
++      snapOffsetDelta: {x: 0, y: 0}
++      snapCorner: 0
++      id: Scene View/TrailRenderer
++      index: 10
++      layout: 4
++      size: {x: 0, y: 0}
++      sizeOverriden: 0
++    - dockPosition: 1
++      containerId: overlay-container--right
++      floating: 0
++      collapsed: 0
++      displayed: 1
++      snapOffset: {x: 48, y: 48}
++      snapOffsetDelta: {x: 0, y: 0}
++      snapCorner: 0
++      id: UnityEditor.SceneViewCameraOverlay
++      index: 11
++      layout: 4
++      size: {x: 0, y: 0}
++      sizeOverriden: 0
+     m_OverlaysVisible: 1
+---- !u!114 &26
++  m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
++  m_Gizmos: 1
++  m_OverrideSceneCullingMask: 6917529027641081856
++  m_SceneIsLit: 1
++  m_SceneLighting: 1
++  m_2DMode: 0
++  m_isRotationLocked: 0
++  m_PlayAudio: 0
++  m_AudioPlay: 0
++  m_Position:
++    m_Target: {x: 4.5, y: 0, z: 5.5}
++    speed: 2
++    m_Value: {x: 4.5, y: 0, z: 5.5}
++  m_RenderMode: 0
++  m_CameraMode:
++    drawMode: 0
++    name: Shaded
++    section: Shading Mode
++  m_ValidateTrueMetals: 0
++  m_DoValidateTrueMetals: 0
++  m_SceneViewState:
++    m_AlwaysRefresh: 0
++    showFog: 1
++    showSkybox: 1
++    showFlares: 1
++    showImageEffects: 1
++    showParticleSystems: 1
++    showVisualEffectGraphs: 1
++    m_FxEnabled: 1
++  m_Grid:
++    xGrid:
++      m_Fade:
++        m_Target: 0
++        speed: 2
++        m_Value: 0
++      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
++      m_Pivot: {x: 0, y: 0, z: 0}
++      m_Size: {x: 0, y: 0}
++    yGrid:
++      m_Fade:
++        m_Target: 1
++        speed: 2
++        m_Value: 1
++      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
++      m_Pivot: {x: 0, y: 0, z: 0}
++      m_Size: {x: 1, y: 1}
++    zGrid:
++      m_Fade:
++        m_Target: 0
++        speed: 2
++        m_Value: 0
++      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
++      m_Pivot: {x: 0, y: 0, z: 0}
++      m_Size: {x: 0, y: 0}
++    m_ShowGrid: 1
++    m_GridAxis: 1
++    m_gridOpacity: 0.5
++  m_Rotation:
++    m_Target: {x: -0.0023081498, y: -0.7165877, z: 0.0023719487, w: -0.6974904}
++    speed: 2
++    m_Value: {x: -0.002308148, y: -0.7165871, z: 0.0023719466, w: -0.6974898}
++  m_Size:
++    m_Target: 12.020815
++    speed: 2
++    m_Value: 12.020815
++  m_Ortho:
++    m_Target: 0
++    speed: 2
++    m_Value: 0
++  m_CameraSettings:
++    m_Speed: 1
++    m_SpeedNormalized: 0.5
++    m_SpeedMin: 0.001
++    m_SpeedMax: 2
++    m_EasingEnabled: 1
++    m_EasingDuration: 0.4
++    m_AccelerationEnabled: 1
++    m_FieldOfViewHorizontalOrVertical: 60
++    m_NearClip: 0.03
++    m_FarClip: 10000
++    m_DynamicClip: 1
++    m_OcclusionCulling: 0
++  m_LastSceneViewRotation: {x: 0, y: 0, z: 0, w: 0}
++  m_LastSceneViewOrtho: 0
++  m_ReplacementShader: {fileID: 0}
++  m_ReplacementString: 
++  m_SceneVisActive: 1
++  m_LastLockedObject: {fileID: 0}
++  m_ViewIsLockedToObject: 0
++--- !u!114 &37
+ MonoBehaviour:
+   m_ObjectHideFlags: 52
+   m_CorrespondingSourceObject: {fileID: 0}
+@@ -1537,21 +1947,21 @@ MonoBehaviour:
+   m_GameObject: {fileID: 0}
+   m_Enabled: 1
+   m_EditorHideFlags: 1
+-  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
++  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
+   m_Name: 
+   m_EditorClassIdentifier: 
+-  m_MinSize: {x: 275, y: 50}
++  m_MinSize: {x: 200, y: 200}
+   m_MaxSize: {x: 4000, y: 4000}
+   m_TitleContent:
+-    m_Text: Inspector
+-    m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000, type: 0}
++    m_Text: Game
++    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000, type: 0}
+     m_Tooltip: 
+   m_Pos:
+     serializedVersion: 2
+-    x: 1769
+-    y: 73
+-    width: 790
+-    height: 615
++    x: 313
++    y: 89
++    width: 1017
++    height: 578
+   m_SerializedDataModeController:
+     m_DataMode: 0
+     m_PreferredDataMode: 0
+@@ -1562,20 +1972,71 @@ MonoBehaviour:
+     m_LastAppliedPresetName: Default
+     m_SaveData: []
+     m_OverlaysVisible: 1
+-  m_ObjectsLockedBeforeSerialization: []
+-  m_InstanceIDsLockedBeforeSerialization: 
+-  m_PreviewResizer:
+-    m_CachedPref: 160
+-    m_ControlHash: -371814159
+-    m_PrefName: Preview_InspectorPreview
+-  m_LastInspectedObjectInstanceID: -1
+-  m_LastVerticalScrollValue: 0
+-  m_GlobalObjectId: 
+-  m_InspectorMode: 0
+-  m_LockTracker:
+-    m_IsLocked: 0
+-  m_PreviewWindow: {fileID: 0}
+---- !u!114 &27
++  m_SerializedViewNames: []
++  m_SerializedViewValues: []
++  m_PlayModeViewName: GameView
++  m_ShowGizmos: 0
++  m_TargetDisplay: 0
++  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
++  m_TargetSize: {x: 1920, y: 1080}
++  m_TextureFilterMode: 0
++  m_TextureHideFlags: 61
++  m_RenderIMGUI: 1
++  m_EnterPlayModeBehavior: 0
++  m_UseMipMap: 0
++  m_VSyncEnabled: 0
++  m_Gizmos: 0
++  m_Stats: 0
++  m_SelectedSizes: 03000000000000000000000000000000000000000000000000000000000000000000000000000000
++  m_ZoomArea:
++    m_HRangeLocked: 0
++    m_VRangeLocked: 0
++    hZoomLockedByDefault: 0
++    vZoomLockedByDefault: 0
++    m_HBaseRangeMin: -960
++    m_HBaseRangeMax: 960
++    m_VBaseRangeMin: -540
++    m_VBaseRangeMax: 540
++    m_HAllowExceedBaseRangeMin: 1
++    m_HAllowExceedBaseRangeMax: 1
++    m_VAllowExceedBaseRangeMin: 1
++    m_VAllowExceedBaseRangeMax: 1
++    m_ScaleWithWindow: 0
++    m_HSlider: 0
++    m_VSlider: 0
++    m_IgnoreScrollWheelUntilClicked: 0
++    m_EnableMouseInput: 1
++    m_EnableSliderZoomHorizontal: 0
++    m_EnableSliderZoomVertical: 0
++    m_UniformScale: 1
++    m_UpDirection: 1
++    m_DrawArea:
++      serializedVersion: 2
++      x: 0
++      y: 21
++      width: 1017
++      height: 557
++    m_Scale: {x: 0.51574075, y: 0.51574075}
++    m_Translation: {x: 508.5, y: 278.5}
++    m_MarginLeft: 0
++    m_MarginRight: 0
++    m_MarginTop: 0
++    m_MarginBottom: 0
++    m_LastShownAreaInsideMargins:
++      serializedVersion: 2
++      x: -985.9605
++      y: -540
++      width: 1971.921
++      height: 1080
++    m_MinimalGUI: 1
++  m_defaultScale: 0.51574075
++  m_LastWindowPixelSize: {x: 1017, y: 578}
++  m_ClearInEditMode: 1
++  m_NoCameraWarning: 1
++  m_LowResolutionForAspectRatios: 01000000000000000000
++  m_XRRenderMode: 0
++  m_RenderTexture: {fileID: 0}
++--- !u!114 &38
+ MonoBehaviour:
+   m_ObjectHideFlags: 52
+   m_CorrespondingSourceObject: {fileID: 0}
+@@ -1583,22 +2044,22 @@ MonoBehaviour:
+   m_PrefabAsset: {fileID: 0}
+   m_GameObject: {fileID: 0}
+   m_Enabled: 1
+-  m_EditorHideFlags: 0
+-  m_Script: {fileID: 11500000, guid: e863c5f9e4c0a9d47a926fbb0416a149, type: 3}
++  m_EditorHideFlags: 1
++  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
+   m_Name: 
+   m_EditorClassIdentifier: 
+-  m_MinSize: {x: 800, y: 640}
++  m_MinSize: {x: 100, y: 100}
+   m_MaxSize: {x: 4000, y: 4000}
+   m_TitleContent:
+-    m_Text: Resource Builder
+-    m_Image: {fileID: 0}
++    m_Text: Console
++    m_Image: {fileID: -4327648978806127646, guid: 0000000000000000d000000000000000, type: 0}
+     m_Tooltip: 
+   m_Pos:
+     serializedVersion: 2
+-    x: 1769
+-    y: 709
+-    width: 790
+-    height: 642
++    x: -1
++    y: 688
++    width: 886
++    height: 263
+   m_SerializedDataModeController:
+     m_DataMode: 0
+     m_PreferredDataMode: 0
+diff --git a/production/session-logs/compaction-log.txt b/production/session-logs/compaction-log.txt
+index a35ac36..108ed5f 100644
+--- a/production/session-logs/compaction-log.txt
++++ b/production/session-logs/compaction-log.txt
+@@ -10,3 +10,5 @@ Context compaction at Sat May  2 00:33:11 CST 2026
+ Context compaction at Sat May  2 00:46:04 CST 2026
+ Context compaction at Sat May  2 01:16:56 CST 2026
+ Context compaction at Sat May  2 01:45:55 CST 2026
++Context compaction at Sat May  2 02:19:27 CST 2026
++Context compaction at Sat May  2 02:47:55 CST 2026
+diff --git a/production/session-logs/session-log.md b/production/session-logs/session-log.md
+index 6637fae..c253b22 100644
+--- a/production/session-logs/session-log.md
++++ b/production/session-logs/session-log.md
+@@ -7896,3 +7896,517 @@ production/session-logs/compaction-log.txt
+ production/session-logs/session-log.md
+ ---
+ 
++## Archived Session State: 20260502_015731
++# Active Session
++
++- Task: MVP 主架构蓝图
++- Status: Draft created — 架构文档已写入，ADR 缺口已识别
++- File: docs/architecture/architecture.md
++- Documentation Language: 简体中文
++- Sections: 引擎风险摘要；技术需求基线；系统分层图；模块所有权；数据流；API 边界；ADR 审计；必需 ADR
++- Next: 创建 P0 ADR，然后生成 architecture traceability 并运行 `/architecture-review`
++
++## Session Extract — /architecture-review 2026-04-29
++- Verdict: FAIL
++- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
++- New TR-IDs registered: None
++- GDD revision flags: `design/gdd/实时弹反系统.md`
++- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
++- Report: docs/architecture/architecture-review-2026-04-29.md
++
++## Session Extract — architecture repair 2026-04-29
++- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
++- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
++- Remaining blocker: P0 ADR coverage still missing
++
++## Session Extract — P0 ADR authoring 2026-04-29
++- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
++- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
++- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
++- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
++- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
++
++## Session Extract — /architecture-review 2026-04-29
++- Verdict: FAIL
++- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
++- New TR-IDs registered: None
++- GDD revision flags: None
++- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
++- Report: docs/architecture/architecture-review-2026-04-29.md
++
++## Session Extract — missing ADR completion 2026-04-29
++- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
++- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
++- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
++- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
++- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
++
++## Session Extract — /architecture-review 2026-04-29
++- Verdict: CONCERNS
++- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
++- New TR-IDs registered: 38
++- GDD revision flags: None
++- Top ADR gaps: None
++- Report: docs/architecture/architecture-review-2026-04-29.md
++
++## Session Extract — /gate-check pre-production remediation 2026-04-29
++- Verdict: CONCERNS
++- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
++- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
++- Report: production/gate-checks/pre-production-gate-2026-04-29.md
++
++## Session Extract — /dev-story 2026-05-01
++- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
++- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
++- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
++- Status: Complete (was already implemented; verified + supplemented restart test)
++- Next: /dev-story story-001-battle-event-dto-and-context
++
++## Session Extract — /dev-story 2026-05-01
++- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
++- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
++- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
++- Blockers: None
++- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
++---
++
++## Session End: 20260502_015731
++### Commits
++aed7515 feat: Sprint 005 Playable — 可交互战斗原型
++8f43f27 chore: Sprint 000-004 补充提交 — meta 文件 + DLL 同步 + 会话日志
++e91418c feat: Sprint 004 Integration — BattleOrchestrator 全系统串联
++6076e1a feat: BattleHudForm 预制体生成并验证 — 30 节点 UGUI 层级, 225 测试全绿
++6e7a695 feat: BattleHudForm 预制体生成器 — Editor 菜单一键创建 UGUI prefab
++f0bab89 docs: Sprint 003 更新为 Code Complete 状态
++ab76b29 feat: Sprint 003 battle-ui 代码骨架 — BattleHudForm + TouchAreaManager
++18b0a0e feat: Sprint 003 Presentation 纯 C# 完成 — 225 EditMode 测试全绿
++2f943b7 feat: Sprint 003 Presentation 开始 — Feedback profile/HitStop/质量降级, 196 EditMode 测试全绿
++176e43f feat: Sprint 002 Feature 完成 — 10/10 stories 通过, 186 EditMode 测试全绿
++8e95e4f feat: Sprint 001 Core 完成 — 10/10 stories 通过, 124 EditMode 测试全绿
++3652a4b feat: Sprint 000 Foundation 完成 — 10/12 stories 通过, 61 EditMode 测试全绿
++### Uncommitted Changes
++.DS_Store
++client/.DS_Store
++client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
++client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
++client/UserSettings/EditorUserSettings.asset
++client/UserSettings/Layouts/default-2022.dwlt
++framework/game.core/bin/Output/netstandard2.1/game.core.dll
++framework/game.core/bin/Output/netstandard2.1/game.core.pdb
++---
++
++## Archived Session State: 20260502_020626
++# Active Session
++
++- Task: MVP 主架构蓝图
++- Status: Draft created — 架构文档已写入，ADR 缺口已识别
++- File: docs/architecture/architecture.md
++- Documentation Language: 简体中文
++- Sections: 引擎风险摘要；技术需求基线；系统分层图；模块所有权；数据流；API 边界；ADR 审计；必需 ADR
++- Next: 创建 P0 ADR，然后生成 architecture traceability 并运行 `/architecture-review`
++
++## Session Extract — /architecture-review 2026-04-29
++- Verdict: FAIL
++- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
++- New TR-IDs registered: None
++- GDD revision flags: `design/gdd/实时弹反系统.md`
++- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
++- Report: docs/architecture/architecture-review-2026-04-29.md
++
++## Session Extract — architecture repair 2026-04-29
++- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
++- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
++- Remaining blocker: P0 ADR coverage still missing
++
++## Session Extract — P0 ADR authoring 2026-04-29
++- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
++- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
++- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
++- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
++- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
++
++## Session Extract — /architecture-review 2026-04-29
++- Verdict: FAIL
++- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
++- New TR-IDs registered: None
++- GDD revision flags: None
++- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
++- Report: docs/architecture/architecture-review-2026-04-29.md
++
++## Session Extract — missing ADR completion 2026-04-29
++- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
++- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
++- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
++- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
++- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
++
++## Session Extract — /architecture-review 2026-04-29
++- Verdict: CONCERNS
++- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
++- New TR-IDs registered: 38
++- GDD revision flags: None
++- Top ADR gaps: None
++- Report: docs/architecture/architecture-review-2026-04-29.md
++
++## Session Extract — /gate-check pre-production remediation 2026-04-29
++- Verdict: CONCERNS
++- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
++- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
++- Report: production/gate-checks/pre-production-gate-2026-04-29.md
++
++## Session Extract — /dev-story 2026-05-01
++- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
++- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
++- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
++- Status: Complete (was already implemented; verified + supplemented restart test)
++- Next: /dev-story story-001-battle-event-dto-and-context
++
++## Session Extract — /dev-story 2026-05-01
++- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
++- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
++- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
++- Blockers: None
++- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
++---
++
++## Session End: 20260502_020626
++### Commits
++aed7515 feat: Sprint 005 Playable — 可交互战斗原型
++8f43f27 chore: Sprint 000-004 补充提交 — meta 文件 + DLL 同步 + 会话日志
++e91418c feat: Sprint 004 Integration — BattleOrchestrator 全系统串联
++6076e1a feat: BattleHudForm 预制体生成并验证 — 30 节点 UGUI 层级, 225 测试全绿
++6e7a695 feat: BattleHudForm 预制体生成器 — Editor 菜单一键创建 UGUI prefab
++f0bab89 docs: Sprint 003 更新为 Code Complete 状态
++ab76b29 feat: Sprint 003 battle-ui 代码骨架 — BattleHudForm + TouchAreaManager
++18b0a0e feat: Sprint 003 Presentation 纯 C# 完成 — 225 EditMode 测试全绿
++2f943b7 feat: Sprint 003 Presentation 开始 — Feedback profile/HitStop/质量降级, 196 EditMode 测试全绿
++176e43f feat: Sprint 002 Feature 完成 — 10/10 stories 通过, 186 EditMode 测试全绿
++8e95e4f feat: Sprint 001 Core 完成 — 10/10 stories 通过, 124 EditMode 测试全绿
++3652a4b feat: Sprint 000 Foundation 完成 — 10/12 stories 通过, 61 EditMode 测试全绿
++### Uncommitted Changes
++.DS_Store
++client/.DS_Store
++client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudForm.cs
++client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
++client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
++client/Assets/Plugins/game.gameplay.dll
++client/Assets/Plugins/game.gameplay.pdb
++client/UserSettings/EditorUserSettings.asset
++client/UserSettings/Layouts/default-2022.dwlt
++framework/game.core/bin/Output/netstandard2.1/game.core.dll
++framework/game.core/bin/Output/netstandard2.1/game.core.pdb
++production/session-logs/session-log.md
++---
++
++## Archived Session State: 20260502_021349
++# Active Session
++
++- Task: MVP 主架构蓝图
++- Status: Draft created — 架构文档已写入，ADR 缺口已识别
++- File: docs/architecture/architecture.md
++- Documentation Language: 简体中文
++- Sections: 引擎风险摘要；技术需求基线；系统分层图；模块所有权；数据流；API 边界；ADR 审计；必需 ADR
++- Next: 创建 P0 ADR，然后生成 architecture traceability 并运行 `/architecture-review`
++
++## Session Extract — /architecture-review 2026-04-29
++- Verdict: FAIL
++- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
++- New TR-IDs registered: None
++- GDD revision flags: `design/gdd/实时弹反系统.md`
++- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
++- Report: docs/architecture/architecture-review-2026-04-29.md
++
++## Session Extract — architecture repair 2026-04-29
++- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
++- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
++- Remaining blocker: P0 ADR coverage still missing
++
++## Session Extract — P0 ADR authoring 2026-04-29
++- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
++- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
++- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
++- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
++- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
++
++## Session Extract — /architecture-review 2026-04-29
++- Verdict: FAIL
++- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
++- New TR-IDs registered: None
++- GDD revision flags: None
++- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
++- Report: docs/architecture/architecture-review-2026-04-29.md
++
++## Session Extract — missing ADR completion 2026-04-29
++- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
++- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
++- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
++- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
++- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
++
++## Session Extract — /architecture-review 2026-04-29
++- Verdict: CONCERNS
++- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
++- New TR-IDs registered: 38
++- GDD revision flags: None
++- Top ADR gaps: None
++- Report: docs/architecture/architecture-review-2026-04-29.md
++
++## Session Extract — /gate-check pre-production remediation 2026-04-29
++- Verdict: CONCERNS
++- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
++- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
++- Report: production/gate-checks/pre-production-gate-2026-04-29.md
++
++## Session Extract — /dev-story 2026-05-01
++- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
++- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
++- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
++- Status: Complete (was already implemented; verified + supplemented restart test)
++- Next: /dev-story story-001-battle-event-dto-and-context
++
++## Session Extract — /dev-story 2026-05-01
++- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
++- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
++- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
++- Blockers: None
++- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
++---
++
++## Session End: 20260502_021349
++### Commits
++84148fd fix: 修复编译错误 + 场景加载方式
++aed7515 feat: Sprint 005 Playable — 可交互战斗原型
++8f43f27 chore: Sprint 000-004 补充提交 — meta 文件 + DLL 同步 + 会话日志
++e91418c feat: Sprint 004 Integration — BattleOrchestrator 全系统串联
++6076e1a feat: BattleHudForm 预制体生成并验证 — 30 节点 UGUI 层级, 225 测试全绿
++6e7a695 feat: BattleHudForm 预制体生成器 — Editor 菜单一键创建 UGUI prefab
++f0bab89 docs: Sprint 003 更新为 Code Complete 状态
++ab76b29 feat: Sprint 003 battle-ui 代码骨架 — BattleHudForm + TouchAreaManager
++18b0a0e feat: Sprint 003 Presentation 纯 C# 完成 — 225 EditMode 测试全绿
++2f943b7 feat: Sprint 003 Presentation 开始 — Feedback profile/HitStop/质量降级, 196 EditMode 测试全绿
++176e43f feat: Sprint 002 Feature 完成 — 10/10 stories 通过, 186 EditMode 测试全绿
++8e95e4f feat: Sprint 001 Core 完成 — 10/10 stories 通过, 124 EditMode 测试全绿
++3652a4b feat: Sprint 000 Foundation 完成 — 10/12 stories 通过, 61 EditMode 测试全绿
++### Uncommitted Changes
++.DS_Store
++client/.DS_Store
++client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
++client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
++client/UserSettings/EditorUserSettings.asset
++client/UserSettings/Layouts/default-2022.dwlt
++framework/game.core/bin/Output/netstandard2.1/game.core.dll
++framework/game.core/bin/Output/netstandard2.1/game.core.pdb
++production/session-logs/session-log.md
++---
++
++## Archived Session State: 20260502_023517
++# Active Session
++
++- Task: MVP 主架构蓝图
++- Status: Draft created — 架构文档已写入，ADR 缺口已识别
++- File: docs/architecture/architecture.md
++- Documentation Language: 简体中文
++- Sections: 引擎风险摘要；技术需求基线；系统分层图；模块所有权；数据流；API 边界；ADR 审计；必需 ADR
++- Next: 创建 P0 ADR，然后生成 architecture traceability 并运行 `/architecture-review`
++
++## Session Extract — /architecture-review 2026-04-29
++- Verdict: FAIL
++- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
++- New TR-IDs registered: None
++- GDD revision flags: `design/gdd/实时弹反系统.md`
++- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
++- Report: docs/architecture/architecture-review-2026-04-29.md
++
++## Session Extract — architecture repair 2026-04-29
++- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
++- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
++- Remaining blocker: P0 ADR coverage still missing
++
++## Session Extract — P0 ADR authoring 2026-04-29
++- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
++- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
++- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
++- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
++- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
++
++## Session Extract — /architecture-review 2026-04-29
++- Verdict: FAIL
++- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
++- New TR-IDs registered: None
++- GDD revision flags: None
++- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
++- Report: docs/architecture/architecture-review-2026-04-29.md
++
++## Session Extract — missing ADR completion 2026-04-29
++- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
++- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
++- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
++- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
++- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
++
++## Session Extract — /architecture-review 2026-04-29
++- Verdict: CONCERNS
++- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
++- New TR-IDs registered: 38
++- GDD revision flags: None
++- Top ADR gaps: None
++- Report: docs/architecture/architecture-review-2026-04-29.md
++
++## Session Extract — /gate-check pre-production remediation 2026-04-29
++- Verdict: CONCERNS
++- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
++- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
++- Report: production/gate-checks/pre-production-gate-2026-04-29.md
++
++## Session Extract — /dev-story 2026-05-01
++- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
++- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
++- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
++- Status: Complete (was already implemented; verified + supplemented restart test)
++- Next: /dev-story story-001-battle-event-dto-and-context
++
++## Session Extract — /dev-story 2026-05-01
++- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
++- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
++- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
++- Blockers: None
++- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
++---
++
++## Session End: 20260502_023517
++### Commits
++84148fd fix: 修复编译错误 + 场景加载方式
++aed7515 feat: Sprint 005 Playable — 可交互战斗原型
++8f43f27 chore: Sprint 000-004 补充提交 — meta 文件 + DLL 同步 + 会话日志
++e91418c feat: Sprint 004 Integration — BattleOrchestrator 全系统串联
++6076e1a feat: BattleHudForm 预制体生成并验证 — 30 节点 UGUI 层级, 225 测试全绿
++6e7a695 feat: BattleHudForm 预制体生成器 — Editor 菜单一键创建 UGUI prefab
++f0bab89 docs: Sprint 003 更新为 Code Complete 状态
++ab76b29 feat: Sprint 003 battle-ui 代码骨架 — BattleHudForm + TouchAreaManager
++18b0a0e feat: Sprint 003 Presentation 纯 C# 完成 — 225 EditMode 测试全绿
++2f943b7 feat: Sprint 003 Presentation 开始 — Feedback profile/HitStop/质量降级, 196 EditMode 测试全绿
++176e43f feat: Sprint 002 Feature 完成 — 10/10 stories 通过, 186 EditMode 测试全绿
++8e95e4f feat: Sprint 001 Core 完成 — 10/10 stories 通过, 124 EditMode 测试全绿
++3652a4b feat: Sprint 000 Foundation 完成 — 10/12 stories 通过, 61 EditMode 测试全绿
++### Uncommitted Changes
++.DS_Store
++client/.DS_Store
++client/Assets/Game/Scripts/Gameplay/Battle/BattleFlowController.cs
++client/Assets/Game/Scripts/Gameplay/Entry/TempGameState.cs
++client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
++client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
++client/UserSettings/EditorUserSettings.asset
++client/UserSettings/Layouts/default-2022.dwlt
++framework/game.core/bin/Output/netstandard2.1/game.core.dll
++framework/game.core/bin/Output/netstandard2.1/game.core.pdb
++production/session-logs/compaction-log.txt
++production/session-logs/session-log.md
++---
++
++## Archived Session State: 20260502_030950
++# Active Session
++
++- Task: MVP 主架构蓝图
++- Status: Draft created — 架构文档已写入，ADR 缺口已识别
++- File: docs/architecture/architecture.md
++- Documentation Language: 简体中文
++- Sections: 引擎风险摘要；技术需求基线；系统分层图；模块所有权；数据流；API 边界；ADR 审计；必需 ADR
++- Next: 创建 P0 ADR，然后生成 architecture traceability 并运行 `/architecture-review`
++
++## Session Extract — /architecture-review 2026-04-29
++- Verdict: FAIL
++- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
++- New TR-IDs registered: None
++- GDD revision flags: `design/gdd/实时弹反系统.md`
++- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
++- Report: docs/architecture/architecture-review-2026-04-29.md
++
++## Session Extract — architecture repair 2026-04-29
++- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
++- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
++- Remaining blocker: P0 ADR coverage still missing
++
++## Session Extract — P0 ADR authoring 2026-04-29
++- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
++- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
++- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
++- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
++- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
++
++## Session Extract — /architecture-review 2026-04-29
++- Verdict: FAIL
++- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
++- New TR-IDs registered: None
++- GDD revision flags: None
++- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
++- Report: docs/architecture/architecture-review-2026-04-29.md
++
++## Session Extract — missing ADR completion 2026-04-29
++- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
++- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
++- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
++- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
++- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
++
++## Session Extract — /architecture-review 2026-04-29
++- Verdict: CONCERNS
++- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
++- New TR-IDs registered: 38
++- GDD revision flags: None
++- Top ADR gaps: None
++- Report: docs/architecture/architecture-review-2026-04-29.md
++
++## Session Extract — /gate-check pre-production remediation 2026-04-29
++- Verdict: CONCERNS
++- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
++- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
++- Report: production/gate-checks/pre-production-gate-2026-04-29.md
++
++## Session Extract — /dev-story 2026-05-01
++- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
++- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
++- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
++- Status: Complete (was already implemented; verified + supplemented restart test)
++- Next: /dev-story story-001-battle-event-dto-and-context
++
++## Session Extract — /dev-story 2026-05-01
++- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
++- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
++- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
++- Blockers: None
++- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
++---
++
++## Session End: 20260502_030950
++### Commits
++84148fd fix: 修复编译错误 + 场景加载方式
++aed7515 feat: Sprint 005 Playable — 可交互战斗原型
++8f43f27 chore: Sprint 000-004 补充提交 — meta 文件 + DLL 同步 + 会话日志
++e91418c feat: Sprint 004 Integration — BattleOrchestrator 全系统串联
++6076e1a feat: BattleHudForm 预制体生成并验证 — 30 节点 UGUI 层级, 225 测试全绿
++6e7a695 feat: BattleHudForm 预制体生成器 — Editor 菜单一键创建 UGUI prefab
++f0bab89 docs: Sprint 003 更新为 Code Complete 状态
++ab76b29 feat: Sprint 003 battle-ui 代码骨架 — BattleHudForm + TouchAreaManager
++18b0a0e feat: Sprint 003 Presentation 纯 C# 完成 — 225 EditMode 测试全绿
++2f943b7 feat: Sprint 003 Presentation 开始 — Feedback profile/HitStop/质量降级, 196 EditMode 测试全绿
++176e43f feat: Sprint 002 Feature 完成 — 10/10 stories 通过, 186 EditMode 测试全绿
++8e95e4f feat: Sprint 001 Core 完成 — 10/10 stories 通过, 124 EditMode 测试全绿
++3652a4b feat: Sprint 000 Foundation 完成 — 10/12 stories 通过, 61 EditMode 测试全绿
++### Uncommitted Changes
++.DS_Store
++client/.DS_Store
++client/Assets/Game/Scripts/Gameplay/Battle/BattleFlowController.cs
++client/Assets/Game/Scripts/Gameplay/Entry/TempGameState.cs
++client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudForm.cs
++client/Assets/GameRes/DataTables/UIForm.bytes
++client/Assets/GameRes/UI/UIForms/BattleHud/BattleHudForm.prefab
++client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
++client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
++client/UserSettings/EditorUserSettings.asset
++client/UserSettings/Layouts/default-2022.dwlt
++framework/game.core/bin/Output/netstandard2.1/game.core.dll
++framework/game.core/bin/Output/netstandard2.1/game.core.pdb
++production/session-logs/compaction-log.txt
++production/session-logs/session-log.md
++---
++
