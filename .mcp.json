@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "gbrain": {
+      "type": "stdio",
+      "command": "/Users/sulequan/.bun/bin/gbrain",
+      "args": ["serve"],
+      "env": {
+        "OPENAI_API_KEY": "dummy",
+        "OPENAI_BASE_URL": "http://192.168.0.100:8000/v1",
+        "PATH": "/Users/sulequan/.bun/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+      }
+    }
+  }
+}
