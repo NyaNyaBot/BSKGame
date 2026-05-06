@@ -38,5 +38,15 @@ namespace Game.Client
         /// 战斗 HUD（ADR-0010）。
         /// </summary>
         BattleHudForm = 202,
+
+        /// <summary>
+        /// 主菜单界面。
+        /// </summary>
+        MainMenuForm = 203,
+
+        /// <summary>
+        /// 暂停覆盖层。
+        /// </summary>
+        PauseOverlayForm = 204,
     }
 }

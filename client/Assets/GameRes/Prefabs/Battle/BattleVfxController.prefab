@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6751992481187981024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4357882095058590757}
+  - component: {fileID: 7735773053549863286}
+  m_Layer: 0
+  m_Name: BattleVfxController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4357882095058590757
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6751992481187981024}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7735773053549863286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6751992481187981024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bab55ede03784f5d89c593277d5c2f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hitEffectPrefab: {fileID: 418821868344024103, guid: 054c9775675f64b31ba024fba6cf8fac, type: 3}
+  _hitColor: {r: 1, g: 0.3, b: 0.1, a: 1}
+  _deathEffectPrefab: {fileID: 1364326641207393596, guid: 2894fe89d94e3467c883266a9634ce22, type: 3}
+  _deathColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+  _attackTrailPrefab: {fileID: 8313735722604916244, guid: a006ca4916338478fa7d332a558e050a, type: 3}
+  _attackColor: {r: 1, g: 0.9, b: 0.4, a: 1}
+  _blockEffectPrefab: {fileID: 3281104433579276781, guid: dd5dafab68726490ba310c62961cfcca, type: 3}
+  _blockColor: {r: 0.4, g: 0.7, b: 1, a: 1}
+  _poolSize: 5

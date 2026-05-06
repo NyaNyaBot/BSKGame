@@ -12,11 +12,13 @@ namespace Game.Client
     /// <summary>
     /// Unity 侧战斗流程控制器。
     /// 职责：创建 Orchestrator、驱动 Tick、处理玩家输入、自动执行敌人回合、管理战斗结束。
+    /// 集成表现层：通过 BattleSceneSetup 连接动画/相机/VFX 系统。
     /// </summary>
     public class BattleFlowController : MonoBehaviour
     {
         private BattleOrchestrator _orchestrator;
         private BattleHudTouchAreaManager _touchAreaManager;
+        private BattleSceneSetup _sceneSetup;
         private bool _hudOpened;
         private float _enemyActionDelay;
         private bool _waitingForEnemyResolve;
@@ -36,16 +38,12 @@ namespace Game.Client
 
             try
             {
-                UnityEngine.Debug.Log("[BattleFlowController] Creating BattleOrchestrator...");
                 _orchestrator = new BattleOrchestrator(sceneContext, config);
-
-                UnityEngine.Debug.Log("[BattleFlowController] Calling orchestrator.Start...");
                 _orchestrator.Start(playerDef, enemyDef);
 
-                UnityEngine.Debug.Log("[BattleFlowController] Creating BattleHudTouchAreaManager...");
                 _touchAreaManager = new BattleHudTouchAreaManager(_orchestrator.HitAreaRegistry, _orchestrator.Bus);
 
-                UnityEngine.Debug.Log("[BattleFlowController] Opening BattleHud...");
+                InitializePresentation();
                 OpenBattleHud();
 
                 Log.Info("[Battle] Started. Player={0} Enemy={1}", _orchestrator.PlayerInstanceId, _orchestrator.EnemyInstanceId);
@@ -54,6 +52,16 @@ namespace Game.Client
             {
                 UnityEngine.Debug.LogError($"[BattleFlowController] Initialize failed: {ex}");
             }
+        }
+
+        private void InitializePresentation()
+        {
+            _sceneSetup = Object.FindObjectOfType<BattleSceneSetup>();
+
+            if (_sceneSetup != null)
+                _sceneSetup.InitializePresentation(_orchestrator.PlayerInstanceId, _orchestrator.EnemyInstanceId);
+            else
+                Log.Warning("[BattleFlowController] No BattleSceneSetup found in scene.");
         }
 
         private void Update()
@@ -100,6 +108,9 @@ namespace Game.Client
             if (result.Outcome == BattleActionOutcome.Accepted)
             {
                 Log.Info("[Battle] Player attacked. Phase → EnemyAction");
+
+                if (_sceneSetup != null && _sceneSetup.PresenterManager != null)
+                    _sceneSetup.PresenterManager.SetLastAttacker(_orchestrator.PlayerInstanceId);
 
                 if (!_orchestrator.IsRunning)
                 {

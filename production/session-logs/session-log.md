@@ -8895,3 +8895,4394 @@ CLAUDE.md
 production/session-logs/session-log.md
 ---
 
+## Archived Session State: 20260506_204639
+# Active Session
+
+- Task: MVP 主架构蓝图
+- Status: Draft created — 架构文档已写入，ADR 缺口已识别
+- File: docs/architecture/architecture.md
+- Documentation Language: 简体中文
+- Sections: 引擎风险摘要；技术需求基线；系统分层图；模块所有权；数据流；API 边界；ADR 审计；必需 ADR
+- Next: 创建 P0 ADR，然后生成 architecture traceability 并运行 `/architecture-review`
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Archived Session State: 20260506_204751
+# Active Session
+
+- Task: MVP 主架构蓝图
+- Status: Draft created — 架构文档已写入，ADR 缺口已识别
+- File: docs/architecture/architecture.md
+- Documentation Language: 简体中文
+- Sections: 引擎风险摘要；技术需求基线；系统分层图；模块所有权；数据流；API 边界；ADR 审计；必需 ADR
+- Next: 创建 P0 ADR，然后生成 architecture traceability 并运行 `/architecture-review`
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_204751
+### Uncommitted Changes
+production/session-logs/session-log.md
+---
+
+## Archived Session State: 20260506_205155
+# Active Session
+
+- Task: MVP 主架构蓝图
+- Status: Draft created — 架构文档已写入，ADR 缺口已识别
+- File: docs/architecture/architecture.md
+- Documentation Language: 简体中文
+- Sections: 引擎风险摘要；技术需求基线；系统分层图；模块所有权；数据流；API 边界；ADR 审计；必需 ADR
+- Next: 创建 P0 ADR，然后生成 architecture traceability 并运行 `/architecture-review`
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_205155
+### Uncommitted Changes
+production/session-logs/session-log.md
+---
+
+## Archived Session State: 20260506_205620
+# Active Session
+
+- Task: MVP 主架构蓝图
+- Status: Draft created — 架构文档已写入，ADR 缺口已识别
+- File: docs/architecture/architecture.md
+- Documentation Language: 简体中文
+- Sections: 引擎风险摘要；技术需求基线；系统分层图；模块所有权；数据流；API 边界；ADR 审计；必需 ADR
+- Next: 创建 P0 ADR，然后生成 architecture traceability 并运行 `/architecture-review`
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_205620
+### Uncommitted Changes
+production/session-logs/session-log.md
+---
+
+## Archived Session State: 20260506_205757
+# Active Session
+
+- Task: MVP 主架构蓝图
+- Status: Draft created — 架构文档已写入，ADR 缺口已识别
+- File: docs/architecture/architecture.md
+- Documentation Language: 简体中文
+- Sections: 引擎风险摘要；技术需求基线；系统分层图；模块所有权；数据流；API 边界；ADR 审计；必需 ADR
+- Next: 创建 P0 ADR，然后生成 architecture traceability 并运行 `/architecture-review`
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_205757
+### Uncommitted Changes
+production/session-logs/session-log.md
+---
+
+## Archived Session State: 20260506_205818
+# Active Session
+
+- Task: MVP 主架构蓝图
+- Status: Draft created — 架构文档已写入，ADR 缺口已识别
+- File: docs/architecture/architecture.md
+- Documentation Language: 简体中文
+- Sections: 引擎风险摘要；技术需求基线；系统分层图；模块所有权；数据流；API 边界；ADR 审计；必需 ADR
+- Next: 创建 P0 ADR，然后生成 architecture traceability 并运行 `/architecture-review`
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_205818
+### Uncommitted Changes
+production/session-logs/session-log.md
+---
+
+## Archived Session State: 20260506_210335
+# Active Session
+
+- Task: MVP 主架构蓝图
+- Status: Draft created — 架构文档已写入，ADR 缺口已识别
+- File: docs/architecture/architecture.md
+- Documentation Language: 简体中文
+- Sections: 引擎风险摘要；技术需求基线；系统分层图；模块所有权；数据流；API 边界；ADR 审计；必需 ADR
+- Next: 创建 P0 ADR，然后生成 architecture traceability 并运行 `/architecture-review`
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_210335
+### Uncommitted Changes
+production/session-logs/session-log.md
+---
+
+## Archived Session State: 20260506_211117
+# Active Session
+
+- Task: MVP 主架构蓝图
+- Status: Draft created — 架构文档已写入，ADR 缺口已识别
+- File: docs/architecture/architecture.md
+- Documentation Language: 简体中文
+- Sections: 引擎风险摘要；技术需求基线；系统分层图；模块所有权；数据流；API 边界；ADR 审计；必需 ADR
+- Next: 创建 P0 ADR，然后生成 architecture traceability 并运行 `/architecture-review`
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_211117
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+production/session-logs/session-log.md
+---
+
+## Archived Session State: 20260506_211604
+# Active Session
+
+- Task: MVP 主架构蓝图
+- Status: Draft created — 架构文档已写入，ADR 缺口已识别
+- File: docs/architecture/architecture.md
+- Documentation Language: 简体中文
+- Sections: 引擎风险摘要；技术需求基线；系统分层图；模块所有权；数据流；API 边界；ADR 审计；必需 ADR
+- Next: 创建 P0 ADR，然后生成 architecture traceability 并运行 `/architecture-review`
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_211604
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+production/session-logs/session-log.md
+---
+
+## Archived Session State: 20260506_212012
+# Active Session
+
+- Task: MVP 主架构蓝图
+- Status: Draft created — 架构文档已写入，ADR 缺口已识别
+- File: docs/architecture/architecture.md
+- Documentation Language: 简体中文
+- Sections: 引擎风险摘要；技术需求基线；系统分层图；模块所有权；数据流；API 边界；ADR 审计；必需 ADR
+- Next: 创建 P0 ADR，然后生成 architecture traceability 并运行 `/architecture-review`
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_212012
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+production/session-logs/session-log.md
+---
+
+## Archived Session State: 20260506_212222
+# Active Session
+
+- Task: MVP 主架构蓝图
+- Status: Draft created — 架构文档已写入，ADR 缺口已识别
+- File: docs/architecture/architecture.md
+- Documentation Language: 简体中文
+- Sections: 引擎风险摘要；技术需求基线；系统分层图；模块所有权；数据流；API 边界；ADR 审计；必需 ADR
+- Next: 创建 P0 ADR，然后生成 architecture traceability 并运行 `/architecture-review`
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_212222
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+production/session-logs/session-log.md
+---
+
+## Archived Session State: 20260506_212311
+# Active Session
+
+- Task: MVP 主架构蓝图
+- Status: Draft created — 架构文档已写入，ADR 缺口已识别
+- File: docs/architecture/architecture.md
+- Documentation Language: 简体中文
+- Sections: 引擎风险摘要；技术需求基线；系统分层图；模块所有权；数据流；API 边界；ADR 审计；必需 ADR
+- Next: 创建 P0 ADR，然后生成 architecture traceability 并运行 `/architecture-review`
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_212311
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+production/session-logs/session-log.md
+---
+
+## Archived Session State: 20260506_212433
+# Active Session
+
+- Task: MVP 主架构蓝图
+- Status: Draft created — 架构文档已写入，ADR 缺口已识别
+- File: docs/architecture/architecture.md
+- Documentation Language: 简体中文
+- Sections: 引擎风险摘要；技术需求基线；系统分层图；模块所有权；数据流；API 边界；ADR 审计；必需 ADR
+- Next: 创建 P0 ADR，然后生成 architecture traceability 并运行 `/architecture-review`
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_212433
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+production/session-logs/session-log.md
+---
+
+## Archived Session State: 20260506_212655
+# Active Session
+
+- Task: MVP 主架构蓝图
+- Status: Draft created — 架构文档已写入，ADR 缺口已识别
+- File: docs/architecture/architecture.md
+- Documentation Language: 简体中文
+- Sections: 引擎风险摘要；技术需求基线；系统分层图；模块所有权；数据流；API 边界；ADR 审计；必需 ADR
+- Next: 创建 P0 ADR，然后生成 architecture traceability 并运行 `/architecture-review`
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_212655
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs.meta
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
+client/Assets/Plugins/game.gameplay.dll
+client/Assets/Plugins/game.gameplay.pdb
+framework/game.core/bin/Output/netstandard2.1/game.core.dll
+framework/game.core/bin/Output/netstandard2.1/game.core.pdb
+production/session-logs/session-log.md
+---
+
+## Archived Session State: 20260506_212950
+# Active Session
+
+- Task: MVP 主架构蓝图
+- Status: Draft created — 架构文档已写入，ADR 缺口已识别
+- File: docs/architecture/architecture.md
+- Documentation Language: 简体中文
+- Sections: 引擎风险摘要；技术需求基线；系统分层图；模块所有权；数据流；API 边界；ADR 审计；必需 ADR
+- Next: 创建 P0 ADR，然后生成 architecture traceability 并运行 `/architecture-review`
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_212950
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs.meta
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
+client/Assets/Plugins/game.gameplay.dll
+client/Assets/Plugins/game.gameplay.pdb
+client/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+framework/game.core/bin/Output/netstandard2.1/game.core.dll
+framework/game.core/bin/Output/netstandard2.1/game.core.pdb
+production/session-logs/session-log.md
+---
+
+## Archived Session State: 20260506_213121
+# Active Session
+
+- Task: MVP 主架构蓝图
+- Status: Draft created — 架构文档已写入，ADR 缺口已识别
+- File: docs/architecture/architecture.md
+- Documentation Language: 简体中文
+- Sections: 引擎风险摘要；技术需求基线；系统分层图；模块所有权；数据流；API 边界；ADR 审计；必需 ADR
+- Next: 创建 P0 ADR，然后生成 architecture traceability 并运行 `/architecture-review`
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_213121
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs.meta
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
+client/Assets/Plugins/game.gameplay.dll
+client/Assets/Plugins/game.gameplay.pdb
+client/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+framework/game.core/bin/Output/netstandard2.1/game.core.dll
+framework/game.core/bin/Output/netstandard2.1/game.core.pdb
+production/session-logs/session-log.md
+---
+
+## Archived Session State: 20260506_213537
+# Active Session
+
+- Task: UX Spec — Main Menu（主菜单）
+- Status: Skeleton created — 骨架已写入 `design/ux/main-menu.md`
+- Current section: 下一节 — Purpose & Player Need（待与用户协作定稿）
+- File: design/ux/main-menu.md
+- Queue: 完成后接续 `/ux-design pause-menu`
+- Next: 逐节填写 Purpose → … → Acceptance Criteria；全文完成后 `/ux-review main-menu`
+
+## Previous Session (archived note)
+
+- Task: MVP 主架构蓝图
+- File: docs/architecture/architecture.md
+- Next (historical): 见下方 Session Extract
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_213537
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs.meta
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
+client/Assets/Plugins/game.gameplay.dll
+client/Assets/Plugins/game.gameplay.pdb
+client/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+framework/game.core/bin/Output/netstandard2.1/game.core.dll
+framework/game.core/bin/Output/netstandard2.1/game.core.pdb
+production/session-logs/session-log.md
+production/session-state/active.md
+---
+
+## Archived Session State: 20260506_213704
+# Active Session
+
+- Task: UX Spec — Main Menu（主菜单）
+- Status: Skeleton created — 骨架已写入 `design/ux/main-menu.md`
+- Current section: 下一节 — Player Context on Arrival（待与用户协作定稿）
+- Sections done: Purpose & Player Need
+- File: design/ux/main-menu.md
+- Queue: 完成后接续 `/ux-design pause-menu`
+- Next: 逐节填写 Purpose → … → Acceptance Criteria；全文完成后 `/ux-review main-menu`
+
+## Previous Session (archived note)
+
+- Task: MVP 主架构蓝图
+- File: docs/architecture/architecture.md
+- Next (historical): 见下方 Session Extract
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_213704
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs.meta
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
+client/Assets/Plugins/game.gameplay.dll
+client/Assets/Plugins/game.gameplay.pdb
+client/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+framework/game.core/bin/Output/netstandard2.1/game.core.dll
+framework/game.core/bin/Output/netstandard2.1/game.core.pdb
+production/session-logs/session-log.md
+production/session-state/active.md
+---
+
+## Archived Session State: 20260506_214305
+# Active Session
+
+- Task: UX Spec — Main Menu（主菜单）
+- Status: Draft complete — Open Questions #1/#2 已通过 AskQuestion 收口；#3/#4 仍开放
+- File: design/ux/main-menu.md
+- Queue: **`/ux-review main-menu`** → 继续 **`/ux-design pause-menu`**（同样可用 AskQuestion）
+- Next: 运行 ux-review；pause-menu 新开会话时先 Read Phase
+
+## Previous Session (archived note)
+
+- Task: MVP 主架构蓝图
+- File: docs/architecture/architecture.md
+- Next (historical): 见下方 Session Extract
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_214305
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs.meta
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
+client/Assets/Plugins/game.gameplay.dll
+client/Assets/Plugins/game.gameplay.pdb
+client/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+framework/game.core/bin/Output/netstandard2.1/game.core.dll
+framework/game.core/bin/Output/netstandard2.1/game.core.pdb
+production/session-logs/session-log.md
+production/session-state/active.md
+---
+
+## Archived Session State: 20260506_214351
+# Active Session
+
+- Task: UX Spec — Main Menu（主菜单）
+- Status: Draft complete — Open Questions #1/#2 已通过 AskQuestion 收口；#3/#4 仍开放
+- File: design/ux/main-menu.md
+- Queue: **`/ux-review main-menu`** → 继续 **`/ux-design pause-menu`**（同样可用 AskQuestion）
+- Next: 运行 ux-review；pause-menu 新开会话时先 Read Phase
+
+## Previous Session (archived note)
+
+- Task: MVP 主架构蓝图
+- File: docs/architecture/architecture.md
+- Next (historical): 见下方 Session Extract
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_214351
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs.meta
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
+client/Assets/Plugins/game.gameplay.dll
+client/Assets/Plugins/game.gameplay.pdb
+client/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+framework/game.core/bin/Output/netstandard2.1/game.core.dll
+framework/game.core/bin/Output/netstandard2.1/game.core.pdb
+production/session-logs/session-log.md
+production/session-state/active.md
+---
+
+## Archived Session State: 20260506_214517
+# Active Session
+
+- Task: UX Spec — Main Menu（主菜单）
+- Status: Revised post `/ux-review` — **Verdict: APPROVED**（2026-05-06 复审）；Open Questions #3/#4 仍开放
+- File: design/ux/main-menu.md
+- Queue: **`/ux-design pause-menu`**（建议全程 AskQuestion）
+- Next: 实现移交 `/team-ui`；pause-menu spec + review
+
+## Previous Session (archived note)
+
+- Task: MVP 主架构蓝图
+- File: docs/architecture/architecture.md
+- Next (historical): 见下方 Session Extract
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_214517
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs.meta
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
+client/Assets/Plugins/game.gameplay.dll
+client/Assets/Plugins/game.gameplay.pdb
+client/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+framework/game.core/bin/Output/netstandard2.1/game.core.dll
+framework/game.core/bin/Output/netstandard2.1/game.core.pdb
+production/session-logs/session-log.md
+production/session-state/active.md
+---
+
+## Archived Session State: 20260506_214749
+# Active Session
+
+- Task: UX Spec — Pause Menu（暂停菜单）
+- Status: Draft complete — AskQuestion：scope=`battle_only`；quit=`modal_always`
+- File: design/ux/pause-menu.md
+- Queue: **`/ux-review pause-menu`**
+- Next: ux-review；按需回填宿主 Pause Overlay Open Question #1
+
+## Previous — Main Menu
+
+- File: design/ux/main-menu.md — APPROVED（2026-05-06）
+
+## Previous Session (archived note)
+
+- Task: MVP 主架构蓝图
+- File: docs/architecture/architecture.md
+- Next (historical): 见下方 Session Extract
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_214749
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs.meta
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
+client/Assets/Plugins/game.gameplay.dll
+client/Assets/Plugins/game.gameplay.pdb
+client/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+framework/game.core/bin/Output/netstandard2.1/game.core.dll
+framework/game.core/bin/Output/netstandard2.1/game.core.pdb
+production/session-logs/session-log.md
+production/session-state/active.md
+---
+
+## Archived Session State: 20260506_214845
+# Active Session
+
+- Task: UX Spec — Pause Menu（暂停菜单）
+- Status: Revised — **`ux-review` APPROVED**（2026-05-06）；宿主暂停策略已写入 Spec
+- File: design/ux/pause-menu.md
+- Queue: 实现移交 `/team-ui`；Open #2/#3（探索共用 Pause / 音频 Duck）非门禁阻断
+- Next: 按 Acceptance 绑宿主 `onHide`/`onShow` smoke
+
+## Previous — Main Menu
+
+- File: design/ux/main-menu.md — APPROVED（2026-05-06）
+
+## Previous Session (archived note)
+
+- Task: MVP 主架构蓝图
+- File: docs/architecture/architecture.md
+- Next (historical): 见下方 Session Extract
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_214845
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs.meta
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
+client/Assets/Plugins/game.gameplay.dll
+client/Assets/Plugins/game.gameplay.pdb
+client/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+framework/game.core/bin/Output/netstandard2.1/game.core.dll
+framework/game.core/bin/Output/netstandard2.1/game.core.pdb
+production/session-logs/session-log.md
+production/session-state/active.md
+---
+
+## Archived Session State: 20260506_215304
+# Active Session
+
+- Task: UX Spec — Pause Menu（暂停菜单）
+- Status: Revised — **`ux-review` APPROVED**（2026-05-06）；宿主暂停策略已写入 Spec
+- File: design/ux/pause-menu.md
+- Queue: 实现移交 `/team-ui`；Open #2/#3（探索共用 Pause / 音频 Duck）非门禁阻断
+- Next: 按 Acceptance 绑宿主 `onHide`/`onShow` smoke
+
+## Previous — Main Menu
+
+- File: design/ux/main-menu.md — APPROVED（2026-05-06）
+
+## Previous Session (archived note)
+
+- Task: MVP 主架构蓝图
+- File: docs/architecture/architecture.md
+- Next (historical): 见下方 Session Extract
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_215304
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs.meta
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
+client/Assets/Plugins/game.gameplay.dll
+client/Assets/Plugins/game.gameplay.pdb
+client/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+framework/game.core/bin/Output/netstandard2.1/game.core.dll
+framework/game.core/bin/Output/netstandard2.1/game.core.pdb
+production/session-logs/session-log.md
+production/session-state/active.md
+---
+
+## Archived Session State: 20260506_215709
+# Active Session
+
+- Task: UX Spec — Pause Menu（暂停菜单）
+- Status: Revised — **`ux-review` APPROVED**（2026-05-06）；宿主暂停策略已写入 Spec
+- File: design/ux/pause-menu.md
+- Queue: 实现移交 `/team-ui`；Open #2/#3（探索共用 Pause / 音频 Duck）非门禁阻断
+- Next: 按 Acceptance 绑宿主 `onHide`/`onShow` smoke
+
+## Previous — Main Menu
+
+- File: design/ux/main-menu.md — APPROVED（2026-05-06）
+
+## Previous Session (archived note)
+
+- Task: MVP 主架构蓝图
+- File: docs/architecture/architecture.md
+- Next (historical): 见下方 Session Extract
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_215709
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs.meta
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
+client/Assets/Plugins/game.gameplay.dll
+client/Assets/Plugins/game.gameplay.pdb
+client/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+framework/game.core/bin/Output/netstandard2.1/game.core.dll
+framework/game.core/bin/Output/netstandard2.1/game.core.pdb
+production/session-logs/session-log.md
+production/session-state/active.md
+---
+
+## Archived Session State: 20260506_215718
+# Active Session
+
+- Task: UX Spec — Pause Menu（暂停菜单）
+- Status: Revised — **`ux-review` APPROVED**（2026-05-06）；宿主暂停策略已写入 Spec
+- File: design/ux/pause-menu.md
+- Queue: 实现移交 `/team-ui`；Open #2/#3（探索共用 Pause / 音频 Duck）非门禁阻断
+- Next: 按 Acceptance 绑宿主 `onHide`/`onShow` smoke
+
+## Previous — Main Menu
+
+- File: design/ux/main-menu.md — APPROVED（2026-05-06）
+
+## Previous Session (archived note)
+
+- Task: MVP 主架构蓝图
+- File: docs/architecture/architecture.md
+- Next (historical): 见下方 Session Extract
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_215718
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs.meta
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
+client/Assets/Plugins/game.gameplay.dll
+client/Assets/Plugins/game.gameplay.pdb
+client/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+framework/game.core/bin/Output/netstandard2.1/game.core.dll
+framework/game.core/bin/Output/netstandard2.1/game.core.pdb
+production/session-logs/session-log.md
+production/session-state/active.md
+---
+
+## Archived Session State: 20260506_215823
+# Active Session
+
+- Task: UX Spec — Pause Menu（暂停菜单）
+- Status: Revised — **`ux-review` APPROVED**（2026-05-06）；宿主暂停策略已写入 Spec
+- File: design/ux/pause-menu.md
+- Queue: 实现移交 `/team-ui`；Open #2/#3（探索共用 Pause / 音频 Duck）非门禁阻断
+- Next: 按 Acceptance 绑宿主 `onHide`/`onShow` smoke
+
+## Previous — Main Menu
+
+- File: design/ux/main-menu.md — APPROVED（2026-05-06）
+
+## Previous Session (archived note)
+
+- Task: MVP 主架构蓝图
+- File: docs/architecture/architecture.md
+- Next (historical): 见下方 Session Extract
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_215823
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs.meta
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
+client/Assets/Plugins/game.gameplay.dll
+client/Assets/Plugins/game.gameplay.pdb
+client/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+framework/game.core/bin/Output/netstandard2.1/game.core.dll
+framework/game.core/bin/Output/netstandard2.1/game.core.pdb
+production/session-logs/session-log.md
+production/session-state/active.md
+---
+
+## Archived Session State: 20260506_215935
+# Active Session
+
+- Task: UX Spec — Pause Menu（暂停菜单）
+- Status: Revised — **`ux-review` APPROVED**（2026-05-06）；宿主暂停策略已写入 Spec
+- File: design/ux/pause-menu.md
+- Queue: 实现移交 `/team-ui`；Open #2/#3（探索共用 Pause / 音频 Duck）非门禁阻断
+- Next: 按 Acceptance 绑宿主 `onHide`/`onShow` smoke
+
+## Previous — Main Menu
+
+- File: design/ux/main-menu.md — APPROVED（2026-05-06）
+
+## Previous Session (archived note)
+
+- Task: MVP 主架构蓝图
+- File: docs/architecture/architecture.md
+- Next (historical): 见下方 Session Extract
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_215935
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs.meta
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
+client/Assets/Plugins/game.gameplay.dll
+client/Assets/Plugins/game.gameplay.pdb
+client/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+framework/game.core/bin/Output/netstandard2.1/game.core.dll
+framework/game.core/bin/Output/netstandard2.1/game.core.pdb
+production/session-logs/session-log.md
+production/session-state/active.md
+---
+
+## Archived Session State: 20260506_220359
+# Active Session
+
+- Task: UX Spec — Pause Menu（暂停菜单）
+- Status: Revised — **`ux-review` APPROVED**（2026-05-06）；宿主暂停策略已写入 Spec
+- File: design/ux/pause-menu.md
+- Queue: 实现移交 `/team-ui`；Open #2/#3（探索共用 Pause / 音频 Duck）非门禁阻断
+- Next: 按 Acceptance 绑宿主 `onHide`/`onShow` smoke
+
+## Previous — Main Menu
+
+- File: design/ux/main-menu.md — APPROVED（2026-05-06）
+
+## Previous Session (archived note)
+
+- Task: MVP 主架构蓝图
+- File: docs/architecture/architecture.md
+- Next (historical): 见下方 Session Extract
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_220359
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs.meta
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
+client/Assets/Plugins/game.gameplay.dll
+client/Assets/Plugins/game.gameplay.pdb
+client/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+framework/game.core/bin/Output/netstandard2.1/game.core.dll
+framework/game.core/bin/Output/netstandard2.1/game.core.pdb
+production/session-logs/session-log.md
+production/session-state/active.md
+---
+
+## Archived Session State: 20260506_220950
+# Active Session
+
+- Task: UX Spec — Pause Menu（暂停菜单）
+- Status: Revised — **`ux-review` APPROVED**（2026-05-06）；宿主暂停策略已写入 Spec
+- File: design/ux/pause-menu.md
+- Queue: 实现移交 `/team-ui`；Open #2/#3（探索共用 Pause / 音频 Duck）非门禁阻断
+- Next: 按 Acceptance 绑宿主 `onHide`/`onShow` smoke
+
+## Previous — Main Menu
+
+- File: design/ux/main-menu.md — APPROVED（2026-05-06）
+
+## Previous Session (archived note)
+
+- Task: MVP 主架构蓝图
+- File: docs/architecture/architecture.md
+- Next (historical): 见下方 Session Extract
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_220950
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs.meta
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
+client/Assets/Plugins/game.gameplay.dll
+client/Assets/Plugins/game.gameplay.pdb
+client/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+framework/game.core/bin/Output/netstandard2.1/game.core.dll
+framework/game.core/bin/Output/netstandard2.1/game.core.pdb
+production/session-logs/session-log.md
+production/session-state/active.md
+---
+
+## Archived Session State: 20260506_221157
+# Active Session
+
+- Task: UX Spec — Pause Menu（暂停菜单）
+- Status: Revised — **`ux-review` APPROVED**（2026-05-06）；宿主暂停策略已写入 Spec
+- File: design/ux/pause-menu.md
+- Queue: 实现移交 `/team-ui`；Open #2/#3（探索共用 Pause / 音频 Duck）非门禁阻断
+- Next: 按 Acceptance 绑宿主 `onHide`/`onShow` smoke
+
+## Previous — Main Menu
+
+- File: design/ux/main-menu.md — APPROVED（2026-05-06）
+
+## Previous Session (archived note)
+
+- Task: MVP 主架构蓝图
+- File: docs/architecture/architecture.md
+- Next (historical): 见下方 Session Extract
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_221157
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs.meta
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
+client/Assets/Plugins/game.gameplay.dll
+client/Assets/Plugins/game.gameplay.pdb
+client/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+framework/game.core/bin/Output/netstandard2.1/game.core.dll
+framework/game.core/bin/Output/netstandard2.1/game.core.pdb
+production/session-logs/session-log.md
+production/session-state/active.md
+---
+
+## Archived Session State: 20260506_231643
+# Active Session
+
+- Task: UX Spec — Pause Menu（暂停菜单）
+- Status: Revised — **`ux-review` APPROVED**（2026-05-06）；宿主暂停策略已写入 Spec
+- File: design/ux/pause-menu.md
+- Queue: 实现移交 `/team-ui`；Open #2/#3（探索共用 Pause / 音频 Duck）非门禁阻断
+- Next: 按 Acceptance 绑宿主 `onHide`/`onShow` smoke
+
+## Previous — Main Menu
+
+- File: design/ux/main-menu.md — APPROVED（2026-05-06）
+
+## Previous Session (archived note)
+
+- Task: MVP 主架构蓝图
+- File: docs/architecture/architecture.md
+- Next (historical): 见下方 Session Extract
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_231643
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs.meta
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
+client/Assets/Plugins/game.gameplay.dll
+client/Assets/Plugins/game.gameplay.pdb
+client/Packages/manifest.json
+client/Packages/packages-lock.json
+client/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+framework/game.core/bin/Output/netstandard2.1/game.core.dll
+framework/game.core/bin/Output/netstandard2.1/game.core.pdb
+production/session-logs/agent-audit.log
+production/session-logs/compaction-log.txt
+production/session-logs/session-log.md
+production/session-state/active.md
+---
+
+## Archived Session State: 20260506_233541
+# Active Session
+
+- Task: UX Spec — Pause Menu（暂停菜单）
+- Status: Revised — **`ux-review` APPROVED**（2026-05-06）；宿主暂停策略已写入 Spec
+- File: design/ux/pause-menu.md
+- Queue: 实现移交 `/team-ui`；Open #2/#3（探索共用 Pause / 音频 Duck）非门禁阻断
+- Next: 按 Acceptance 绑宿主 `onHide`/`onShow` smoke
+
+## Previous — Main Menu
+
+- File: design/ux/main-menu.md — APPROVED（2026-05-06）
+
+## Previous Session (archived note)
+
+- Task: MVP 主架构蓝图
+- File: docs/architecture/architecture.md
+- Next (historical): 见下方 Session Extract
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_233541
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+client/.DS_Store
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs.meta
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
+client/Assets/Plugins/game.gameplay.dll
+client/Assets/Plugins/game.gameplay.pdb
+client/Packages/manifest.json
+client/Packages/packages-lock.json
+client/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+framework/game.core/bin/Output/netstandard2.1/game.core.dll
+framework/game.core/bin/Output/netstandard2.1/game.core.pdb
+production/session-logs/agent-audit.log
+production/session-logs/compaction-log.txt
+production/session-logs/session-log.md
+production/session-state/active.md
+---
+
+## Archived Session State: 20260506_233831
+# Active Session
+
+- Task: UX Spec — Pause Menu（暂停菜单）
+- Status: Revised — **`ux-review` APPROVED**（2026-05-06）；宿主暂停策略已写入 Spec
+- File: design/ux/pause-menu.md
+- Queue: 实现移交 `/team-ui`；Open #2/#3（探索共用 Pause / 音频 Duck）非门禁阻断
+- Next: 按 Acceptance 绑宿主 `onHide`/`onShow` smoke
+
+## Previous — Main Menu
+
+- File: design/ux/main-menu.md — APPROVED（2026-05-06）
+
+## Previous Session (archived note)
+
+- Task: MVP 主架构蓝图
+- File: docs/architecture/architecture.md
+- Next (historical): 见下方 Session Extract
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_233831
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+client/.DS_Store
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs.meta
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
+client/Assets/Plugins/game.gameplay.dll
+client/Assets/Plugins/game.gameplay.pdb
+client/Packages/manifest.json
+client/Packages/packages-lock.json
+client/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+framework/game.core/bin/Output/netstandard2.1/game.core.dll
+framework/game.core/bin/Output/netstandard2.1/game.core.pdb
+production/session-logs/agent-audit.log
+production/session-logs/compaction-log.txt
+production/session-logs/session-log.md
+production/session-state/active.md
+---
+
+## Archived Session State: 20260506_234757
+# Active Session
+
+- Task: UX Spec — Pause Menu（暂停菜单）
+- Status: Revised — **`ux-review` APPROVED**（2026-05-06）；宿主暂停策略已写入 Spec
+- File: design/ux/pause-menu.md
+- Queue: 实现移交 `/team-ui`；Open #2/#3（探索共用 Pause / 音频 Duck）非门禁阻断
+- Next: 按 Acceptance 绑宿主 `onHide`/`onShow` smoke
+
+## Previous — Main Menu
+
+- File: design/ux/main-menu.md — APPROVED（2026-05-06）
+
+## Previous Session (archived note)
+
+- Task: MVP 主架构蓝图
+- File: docs/architecture/architecture.md
+- Next (historical): 见下方 Session Extract
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260506_234757
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+client/.DS_Store
+client/Assets/Game/Scripts/Gameplay/0_Test/GameUtils.cs
+client/Assets/Game/Scripts/Gameplay/0_Test/GameUtils.cs.meta
+client/Assets/Game/Scripts/Gameplay/Architecture.meta
+client/Assets/Game/Scripts/Gameplay/Architecture/BattleMainArchitecture.cs
+client/Assets/Game/Scripts/Gameplay/Architecture/BattleMainArchitecture.cs.meta
+client/Assets/Game/Scripts/Gameplay/Architecture/MenuArchitecture.cs
+client/Assets/Game/Scripts/Gameplay/Architecture/MenuArchitecture.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/BattleAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/BattleAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/BattleActionItem.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/BattleActionItem.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/BlockAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/BlockAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/EmptyAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/EmptyAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/ExecuteAllAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/ExecuteAllAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/HighlightTileAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/HighlightTileAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/Model.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/Model/BattleMainModel.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/Model/BattleMainModel.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/MoveToAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/MoveToAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/SaveSelectEntityAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/SaveSelectEntityAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/SkillAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/SkillAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/UndoAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/UndoAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleManager.cs
+client/Assets/Game/Scripts/Gameplay/BattleManager.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/BoardEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/BoardEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice/LatticeEntityLogic.IPointerHandler.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice/LatticeEntityLogic.IPointerHandler.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice/LatticeEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice/LatticeEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IDamageable.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IDamageable.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.INavigationAgent.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.INavigationAgent.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IPointerHandler.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IPointerHandler.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.ISelectable.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.ISelectable.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IView.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IView.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IViewExtend.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IViewExtend.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/RoleController.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/RoleController/RoleControllerEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/RoleController/RoleControllerEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph/TileNodeEntityLogic.IPointerHandler.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph/TileNodeEntityLogic.IPointerHandler.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph/TileNodeEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph/TileNodeEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/System.meta
+client/Assets/Game/Scripts/Gameplay/System/Base.meta
+client/Assets/Game/Scripts/Gameplay/System/Base/ManagedSystem.cs
+client/Assets/Game/Scripts/Gameplay/System/Base/ManagedSystem.cs.meta
+client/Assets/Game/Scripts/Gameplay/System/BattleActionSystem.cs
+client/Assets/Game/Scripts/Gameplay/System/BattleActionSystem.cs.meta
+client/Assets/Game/Scripts/Gameplay/System/SelectionSystem.cs
+client/Assets/Game/Scripts/Gameplay/System/SelectionSystem.cs.meta
+client/Assets/Game/Scripts/Gameplay/Tilemap.meta
+client/Assets/Game/Scripts/Gameplay/Tilemap/CustomTile.cs
+client/Assets/Game/Scripts/Gameplay/Tilemap/CustomTile.cs.meta
+client/Assets/Game/Scripts/Gameplay/Tilemap/TileGraph.cs
+client/Assets/Game/Scripts/Gameplay/Tilemap/TileGraph.cs.meta
+client/Assets/Game/Scripts/Gameplay/Tilemap/TileGraphImpl.cs
+client/Assets/Game/Scripts/Gameplay/Tilemap/TileGraphImpl.cs.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Graph.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/GraphUtils.cs
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/GraphUtils.cs.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/IGraphUtility.cs
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/IGraphUtility.cs.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/TileMapGraphUtility.cs
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/TileMapGraphUtility.cs.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Input/UnityInputUtility_PC.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs.meta
+client/Assets/Game/Scripts/Windows/UIForm/BattleMain.meta
+client/Assets/Game/Scripts/Windows/UIForm/BattleMain/BattleMainForm.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleMain/BattleMainForm.cs.meta
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
+client/Assets/Plugins/game.gameplay.dll
+client/Assets/Plugins/game.gameplay.pdb
+client/Packages/manifest.json
+client/Packages/packages-lock.json
+client/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+framework/game.core/bin/Output/netstandard2.1/game.core.dll
+framework/game.core/bin/Output/netstandard2.1/game.core.pdb
+gameplay/gameplay/Entity/Data/BoardEntityModel.cs
+gameplay/gameplay/Entity/Data/LatticeEntityModel.cs
+gameplay/gameplay/Entity/Data/TileNodeEntityModel.cs
+gameplay/gameplay/Entity/GameplayEntity/ProceduralGraph/BoardGameplayEntity.cs
+gameplay/gameplay/Entity/GameplayEntity/ProceduralGraph/LatticeGameplayEntity.cs
+gameplay/gameplay/Entity/GameplayEntity/Role/RoleGameplayEntity.ITeamAgentGetter.cs
+gameplay/gameplay/Entity/GameplayEntity/Role/RoleGameplayEntity.cs
+gameplay/gameplay/Entity/GameplayEntity/RoleController/RoleControllerGameplayEntity.cs
+gameplay/gameplay/Entity/GameplayEntity/TileMapGraph/TileNodeGameplayEntity.cs
+gameplay/gameplay/Graph/BoardGraph.cs
+gameplay/gameplay/Graph/LatticeNode.cs
+production/session-logs/agent-audit.log
+production/session-logs/compaction-log.txt
+production/session-logs/session-log.md
+production/session-state/active.md
+---
+
+## Archived Session State: 20260507_000413
+# Active Session
+
+- Task: UX Spec — Pause Menu（暂停菜单）
+- Status: Revised — **`ux-review` APPROVED**（2026-05-06）；宿主暂停策略已写入 Spec
+- File: design/ux/pause-menu.md
+- Queue: 实现移交 `/team-ui`；Open #2/#3（探索共用 Pause / 音频 Duck）非门禁阻断
+- Next: 按 Acceptance 绑宿主 `onHide`/`onShow` smoke
+
+## Previous — Main Menu
+
+- File: design/ux/main-menu.md — APPROVED（2026-05-06）
+
+## Previous Session (archived note)
+
+- Task: MVP 主架构蓝图
+- File: docs/architecture/architecture.md
+- Next (historical): 见下方 Session Extract
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260507_000413
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+client/.DS_Store
+client/Assets/Game/Scripts/Gameplay/0_Test/GameUtils.cs
+client/Assets/Game/Scripts/Gameplay/0_Test/GameUtils.cs.meta
+client/Assets/Game/Scripts/Gameplay/Architecture.meta
+client/Assets/Game/Scripts/Gameplay/Architecture/BattleMainArchitecture.cs
+client/Assets/Game/Scripts/Gameplay/Architecture/BattleMainArchitecture.cs.meta
+client/Assets/Game/Scripts/Gameplay/Architecture/MenuArchitecture.cs
+client/Assets/Game/Scripts/Gameplay/Architecture/MenuArchitecture.cs.meta
+client/Assets/Game/Scripts/Gameplay/Battle/BattleFlowController.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/BattleAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/BattleAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/BattleActionItem.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/BattleActionItem.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/BlockAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/BlockAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/EmptyAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/EmptyAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/ExecuteAllAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/ExecuteAllAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/HighlightTileAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/HighlightTileAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/Model.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/Model/BattleMainModel.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/Model/BattleMainModel.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/MoveToAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/MoveToAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/SaveSelectEntityAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/SaveSelectEntityAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/SkillAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/SkillAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/UndoAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/UndoAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleManager.cs
+client/Assets/Game/Scripts/Gameplay/BattleManager.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/BoardEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/BoardEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice/LatticeEntityLogic.IPointerHandler.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice/LatticeEntityLogic.IPointerHandler.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice/LatticeEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice/LatticeEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IDamageable.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IDamageable.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.INavigationAgent.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.INavigationAgent.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IPointerHandler.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IPointerHandler.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.ISelectable.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.ISelectable.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IView.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IView.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IViewExtend.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IViewExtend.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/RoleController.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/RoleController/RoleControllerEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/RoleController/RoleControllerEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph/TileNodeEntityLogic.IPointerHandler.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph/TileNodeEntityLogic.IPointerHandler.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph/TileNodeEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph/TileNodeEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/System.meta
+client/Assets/Game/Scripts/Gameplay/System/Base.meta
+client/Assets/Game/Scripts/Gameplay/System/Base/ManagedSystem.cs
+client/Assets/Game/Scripts/Gameplay/System/Base/ManagedSystem.cs.meta
+client/Assets/Game/Scripts/Gameplay/System/BattleActionSystem.cs
+client/Assets/Game/Scripts/Gameplay/System/BattleActionSystem.cs.meta
+client/Assets/Game/Scripts/Gameplay/System/SelectionSystem.cs
+client/Assets/Game/Scripts/Gameplay/System/SelectionSystem.cs.meta
+client/Assets/Game/Scripts/Gameplay/Tilemap.meta
+client/Assets/Game/Scripts/Gameplay/Tilemap/CustomTile.cs
+client/Assets/Game/Scripts/Gameplay/Tilemap/CustomTile.cs.meta
+client/Assets/Game/Scripts/Gameplay/Tilemap/TileGraph.cs
+client/Assets/Game/Scripts/Gameplay/Tilemap/TileGraph.cs.meta
+client/Assets/Game/Scripts/Gameplay/Tilemap/TileGraphImpl.cs
+client/Assets/Game/Scripts/Gameplay/Tilemap/TileGraphImpl.cs.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Graph.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/GraphUtils.cs
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/GraphUtils.cs.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/IGraphUtility.cs
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/IGraphUtility.cs.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/TileMapGraphUtility.cs
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/TileMapGraphUtility.cs.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Input/UnityInputUtility_PC.cs
+client/Assets/Game/Scripts/Windows/Base/UIFormId.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs.meta
+client/Assets/Game/Scripts/Windows/UIForm/BattleMain.meta
+client/Assets/Game/Scripts/Windows/UIForm/BattleMain/BattleMainForm.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleMain/BattleMainForm.cs.meta
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
+client/Assets/Plugins/game.gameplay.dll
+client/Assets/Plugins/game.gameplay.pdb
+client/Packages/manifest.json
+client/Packages/packages-lock.json
+client/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+framework/game.core/bin/Output/netstandard2.1/game.core.dll
+framework/game.core/bin/Output/netstandard2.1/game.core.pdb
+gameplay/gameplay/Entity/Data/BoardEntityModel.cs
+gameplay/gameplay/Entity/Data/LatticeEntityModel.cs
+gameplay/gameplay/Entity/Data/TileNodeEntityModel.cs
+gameplay/gameplay/Entity/GameplayEntity/ProceduralGraph/BoardGameplayEntity.cs
+gameplay/gameplay/Entity/GameplayEntity/ProceduralGraph/LatticeGameplayEntity.cs
+gameplay/gameplay/Entity/GameplayEntity/Role/RoleGameplayEntity.ITeamAgentGetter.cs
+gameplay/gameplay/Entity/GameplayEntity/Role/RoleGameplayEntity.cs
+gameplay/gameplay/Entity/GameplayEntity/RoleController/RoleControllerGameplayEntity.cs
+gameplay/gameplay/Entity/GameplayEntity/TileMapGraph/TileNodeGameplayEntity.cs
+gameplay/gameplay/Graph/BoardGraph.cs
+gameplay/gameplay/Graph/LatticeNode.cs
+production/session-logs/agent-audit.log
+production/session-logs/compaction-log.txt
+production/session-logs/session-log.md
+production/session-state/active.md
+---
+
+## Archived Session State: 20260507_000854
+# Active Session
+
+- Task: UX Spec — Pause Menu（暂停菜单）
+- Status: Revised — **`ux-review` APPROVED**（2026-05-06）；宿主暂停策略已写入 Spec
+- File: design/ux/pause-menu.md
+- Queue: 实现移交 `/team-ui`；Open #2/#3（探索共用 Pause / 音频 Duck）非门禁阻断
+- Next: 按 Acceptance 绑宿主 `onHide`/`onShow` smoke
+
+## Previous — Main Menu
+
+- File: design/ux/main-menu.md — APPROVED（2026-05-06）
+
+## Previous Session (archived note)
+
+- Task: MVP 主架构蓝图
+- File: docs/architecture/architecture.md
+- Next (historical): 见下方 Session Extract
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260507_000854
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+client/.DS_Store
+client/Assets/Game/Scripts/Gameplay/0_Test/GameUtils.cs
+client/Assets/Game/Scripts/Gameplay/0_Test/GameUtils.cs.meta
+client/Assets/Game/Scripts/Gameplay/Architecture.meta
+client/Assets/Game/Scripts/Gameplay/Architecture/BattleMainArchitecture.cs
+client/Assets/Game/Scripts/Gameplay/Architecture/BattleMainArchitecture.cs.meta
+client/Assets/Game/Scripts/Gameplay/Architecture/MenuArchitecture.cs
+client/Assets/Game/Scripts/Gameplay/Architecture/MenuArchitecture.cs.meta
+client/Assets/Game/Scripts/Gameplay/Battle/BattleFlowController.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/BattleAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/BattleAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/BattleActionItem.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/BattleActionItem.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/BlockAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/BlockAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/EmptyAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/EmptyAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/ExecuteAllAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/ExecuteAllAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/HighlightTileAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/HighlightTileAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/Model.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/Model/BattleMainModel.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/Model/BattleMainModel.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/MoveToAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/MoveToAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/SaveSelectEntityAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/SaveSelectEntityAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/SkillAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/SkillAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/UndoAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/UndoAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleManager.cs
+client/Assets/Game/Scripts/Gameplay/BattleManager.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/BoardEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/BoardEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice/LatticeEntityLogic.IPointerHandler.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice/LatticeEntityLogic.IPointerHandler.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice/LatticeEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice/LatticeEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IDamageable.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IDamageable.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.INavigationAgent.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.INavigationAgent.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IPointerHandler.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IPointerHandler.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.ISelectable.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.ISelectable.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IView.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IView.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IViewExtend.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IViewExtend.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/RoleController.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/RoleController/RoleControllerEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/RoleController/RoleControllerEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph/TileNodeEntityLogic.IPointerHandler.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph/TileNodeEntityLogic.IPointerHandler.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph/TileNodeEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph/TileNodeEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/System.meta
+client/Assets/Game/Scripts/Gameplay/System/Base.meta
+client/Assets/Game/Scripts/Gameplay/System/Base/ManagedSystem.cs
+client/Assets/Game/Scripts/Gameplay/System/Base/ManagedSystem.cs.meta
+client/Assets/Game/Scripts/Gameplay/System/BattleActionSystem.cs
+client/Assets/Game/Scripts/Gameplay/System/BattleActionSystem.cs.meta
+client/Assets/Game/Scripts/Gameplay/System/SelectionSystem.cs
+client/Assets/Game/Scripts/Gameplay/System/SelectionSystem.cs.meta
+client/Assets/Game/Scripts/Gameplay/Tilemap.meta
+client/Assets/Game/Scripts/Gameplay/Tilemap/CustomTile.cs
+client/Assets/Game/Scripts/Gameplay/Tilemap/CustomTile.cs.meta
+client/Assets/Game/Scripts/Gameplay/Tilemap/TileGraph.cs
+client/Assets/Game/Scripts/Gameplay/Tilemap/TileGraph.cs.meta
+client/Assets/Game/Scripts/Gameplay/Tilemap/TileGraphImpl.cs
+client/Assets/Game/Scripts/Gameplay/Tilemap/TileGraphImpl.cs.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Graph.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/GraphUtils.cs
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/GraphUtils.cs.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/IGraphUtility.cs
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/IGraphUtility.cs.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/TileMapGraphUtility.cs
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/TileMapGraphUtility.cs.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Input/UnityInputUtility_PC.cs
+client/Assets/Game/Scripts/Windows/Base/UIFormId.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs.meta
+client/Assets/Game/Scripts/Windows/UIForm/BattleMain.meta
+client/Assets/Game/Scripts/Windows/UIForm/BattleMain/BattleMainForm.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleMain/BattleMainForm.cs.meta
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
+client/Assets/Plugins/game.gameplay.dll
+client/Assets/Plugins/game.gameplay.pdb
+client/Packages/manifest.json
+client/Packages/packages-lock.json
+client/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+framework/game.core/bin/Output/netstandard2.1/game.core.dll
+framework/game.core/bin/Output/netstandard2.1/game.core.pdb
+gameplay/gameplay/Entity/Data/BoardEntityModel.cs
+gameplay/gameplay/Entity/Data/LatticeEntityModel.cs
+gameplay/gameplay/Entity/Data/TileNodeEntityModel.cs
+gameplay/gameplay/Entity/GameplayEntity/ProceduralGraph/BoardGameplayEntity.cs
+gameplay/gameplay/Entity/GameplayEntity/ProceduralGraph/LatticeGameplayEntity.cs
+gameplay/gameplay/Entity/GameplayEntity/Role/RoleGameplayEntity.ITeamAgentGetter.cs
+gameplay/gameplay/Entity/GameplayEntity/Role/RoleGameplayEntity.cs
+gameplay/gameplay/Entity/GameplayEntity/RoleController/RoleControllerGameplayEntity.cs
+gameplay/gameplay/Entity/GameplayEntity/TileMapGraph/TileNodeGameplayEntity.cs
+gameplay/gameplay/Graph/BoardGraph.cs
+gameplay/gameplay/Graph/LatticeNode.cs
+production/session-logs/agent-audit.log
+production/session-logs/compaction-log.txt
+production/session-logs/session-log.md
+production/session-state/active.md
+---
+
+## Archived Session State: 20260507_003639
+# Active Session
+
+- Task: UX Spec — Pause Menu（暂停菜单）
+- Status: Revised — **`ux-review` APPROVED**（2026-05-06）；宿主暂停策略已写入 Spec
+- File: design/ux/pause-menu.md
+- Queue: 实现移交 `/team-ui`；Open #2/#3（探索共用 Pause / 音频 Duck）非门禁阻断
+- Next: 按 Acceptance 绑宿主 `onHide`/`onShow` smoke
+
+## Previous — Main Menu
+
+- File: design/ux/main-menu.md — APPROVED（2026-05-06）
+
+## Previous Session (archived note)
+
+- Task: MVP 主架构蓝图
+- File: docs/architecture/architecture.md
+- Next (historical): 见下方 Session Extract
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260507_003639
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+client/.DS_Store
+client/Assets/Game/Scripts/Editor/Tile.meta
+client/Assets/Game/Scripts/Editor/Tile/TileDefine.cs
+client/Assets/Game/Scripts/Editor/Tile/TileDefine.cs.meta
+client/Assets/Game/Scripts/Gameplay/0_Test/GameUtils.cs
+client/Assets/Game/Scripts/Gameplay/0_Test/GameUtils.cs.meta
+client/Assets/Game/Scripts/Gameplay/Architecture.meta
+client/Assets/Game/Scripts/Gameplay/Architecture/BattleMainArchitecture.cs
+client/Assets/Game/Scripts/Gameplay/Architecture/BattleMainArchitecture.cs.meta
+client/Assets/Game/Scripts/Gameplay/Architecture/MenuArchitecture.cs
+client/Assets/Game/Scripts/Gameplay/Architecture/MenuArchitecture.cs.meta
+client/Assets/Game/Scripts/Gameplay/BSK.Game.Gameplay.asmdef
+client/Assets/Game/Scripts/Gameplay/Battle/BattleFlowController.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/BattleAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/BattleAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/BattleActionItem.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/BattleActionItem.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/BlockAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/BlockAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/EmptyAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/EmptyAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/ExecuteAllAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/ExecuteAllAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/HighlightTileAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/HighlightTileAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/Model.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/Model/BattleMainModel.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/Model/BattleMainModel.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/MoveToAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/MoveToAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/SaveSelectEntityAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/SaveSelectEntityAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/SkillAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/SkillAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/UndoAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/UndoAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleManager.cs
+client/Assets/Game/Scripts/Gameplay/BattleManager.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/BoardEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/BoardEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice/LatticeEntityLogic.IPointerHandler.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice/LatticeEntityLogic.IPointerHandler.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice/LatticeEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice/LatticeEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IDamageable.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IDamageable.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.INavigationAgent.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.INavigationAgent.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IPointerHandler.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IPointerHandler.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.ISelectable.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.ISelectable.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IView.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IView.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IViewExtend.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IViewExtend.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/RoleController.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/RoleController/RoleControllerEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/RoleController/RoleControllerEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph/TileNodeEntityLogic.IPointerHandler.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph/TileNodeEntityLogic.IPointerHandler.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph/TileNodeEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph/TileNodeEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/System.meta
+client/Assets/Game/Scripts/Gameplay/System/Base.meta
+client/Assets/Game/Scripts/Gameplay/System/Base/ManagedSystem.cs
+client/Assets/Game/Scripts/Gameplay/System/Base/ManagedSystem.cs.meta
+client/Assets/Game/Scripts/Gameplay/System/BattleActionSystem.cs
+client/Assets/Game/Scripts/Gameplay/System/BattleActionSystem.cs.meta
+client/Assets/Game/Scripts/Gameplay/System/SelectionSystem.cs
+client/Assets/Game/Scripts/Gameplay/System/SelectionSystem.cs.meta
+client/Assets/Game/Scripts/Gameplay/Tilemap.meta
+client/Assets/Game/Scripts/Gameplay/Tilemap/CustomTile.cs
+client/Assets/Game/Scripts/Gameplay/Tilemap/CustomTile.cs.meta
+client/Assets/Game/Scripts/Gameplay/Tilemap/TileGraph.cs
+client/Assets/Game/Scripts/Gameplay/Tilemap/TileGraph.cs.meta
+client/Assets/Game/Scripts/Gameplay/Tilemap/TileGraphImpl.cs
+client/Assets/Game/Scripts/Gameplay/Tilemap/TileGraphImpl.cs.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Graph.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/GraphUtils.cs
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/GraphUtils.cs.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/IGraphUtility.cs
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/IGraphUtility.cs.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/TileMapGraphUtility.cs
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/TileMapGraphUtility.cs.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Input/UnityInputUtility_PC.cs
+client/Assets/Game/Scripts/Windows/Base/UIFormId.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs.meta
+client/Assets/Game/Scripts/Windows/UIForm/BattleMain.meta
+client/Assets/Game/Scripts/Windows/UIForm/BattleMain/BattleMainForm.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleMain/BattleMainForm.cs.meta
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
+client/Assets/Plugins/game.gameplay.dll
+client/Assets/Plugins/game.gameplay.pdb
+client/Packages/manifest.json
+client/Packages/packages-lock.json
+client/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+framework/game.core/bin/Output/netstandard2.1/game.core.dll
+framework/game.core/bin/Output/netstandard2.1/game.core.pdb
+gameplay/gameplay/Entity/Data/BoardEntityModel.cs
+gameplay/gameplay/Entity/Data/LatticeEntityModel.cs
+gameplay/gameplay/Entity/Data/TileNodeEntityModel.cs
+gameplay/gameplay/Entity/GameplayEntity/ProceduralGraph/BoardGameplayEntity.cs
+gameplay/gameplay/Entity/GameplayEntity/ProceduralGraph/LatticeGameplayEntity.cs
+gameplay/gameplay/Entity/GameplayEntity/Role/RoleGameplayEntity.ITeamAgentGetter.cs
+gameplay/gameplay/Entity/GameplayEntity/Role/RoleGameplayEntity.cs
+gameplay/gameplay/Entity/GameplayEntity/RoleController/RoleControllerGameplayEntity.cs
+gameplay/gameplay/Entity/GameplayEntity/TileMapGraph/TileNodeGameplayEntity.cs
+gameplay/gameplay/Graph/BoardGraph.cs
+gameplay/gameplay/Graph/LatticeNode.cs
+production/session-logs/agent-audit.log
+production/session-logs/compaction-log.txt
+production/session-logs/session-log.md
+production/session-state/active.md
+---
+
+## Archived Session State: 20260507_003905
+# Active Session
+
+- Task: UX Spec — Pause Menu（暂停菜单）
+- Status: Revised — **`ux-review` APPROVED**（2026-05-06）；宿主暂停策略已写入 Spec
+- File: design/ux/pause-menu.md
+- Queue: 实现移交 `/team-ui`；Open #2/#3（探索共用 Pause / 音频 Duck）非门禁阻断
+- Next: 按 Acceptance 绑宿主 `onHide`/`onShow` smoke
+
+## Previous — Main Menu
+
+- File: design/ux/main-menu.md — APPROVED（2026-05-06）
+
+## Previous Session (archived note)
+
+- Task: MVP 主架构蓝图
+- File: docs/architecture/architecture.md
+- Next (historical): 见下方 Session Extract
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260507_003905
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+client/.DS_Store
+client/Assets/Game/Scripts/Editor/Tile.meta
+client/Assets/Game/Scripts/Editor/Tile/TileDefine.cs
+client/Assets/Game/Scripts/Editor/Tile/TileDefine.cs.meta
+client/Assets/Game/Scripts/Gameplay/0_Test/GameUtils.cs
+client/Assets/Game/Scripts/Gameplay/0_Test/GameUtils.cs.meta
+client/Assets/Game/Scripts/Gameplay/Architecture.meta
+client/Assets/Game/Scripts/Gameplay/Architecture/BattleMainArchitecture.cs
+client/Assets/Game/Scripts/Gameplay/Architecture/BattleMainArchitecture.cs.meta
+client/Assets/Game/Scripts/Gameplay/Architecture/MenuArchitecture.cs
+client/Assets/Game/Scripts/Gameplay/Architecture/MenuArchitecture.cs.meta
+client/Assets/Game/Scripts/Gameplay/BSK.Game.Gameplay.asmdef
+client/Assets/Game/Scripts/Gameplay/Battle/BattleFlowController.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/BattleAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/BattleAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/BattleActionItem.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/BattleActionItem.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/BlockAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/BlockAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/EmptyAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/EmptyAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/ExecuteAllAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/ExecuteAllAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/HighlightTileAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/HighlightTileAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/Model.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/Model/BattleMainModel.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/Model/BattleMainModel.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/MoveToAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/MoveToAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/SaveSelectEntityAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/SaveSelectEntityAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/SkillAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/SkillAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/UndoAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/UndoAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleManager.cs
+client/Assets/Game/Scripts/Gameplay/BattleManager.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/BoardEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/BoardEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice/LatticeEntityLogic.IPointerHandler.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice/LatticeEntityLogic.IPointerHandler.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice/LatticeEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice/LatticeEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IDamageable.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IDamageable.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.INavigationAgent.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.INavigationAgent.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IPointerHandler.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IPointerHandler.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.ISelectable.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.ISelectable.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IView.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IView.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IViewExtend.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IViewExtend.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/RoleController.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/RoleController/RoleControllerEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/RoleController/RoleControllerEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph/TileNodeEntityLogic.IPointerHandler.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph/TileNodeEntityLogic.IPointerHandler.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph/TileNodeEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph/TileNodeEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/System.meta
+client/Assets/Game/Scripts/Gameplay/System/Base.meta
+client/Assets/Game/Scripts/Gameplay/System/Base/ManagedSystem.cs
+client/Assets/Game/Scripts/Gameplay/System/Base/ManagedSystem.cs.meta
+client/Assets/Game/Scripts/Gameplay/System/BattleActionSystem.cs
+client/Assets/Game/Scripts/Gameplay/System/BattleActionSystem.cs.meta
+client/Assets/Game/Scripts/Gameplay/System/SelectionSystem.cs
+client/Assets/Game/Scripts/Gameplay/System/SelectionSystem.cs.meta
+client/Assets/Game/Scripts/Gameplay/Tilemap.meta
+client/Assets/Game/Scripts/Gameplay/Tilemap/CustomTile.cs
+client/Assets/Game/Scripts/Gameplay/Tilemap/CustomTile.cs.meta
+client/Assets/Game/Scripts/Gameplay/Tilemap/TileGraph.cs
+client/Assets/Game/Scripts/Gameplay/Tilemap/TileGraph.cs.meta
+client/Assets/Game/Scripts/Gameplay/Tilemap/TileGraphImpl.cs
+client/Assets/Game/Scripts/Gameplay/Tilemap/TileGraphImpl.cs.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Graph.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/GraphUtils.cs
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/GraphUtils.cs.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/IGraphUtility.cs
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/IGraphUtility.cs.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/TileMapGraphUtility.cs
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/TileMapGraphUtility.cs.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Input/UnityInputUtility_PC.cs
+client/Assets/Game/Scripts/Windows/Base/UIFormId.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs.meta
+client/Assets/Game/Scripts/Windows/UIForm/BattleMain.meta
+client/Assets/Game/Scripts/Windows/UIForm/BattleMain/BattleMainForm.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleMain/BattleMainForm.cs.meta
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
+client/Assets/Plugins/game.gameplay.dll
+client/Assets/Plugins/game.gameplay.pdb
+client/Packages/manifest.json
+client/Packages/packages-lock.json
+client/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+framework/game.core/bin/Output/netstandard2.1/game.core.dll
+framework/game.core/bin/Output/netstandard2.1/game.core.pdb
+gameplay/gameplay/Entity/Data/BoardEntityModel.cs
+gameplay/gameplay/Entity/Data/LatticeEntityModel.cs
+gameplay/gameplay/Entity/Data/TileNodeEntityModel.cs
+gameplay/gameplay/Entity/GameplayEntity/ProceduralGraph/BoardGameplayEntity.cs
+gameplay/gameplay/Entity/GameplayEntity/ProceduralGraph/LatticeGameplayEntity.cs
+gameplay/gameplay/Entity/GameplayEntity/Role/RoleGameplayEntity.ITeamAgentGetter.cs
+gameplay/gameplay/Entity/GameplayEntity/Role/RoleGameplayEntity.cs
+gameplay/gameplay/Entity/GameplayEntity/RoleController/RoleControllerGameplayEntity.cs
+gameplay/gameplay/Entity/GameplayEntity/TileMapGraph/TileNodeGameplayEntity.cs
+gameplay/gameplay/Graph/BoardGraph.cs
+gameplay/gameplay/Graph/LatticeNode.cs
+production/session-logs/agent-audit.log
+production/session-logs/compaction-log.txt
+production/session-logs/session-log.md
+production/session-state/active.md
+---
+
+## Archived Session State: 20260507_004510
+# Active Session
+
+- Task: UX Spec — Pause Menu（暂停菜单）
+- Status: Revised — **`ux-review` APPROVED**（2026-05-06）；宿主暂停策略已写入 Spec
+- File: design/ux/pause-menu.md
+- Queue: 实现移交 `/team-ui`；Open #2/#3（探索共用 Pause / 音频 Duck）非门禁阻断
+- Next: 按 Acceptance 绑宿主 `onHide`/`onShow` smoke
+
+## Previous — Main Menu
+
+- File: design/ux/main-menu.md — APPROVED（2026-05-06）
+
+## Previous Session (archived note)
+
+- Task: MVP 主架构蓝图
+- File: docs/architecture/architecture.md
+- Next (historical): 见下方 Session Extract
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 0 covered, 0 partial, 38 gaps
+- New TR-IDs registered: None
+- GDD revision flags: `design/gdd/实时弹反系统.md`
+- Top ADR gaps: 场景生命周期与场景上下文路由; 战斗事件总线与 DTO 版本策略; 玩法逻辑与 Unity 适配器程序集分层
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — architecture repair 2026-04-29
+- Restored: `design/gdd/实时弹反系统.md` from review log and approved dependent contracts
+- Fixed: dangling turn-manager TR reference in `docs/architecture/architecture.md`
+- Remaining blocker: P0 ADR coverage still missing
+
+## Session Extract — P0 ADR authoring 2026-04-29
+- Created: ADR-0001 through ADR-0006 as Proposed P0 architecture baselines
+- ADRs: scene lifecycle/context routing; battle event bus/DTO versioning; gameplay/Unity/HybridCLR layering; combat clock/deterministic ordering; damage/HP ownership; mobile touch timestamp/hit area strategy
+- Engine specialist result: no BLOCKING Unity/HybridCLR issue; high-risk notes incorporated
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: ADRs are Proposed; run independent `/architecture-review` before accepting or advancing gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: FAIL
+- Requirements: 38 total — 26 covered, 6 partial, 6 gaps
+- New TR-IDs registered: None
+- GDD revision flags: None
+- Top ADR gaps: 弹反时间轴派生与 counter handoff; 敌方攻击模式数据与调度所有权; 战斗反馈质量分级与 WebGL 降级策略
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — missing ADR completion 2026-04-29
+- Created: ADR-0007 through ADR-0013 as Proposed follow-up architecture baselines
+- ADRs: parry timeline/counter handoff; enemy attack pattern ownership; battle feedback quality/WebGL degradation; UIFrame battle HUD composition; character schema/snapshot ownership; action service boundary; deterministic combat test strategy
+- Resolved draft conflict: ADR-0004 is now the combat tick/event drain order authority; ADR-0002 owns typed DTO/subscription/context filtering/enqueue mechanics only
+- Updated: `docs/architecture/architecture.md` and technical preferences ADR log
+- Remaining blocker: run independent `/ccgs-architecture-review` before accepting ADRs or advancing pre-production gate
+
+## Session Extract — /architecture-review 2026-04-29
+- Verdict: CONCERNS
+- Requirements: 38 total — 38 covered, 0 partial, 0 gaps
+- New TR-IDs registered: 38
+- GDD revision flags: None
+- Top ADR gaps: None
+- Report: docs/architecture/architecture-review-2026-04-29.md
+
+## Session Extract — /gate-check pre-production remediation 2026-04-29
+- Verdict: CONCERNS
+- Closed blockers: tests/CI baseline, accessibility requirements, UX interaction patterns, HUD UX spec, performance budgets, ADR Accepted status
+- Remaining concerns: Unity deprecated/breaking/module reference docs; HybridCLR/WebGL device evidence
+- Report: production/gate-checks/pre-production-gate-2026-04-29.md
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/scene-lifecycle-context/story-001-scene-context-identity.md — 场景与战斗上下文身份与版本
+- Files changed: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (added restart test)
+- Test written: client/Assets/Tests/EditMode/Scene/SceneContextIdentityTests.cs (5 tests, 6/6 passed)
+- Status: Complete (was already implemented; verified + supplemented restart test)
+- Next: /dev-story story-001-battle-event-dto-and-context
+
+## Session Extract — /dev-story 2026-05-01
+- Story: production/epics/battle-event-bus-dto-versioning/story-001-battle-event-dto-and-context.md — 战斗事件 DTO 与 SceneEventContext
+- Files changed: gameplay/gameplay/Events/IBattleEvent.cs, IBattleEventBus.cs, BattleEventBus.cs (created)
+- Test written: client/Assets/Tests/EditMode/Events/BattleEventDtoTests.cs (8 tests, 14/14 passed)
+- Blockers: None
+- Next: /dev-story story-001-assembly-boundaries or story-002-dto-boundary-primitives
+---
+
+## Session End: 20260507_004510
+### Uncommitted Changes
+.claude/hooks/check-gstack.sh
+.claude/settings.json
+CLAUDE.md
+client/.DS_Store
+client/Assets/Game/Scripts/Editor/Tile.meta
+client/Assets/Game/Scripts/Editor/Tile/TileDefine.cs
+client/Assets/Game/Scripts/Editor/Tile/TileDefine.cs.meta
+client/Assets/Game/Scripts/Gameplay/0_Test/GameUtils.cs
+client/Assets/Game/Scripts/Gameplay/0_Test/GameUtils.cs.meta
+client/Assets/Game/Scripts/Gameplay/Architecture.meta
+client/Assets/Game/Scripts/Gameplay/Architecture/BattleMainArchitecture.cs
+client/Assets/Game/Scripts/Gameplay/Architecture/BattleMainArchitecture.cs.meta
+client/Assets/Game/Scripts/Gameplay/Architecture/MenuArchitecture.cs
+client/Assets/Game/Scripts/Gameplay/Architecture/MenuArchitecture.cs.meta
+client/Assets/Game/Scripts/Gameplay/BSK.Game.Gameplay.asmdef
+client/Assets/Game/Scripts/Gameplay/Battle/BattleFlowController.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/BattleAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/BattleAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/BattleActionItem.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/BattleActionItem.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/BlockAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/BlockAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/EmptyAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/EmptyAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/ExecuteAllAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/ExecuteAllAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/HighlightTileAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/HighlightTileAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/Model.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/Model/BattleMainModel.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/Model/BattleMainModel.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/MoveToAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/MoveToAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/SaveSelectEntityAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/SaveSelectEntityAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/SkillAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/SkillAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleAction/UndoAction.cs
+client/Assets/Game/Scripts/Gameplay/BattleAction/UndoAction.cs.meta
+client/Assets/Game/Scripts/Gameplay/BattleManager.cs
+client/Assets/Game/Scripts/Gameplay/BattleManager.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/BoardEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/BoardEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice/LatticeEntityLogic.IPointerHandler.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice/LatticeEntityLogic.IPointerHandler.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice/LatticeEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/ProceduralGraph/Lattice/LatticeEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IDamageable.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IDamageable.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.INavigationAgent.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.INavigationAgent.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IPointerHandler.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IPointerHandler.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.ISelectable.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.ISelectable.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IView.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IView.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IViewExtend.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.IViewExtend.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/Role/RoleEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/RoleController.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/RoleController/RoleControllerEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/RoleController/RoleControllerEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph/TileNodeEntityLogic.IPointerHandler.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph/TileNodeEntityLogic.IPointerHandler.cs.meta
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph/TileNodeEntityLogic.cs
+client/Assets/Game/Scripts/Gameplay/Entity/EntityLogic/TileMapGraph/TileNodeEntityLogic.cs.meta
+client/Assets/Game/Scripts/Gameplay/System.meta
+client/Assets/Game/Scripts/Gameplay/System/Base.meta
+client/Assets/Game/Scripts/Gameplay/System/Base/ManagedSystem.cs
+client/Assets/Game/Scripts/Gameplay/System/Base/ManagedSystem.cs.meta
+client/Assets/Game/Scripts/Gameplay/System/BattleActionSystem.cs
+client/Assets/Game/Scripts/Gameplay/System/BattleActionSystem.cs.meta
+client/Assets/Game/Scripts/Gameplay/System/SelectionSystem.cs
+client/Assets/Game/Scripts/Gameplay/System/SelectionSystem.cs.meta
+client/Assets/Game/Scripts/Gameplay/Tilemap.meta
+client/Assets/Game/Scripts/Gameplay/Tilemap/CustomTile.cs
+client/Assets/Game/Scripts/Gameplay/Tilemap/CustomTile.cs.meta
+client/Assets/Game/Scripts/Gameplay/Tilemap/TileGraph.cs
+client/Assets/Game/Scripts/Gameplay/Tilemap/TileGraph.cs.meta
+client/Assets/Game/Scripts/Gameplay/Tilemap/TileGraphImpl.cs
+client/Assets/Game/Scripts/Gameplay/Tilemap/TileGraphImpl.cs.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Graph.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/GraphUtils.cs
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/GraphUtils.cs.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/IGraphUtility.cs
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/IGraphUtility.cs.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/TileMapGraphUtility.cs
+client/Assets/Game/Scripts/Gameplay/Utility/Graph/TileMapGraphUtility.cs.meta
+client/Assets/Game/Scripts/Gameplay/Utility/Input/UnityInputUtility_PC.cs
+client/Assets/Game/Scripts/Windows/Base/UIFormId.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleHud/BattleHudTouchAreaManager.cs.meta
+client/Assets/Game/Scripts/Windows/UIForm/BattleMain.meta
+client/Assets/Game/Scripts/Windows/UIForm/BattleMain/BattleMainForm.cs
+client/Assets/Game/Scripts/Windows/UIForm/BattleMain/BattleMainForm.cs.meta
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.dll
+client/Assets/Packages/com.game.framework.bsk.core/Plugins/game.core.pdb
+client/Assets/Plugins/game.gameplay.dll
+client/Assets/Plugins/game.gameplay.pdb
+client/Packages/manifest.json
+client/Packages/packages-lock.json
+client/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+framework/game.core/bin/Output/netstandard2.1/game.core.dll
+framework/game.core/bin/Output/netstandard2.1/game.core.pdb
+gameplay/gameplay/Entity/Data/BoardEntityModel.cs
+gameplay/gameplay/Entity/Data/LatticeEntityModel.cs
+gameplay/gameplay/Entity/Data/TileNodeEntityModel.cs
+gameplay/gameplay/Entity/GameplayEntity/ProceduralGraph/BoardGameplayEntity.cs
+gameplay/gameplay/Entity/GameplayEntity/ProceduralGraph/LatticeGameplayEntity.cs
+gameplay/gameplay/Entity/GameplayEntity/Role/RoleGameplayEntity.ITeamAgentGetter.cs
+gameplay/gameplay/Entity/GameplayEntity/Role/RoleGameplayEntity.cs
+gameplay/gameplay/Entity/GameplayEntity/RoleController/RoleControllerGameplayEntity.cs
+gameplay/gameplay/Entity/GameplayEntity/TileMapGraph/TileNodeGameplayEntity.cs
+gameplay/gameplay/Graph/BoardGraph.cs
+gameplay/gameplay/Graph/LatticeNode.cs
+production/session-logs/agent-audit.log
+production/session-logs/compaction-log.txt
+production/session-logs/session-log.md
+production/session-state/active.md
+---
+

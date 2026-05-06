@@ -1,11 +1,20 @@
 # Active Session
 
+- Task: UX Spec — Pause Menu（暂停菜单）
+- Status: Revised — **`ux-review` APPROVED**（2026-05-06）；宿主暂停策略已写入 Spec
+- File: design/ux/pause-menu.md
+- Queue: 实现移交 `/team-ui`；Open #2/#3（探索共用 Pause / 音频 Duck）非门禁阻断
+- Next: 按 Acceptance 绑宿主 `onHide`/`onShow` smoke
+
+## Previous — Main Menu
+
+- File: design/ux/main-menu.md — APPROVED（2026-05-06）
+
+## Previous Session (archived note)
+
 - Task: MVP 主架构蓝图
-- Status: Draft created — 架构文档已写入，ADR 缺口已识别
 - File: docs/architecture/architecture.md
-- Documentation Language: 简体中文
-- Sections: 引擎风险摘要；技术需求基线；系统分层图；模块所有权；数据流；API 边界；ADR 审计；必需 ADR
-- Next: 创建 P0 ADR，然后生成 architecture traceability 并运行 `/architecture-review`
+- Next (historical): 见下方 Session Extract
 
 ## Session Extract — /architecture-review 2026-04-29
 - Verdict: FAIL

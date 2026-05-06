@@ -80,7 +80,7 @@ namespace Game.Client
 
             if (Camera.main == null)
                 return;
-            var mouseRay = GameUtils.MouseRay;
+            var mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
 
             ImpactInfo impactInfo = null;
 
