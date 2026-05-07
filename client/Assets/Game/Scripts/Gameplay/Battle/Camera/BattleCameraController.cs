@@ -4,7 +4,8 @@ using UnityEngine;
 namespace Game.Client
 {
     /// <summary>
-    /// 战斗相机控制器。管理默认等距俯视和战斗特写两个虚拟相机。
+    /// 战斗相机控制器。固定等距俯视 + 轻微冲击效果。
+    /// Closeup 相机暂时禁用以避免运动畸变，仅保留 impulse 反馈。
     /// </summary>
     public class BattleCameraController : MonoBehaviour
     {
@@ -20,8 +21,8 @@ namespace Game.Client
 
         [Header("Settings")]
         [SerializeField] private int _defaultPriority = 10;
-        [SerializeField] private int _closeupPriority = 20;
-        [SerializeField] private float _closeupHoldTime = 1.5f;
+        [SerializeField] private float _closeupHoldTime = 1.0f;
+        [SerializeField] private bool _enableCloseup = false;
 
         private float _closeupTimer;
         private bool _closeupActive;
@@ -36,8 +37,9 @@ namespace Game.Client
 
             if (_defaultVCam != null)
             {
-                _defaultVCam.Follow = _targetGroup != null ? _targetGroup.Transform : player;
-                _defaultVCam.LookAt = _targetGroup != null ? _targetGroup.Transform : player;
+                var groupTransform = _targetGroup != null ? _targetGroup.Transform : player;
+                _defaultVCam.Follow = groupTransform;
+                _defaultVCam.LookAt = groupTransform;
                 _defaultVCam.Priority = _defaultPriority;
             }
 
@@ -47,11 +49,12 @@ namespace Game.Client
 
         public void SwitchToCloseup(Transform attacker, Transform target)
         {
-            if (_closeupVCam == null) return;
+            if (!_enableCloseup || _closeupVCam == null) return;
 
-            _closeupVCam.Follow = attacker;
-            _closeupVCam.LookAt = target;
-            _closeupVCam.Priority = _closeupPriority;
+            var midpoint = (attacker.position + target.position) * 0.5f;
+            _closeupVCam.Follow = _targetGroup != null ? _targetGroup.Transform : attacker;
+            _closeupVCam.LookAt = _targetGroup != null ? _targetGroup.Transform : target;
+            _closeupVCam.Priority = _defaultPriority + 5;
             _closeupActive = true;
             _closeupTimer = _closeupHoldTime;
         }
@@ -63,7 +66,7 @@ namespace Game.Client
             _closeupActive = false;
         }
 
-        public void TriggerHitImpulse(float force = 0.5f)
+        public void TriggerHitImpulse(float force = 0.3f)
         {
             if (_impulseSource != null)
                 _impulseSource.GenerateImpulse(force);

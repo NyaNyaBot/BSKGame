@@ -41,7 +41,7 @@ namespace Game.Client
         private void Awake()
         {
             if (_animancer == null)
-                _animancer = GetComponent<AnimancerComponent>();
+                _animancer = GetComponentInChildren<AnimancerComponent>();
 
             InitializeLayers();
         }
@@ -61,12 +61,7 @@ namespace Game.Client
         public void PlayIdle()
         {
             _fullBodyLayer.Play(_idle);
-
-            if (_breathIdle != null && _breathIdle.Clip != null)
-            {
-                _additiveLayer.Play(_breathIdle);
-                _additiveLayer.StartFade(1f, 0.3f);
-            }
+            _additiveLayer.StartFade(0f, 0.2f);
         }
 
         public void PlayWalk()
@@ -81,12 +76,11 @@ namespace Game.Client
 
         public float PlayAttack()
         {
-            var state = _upperBodyLayer.Play(_attack);
-            _upperBodyLayer.StartFade(1f, 0.1f);
+            var state = _fullBodyLayer.Play(_attack);
 
             state.Events.OnEnd = () =>
             {
-                _upperBodyLayer.StartFade(0f, 0.2f);
+                _fullBodyLayer.Play(_idle);
                 OnAttackAnimEnd?.Invoke();
             };
 
@@ -95,24 +89,22 @@ namespace Game.Client
 
         public float PlayBlock()
         {
-            var state = _upperBodyLayer.Play(_block);
-            _upperBodyLayer.StartFade(1f, 0.1f);
+            var state = _fullBodyLayer.Play(_block);
             return state.Length;
         }
 
         public void StopBlock()
         {
-            _upperBodyLayer.StartFade(0f, 0.25f);
+            _fullBodyLayer.Play(_idle);
         }
 
         public float PlayHitReaction()
         {
-            var state = _upperBodyLayer.Play(_hitReaction);
-            _upperBodyLayer.StartFade(1f, 0.05f);
+            var state = _fullBodyLayer.Play(_hitReaction);
 
             state.Events.OnEnd = () =>
             {
-                _upperBodyLayer.StartFade(0f, 0.2f);
+                _fullBodyLayer.Play(_idle);
                 OnHitReactionEnd?.Invoke();
             };
 
@@ -121,9 +113,6 @@ namespace Game.Client
 
         public float PlayDeath()
         {
-            _upperBodyLayer.StartFade(0f, 0.1f);
-            _additiveLayer.StartFade(0f, 0.1f);
-
             var state = _fullBodyLayer.Play(_death);
             state.Events.OnEnd = () =>
             {

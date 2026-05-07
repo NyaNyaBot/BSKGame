@@ -27,7 +27,7 @@ namespace Game.Client
         public BattleCameraController CameraController => _cameraController;
         public BattleVfxController VfxController => _vfxController;
 
-        public void InitializePresentation(string playerInstanceId, string enemyInstanceId)
+        public void InitializePresentation(Game.Gameplay.Events.IBattleEventBus bus, string playerInstanceId, string enemyInstanceId)
         {
             if (_useFactoryVfx && _vfxController == null)
                 SetupFallbackVfx();
@@ -37,10 +37,7 @@ namespace Game.Client
 
             if (_presenterManager != null)
             {
-                _presenterManager.Initialize(
-                    GetBattleBus(),
-                    _cameraController,
-                    _vfxController);
+                _presenterManager.Initialize(bus, _cameraController, _vfxController);
 
                 if (_playerPresenter != null)
                     _presenterManager.RegisterPresenter(playerInstanceId, _playerPresenter);
@@ -49,16 +46,6 @@ namespace Game.Client
             }
 
             Log.Info("[BattleSceneSetup] Presentation initialized. Player={0} Enemy={1}", playerInstanceId, enemyInstanceId);
-        }
-
-        private Game.Gameplay.Events.IBattleEventBus GetBattleBus()
-        {
-            var flowController = GetComponent<BattleFlowController>();
-            if (flowController != null && flowController.Orchestrator != null)
-                return flowController.Orchestrator.Bus;
-
-            Log.Warning("[BattleSceneSetup] Could not find BattleEventBus from BattleFlowController.");
-            return null;
         }
 
         private void SetupFallbackVfx()

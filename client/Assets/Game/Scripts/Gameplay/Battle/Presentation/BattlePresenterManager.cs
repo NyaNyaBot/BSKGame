@@ -54,7 +54,8 @@ namespace Game.Client
 
         private void OnDamageApplied(DamageApplied evt)
         {
-            EnqueuePresentation(() => StartCoroutine(DamageSequence(evt)));
+            string attackerId = _lastAttackerId;
+            EnqueuePresentation(() => StartCoroutine(DamageSequence(evt, attackerId)));
         }
 
         private void OnCharacterDefeated(CharacterDefeated evt)
@@ -67,35 +68,42 @@ namespace Game.Client
             Log.Info("[Presenter] Phase: {0} → {1}", evt.PreviousPhase, evt.CurrentPhase);
         }
 
-        private IEnumerator DamageSequence(DamageApplied evt)
+        private IEnumerator DamageSequence(DamageApplied evt, string capturedAttackerId)
         {
             _isPlaying = true;
 
-            var attackerId = FindAttackerFor(evt.TargetInstanceId);
-            var attacker = attackerId != null ? GetPresenter(attackerId) : null;
+            var attacker = capturedAttackerId != null ? GetPresenter(capturedAttackerId) : null;
             var target = GetPresenter(evt.TargetInstanceId);
 
-            // 攻击动画
+            bool skipAttack = _skipNextAttackAnim;
+            bool skipHit = _skipNextHitReaction;
+            _skipNextAttackAnim = false;
+            _skipNextHitReaction = false;
+
             float attackDuration = 0f;
-            if (attacker != null)
+            if (attacker != null && !skipAttack)
             {
                 if (_cameraController != null)
                     _cameraController.SwitchToCloseup(attacker.transform, target != null ? target.transform : attacker.transform);
 
                 attackDuration = attacker.PlayAttack();
-                yield return new WaitForSeconds(attackDuration * 0.4f);
+                // 等到攻击动画 55% 命中帧，与状态机的伤害判定同步。
+                yield return new WaitForSeconds(attackDuration * 0.55f);
             }
+            // skipAttack=true 时由状态机已在视觉命中帧调用 ApplyPlayerDamage，
+            // 这里立即触发 hit reaction + impulse，无需额外延迟。
 
-            // 受击动画 + VFX
             if (target != null)
             {
-                float hitDuration = target.PlayHitReaction();
+                float hitDuration = 0.3f;
+                if (!skipHit)
+                    hitDuration = target.PlayHitReaction();
 
                 if (_vfxController != null)
                     _vfxController.PlayHitEffect(target.HitVfxPoint != null ? target.HitVfxPoint.position : target.transform.position);
 
                 if (_cameraController != null)
-                    _cameraController.TriggerHitImpulse(0.4f);
+                    _cameraController.TriggerHitImpulse(0.3f);
 
                 yield return new WaitForSeconds(hitDuration);
             }
@@ -145,15 +153,22 @@ namespace Game.Client
         }
 
         private string _lastAttackerId;
+        private bool _skipNextAttackAnim;
+        private bool _skipNextHitReaction;
 
         public void SetLastAttacker(string instanceId)
         {
             _lastAttackerId = instanceId;
         }
 
-        private string FindAttackerFor(string targetId)
+        public void SetSkipNextAttackAnim(bool skip)
         {
-            return _lastAttackerId;
+            _skipNextAttackAnim = skip;
+        }
+
+        public void SetSkipNextHitReaction(bool skip)
+        {
+            _skipNextHitReaction = skip;
         }
 
         private void OnDestroy()

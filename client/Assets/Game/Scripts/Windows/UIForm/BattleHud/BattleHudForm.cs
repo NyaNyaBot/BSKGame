@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Game.Gameplay.Character;
 using Game.Gameplay.Combat;
@@ -31,6 +32,7 @@ namespace Game.Client
 
         [Header("Action")]
         public CanvasGroup ParryReadyIndicator;
+        public Slider ParryTimerBar;
         public CanvasGroup CounterReadyIndicator;
 
         [Header("Phase")]
@@ -52,6 +54,14 @@ namespace Game.Client
         private ICombatClock _clock;
 
         private readonly List<IDisposable> _subscriptions = new List<IDisposable>();
+
+        private float _parryWindowDuration = 0.4f;
+        private float _parryWindowElapsed;
+        private bool _parryWindowActive;
+        private int _currentEnemyPhase;
+        private float _currentPhaseDuration;
+        private float _totalParryWindow;
+        private float _perfectWindow;
 
         public BattleHudViewModel ViewModel => _viewModel;
 
@@ -99,12 +109,15 @@ namespace Game.Client
             SubscribeEvents();
             InitializeFromSnapshots();
 
+            BattleFlowController.OnEnemyAttackPhaseChanged += SetEnemyAttackPhase;
+
             _viewModel.OnChanged += RefreshUI;
             RefreshUI();
         }
 
         protected override void OnClose(bool isShutdown, object userData)
         {
+            BattleFlowController.OnEnemyAttackPhaseChanged -= SetEnemyAttackPhase;
             DisposeAllSubscriptions();
 
             if (_viewModel != null)
@@ -123,6 +136,17 @@ namespace Game.Client
         protected override void OnUpdate(float elapseSeconds, float realElapseSeconds)
         {
             base.OnUpdate(elapseSeconds, realElapseSeconds);
+
+            if (_parryWindowActive)
+            {
+                _parryWindowElapsed += elapseSeconds;
+                float progress = 1f - Mathf.Clamp01(_parryWindowElapsed / _currentPhaseDuration);
+                if (ParryTimerBar != null)
+                    ParryTimerBar.value = progress;
+
+                if (_parryWindowElapsed >= _currentPhaseDuration)
+                    _parryWindowActive = false;
+            }
 
             if (_viewModel != null && _viewModel.IsDebugOverlayEnabled && _clock != null)
             {
@@ -178,12 +202,21 @@ namespace Game.Client
             }
         }
 
+        private const float HpUpdateDelay = 0.05f;
+
         private void HandleDamageApplied(DamageApplied evt)
         {
             if (_readModel == null) return;
+            StartCoroutine(DelayedHpUpdate(evt.TargetInstanceId));
+        }
 
-            var snap = _readModel.GetSnapshot(evt.TargetInstanceId);
-            if (snap.InstanceId == null) return;
+        private System.Collections.IEnumerator DelayedHpUpdate(string targetInstanceId)
+        {
+            yield return new WaitForSeconds(HpUpdateDelay);
+
+            if (_readModel == null) yield break;
+            var snap = _readModel.GetSnapshot(targetInstanceId);
+            if (snap.InstanceId == null) yield break;
 
             if (snap.InstanceId == _viewModel.PlayerSnapshot.InstanceId)
                 _viewModel.UpdatePlayerSnapshot(snap);
@@ -202,11 +235,138 @@ namespace Game.Client
         private void HandlePhaseChanged(BattleInputPhaseChanged evt)
         {
             _viewModel.UpdatePhase(evt.CurrentPhase);
+            // 弹反 UI 的可见性由 BattleFlowController.SetEnemyAttackPhase 独占控制。
+        }
+
+        /// <summary>
+        /// 由 BattleFlowController 调用，通知当前敌人攻击子阶段。
+        /// phase: 1=WindUp, 2=ParryWindow, 3=Strike
+        /// </summary>
+        public void SetEnemyAttackPhase(int phase, float duration, float totalParryWindow, float perfectWindow)
+        {
+            _currentEnemyPhase = phase;
+            _currentPhaseDuration = duration;
+            _totalParryWindow = totalParryWindow;
+            _perfectWindow = perfectWindow;
+            _parryWindowElapsed = 0f;
+
+            if (ParryReadyIndicator == null) return;
+
+            switch (phase)
+            {
+                case 0: // Hide - 完全清空，防止残留
+                    _parryWindowActive = false;
+                    ParryReadyIndicator.alpha = 0f;
+                    SetParryLabelText(string.Empty);
+                    SetParryLabelColor(Color.white);
+                    if (ParryTimerBar != null)
+                    {
+                        ParryTimerBar.value = 0f;
+                        ParryTimerBar.gameObject.SetActive(false);
+                    }
+                    break;
+
+                case 1: // WindUp - 不显示UI，仅依赖敌人动画前摇暗示
+                    _parryWindowActive = false;
+                    ParryReadyIndicator.alpha = 0f;
+                    SetParryLabelText(string.Empty);
+                    if (ParryTimerBar != null)
+                        ParryTimerBar.gameObject.SetActive(false);
+                    break;
+
+                case 2: // ParryWindow
+                    SetParryLabelText("弹反!");
+                    SetParryLabelColor(new Color(1f, 0.85f, 0f));
+                    if (ParryTimerBar != null)
+                    {
+                        ParryTimerBar.gameObject.SetActive(true);
+                        ParryTimerBar.value = 1f;
+                        SetFillColor(new Color(1f, 0.75f, 0f));
+                    }
+                    ParryReadyIndicator.alpha = 1f;
+                    _parryWindowActive = true;
+                    break;
+
+                case 3: // Strike (failed parry visual)
+                    SetParryLabelText("被命中!");
+                    SetParryLabelColor(Color.red);
+                    if (ParryTimerBar != null)
+                    {
+                        ParryTimerBar.gameObject.SetActive(false);
+                    }
+                    ParryReadyIndicator.alpha = 1f;
+                    _parryWindowActive = false;
+                    break;
+
+                case 4: // Result display (parry succeeded - text from HandleParryResolved)
+                    if (ParryTimerBar != null)
+                        ParryTimerBar.gameObject.SetActive(false);
+                    ParryReadyIndicator.alpha = 1f;
+                    _parryWindowActive = false;
+                    break;
+            }
+        }
+
+        private void SetParryLabelColor(Color color)
+        {
+            if (ParryReadyIndicator == null) return;
+            var label = ParryReadyIndicator.transform.Find("ParryLabel");
+            if (label == null) return;
+            var textComp = label.GetComponent<Text>();
+            if (textComp != null)
+                textComp.color = color;
+        }
+
+        private void SetFillColor(Color color)
+        {
+            if (ParryTimerBar == null) return;
+            var fillArea = ParryTimerBar.transform.Find("Fill Area");
+            if (fillArea == null) return;
+            var fill = fillArea.Find("Fill");
+            if (fill == null) return;
+            var img = fill.GetComponent<Image>();
+            if (img != null)
+                img.color = color;
+        }
+
+        private void SetParryLabelText(string text)
+        {
+            if (ParryReadyIndicator == null) return;
+            var label = ParryReadyIndicator.transform.Find("ParryLabel");
+            if (label == null) return;
+            var textComp = label.GetComponent<Text>();
+            if (textComp != null)
+                textComp.text = text;
         }
 
         private void HandleParryResolved(ParryResolved evt)
         {
-            // UI 只关注 counter 可用状态（来自 CounterEntryOpened/Closed）。
+            _parryWindowActive = false;
+
+            // 失败弹反由 BattleFlowController 通过 phase=3 显示"被命中!"，这里不覆盖。
+            if (evt.Grade == ParryGrade.FailedParry) return;
+
+            string gradeText;
+            Color gradeColor;
+            switch (evt.Grade)
+            {
+                case ParryGrade.PerfectParry:
+                    gradeText = "完美弹反!";
+                    gradeColor = new Color(1f, 0.85f, 0f);
+                    break;
+                case ParryGrade.NormalParry:
+                    gradeText = "弹反成功!";
+                    gradeColor = Color.cyan;
+                    break;
+                default:
+                    return;
+            }
+
+            SetParryLabelText(gradeText);
+            SetParryLabelColor(gradeColor);
+
+            if (ParryTimerBar != null)
+                ParryTimerBar.gameObject.SetActive(false);
         }
 
         private void HandleCounterOpened(CounterEntryOpened evt)
@@ -256,8 +416,8 @@ namespace Game.Client
 
         private void RefreshActionIndicators()
         {
-            if (ParryReadyIndicator != null)
-                ParryReadyIndicator.alpha = _viewModel.IsParryReady ? 1f : 0f;
+            // ParryReadyIndicator 完全由 BattleFlowController.SetEnemyAttackPhase 控制
+            // （动画驱动状态机），不再绑定到 _viewModel.IsParryReady（orchestrator 阶段）。
             if (CounterReadyIndicator != null)
                 CounterReadyIndicator.alpha = _viewModel.IsCounterAvailable ? 1f : 0f;
         }

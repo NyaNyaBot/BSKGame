@@ -59,6 +59,12 @@ namespace Game.Gameplay.Integration
 
         private readonly List<AttackPatternDefinition> _defaultEnemyPatterns = new List<AttackPatternDefinition>();
 
+        /// <summary>
+        /// 弹反伤害修正（基点 0~10000）。0=完全弹反，5000=减半，10000=全额承受。
+        /// 每次 ExecuteEnemyAttack 后自动重置为 10000。
+        /// </summary>
+        public int PendingParryDamageModifierBp { get; set; } = 10000;
+
         public BattleOrchestrator(ISceneContextService sceneContext, BattleStartConfig config)
         {
             _sceneContext = sceneContext ?? throw new ArgumentNullException(nameof(sceneContext));
@@ -239,10 +245,16 @@ namespace Game.Gameplay.Integration
 
             if (plan.HasValue)
             {
-                int damage = plan.Value.BaseDamage;
-                var dmgRequest = new DamageRequest($"enemy_dmg_t{TurnNumber}", PlayerInstanceId, damage);
-                var dmgResult = DamageService.ApplyDamage(dmgRequest);
-                PublishDamageEvents(dmgResult);
+                int baseDamage = plan.Value.BaseDamage;
+                int damage = baseDamage * PendingParryDamageModifierBp / 10000;
+                PendingParryDamageModifierBp = 10000;
+
+                if (damage > 0)
+                {
+                    var dmgRequest = new DamageRequest($"enemy_dmg_t{TurnNumber}", PlayerInstanceId, damage);
+                    var dmgResult = DamageService.ApplyDamage(dmgRequest);
+                    PublishDamageEvents(dmgResult);
+                }
 
                 if (plan.Value.PatternId != null)
                 {
